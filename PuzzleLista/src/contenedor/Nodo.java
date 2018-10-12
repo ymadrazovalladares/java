@@ -1,13 +1,13 @@
 package contenedor;
 
 public class Nodo {
-    private Integer valor;
+    public int valor;
     private Nodo siguiente;
     private Nodo anterior;
     private Nodo superior;
     private Nodo inferior;
 
-    Nodo(Integer valor) {
+    Nodo(int valor) {
         this.valor = valor;
         this.siguiente = null;
         this.anterior = null;
@@ -39,17 +39,17 @@ public class Nodo {
     }
 
     Nodo(Nodo valor) {
-        this.valor = valor.getValor();
         this.anterior = null;
         this.superior = null;
         this.inferior = null;
+        this.superior = null;
     }
 
-    public Integer getValor() {
+    public int getValor() {
         return valor;
     }
 
-    public void setValor(Integer valor) {
+    public void setValor(int valor) {
         this.valor = valor;
     }
 

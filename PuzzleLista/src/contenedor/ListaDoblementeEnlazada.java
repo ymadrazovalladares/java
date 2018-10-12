@@ -1,12 +1,12 @@
 package contenedor;
 
-public class ListaDoblementeEnlazada
+public class ListaDoblementeEnlazada<Integer>
 {
     Nodo inicioLista;
     Nodo finalLista;
-    Integer totalAlmacenados;
+    int totalAlmacenados;
 
-    public Integer getTotalalmacenados()
+    public int getTotalalmacenados()
     {
         return this.totalAlmacenados;
     }
@@ -19,28 +19,37 @@ public class ListaDoblementeEnlazada
         totalAlmacenados =0;
     }
 
-    public void PushMatrix(Integer aMatrix[][])
+    public void PushMatrix(int aMatrix[][])
     {
+        inicioLista = new Nodo();
         inicioLista.setValor(aMatrix[0][0]);
-        Nodo newNodo = new Nodo(aMatrix[0][0]);
+        Nodo newNodo;
         inicioLista.setSuperior(null);
         inicioLista.setAnterior(null);
         Nodo temp = inicioLista;
         Nodo aux = new Nodo();
+        newNodo = new Nodo();
         for (int i = 0; i < aMatrix.length; i++)
         {
-            for (int j = 1; j <= aMatrix[0].length; j++)
+            if((i != 0) )
+            {
+                aux = Buscar(aMatrix[i-1][0]);
+                temp.setSuperior(aux);
+                aux.setInferior(temp);
+            }
+            for (int j = 1; j < aMatrix[0].length; j++)
             {
                 newNodo = new Nodo();
+               // newNodo.setValor(aMatrix[i][j]);
                 if(i ==0)
                 {
                     newNodo.setSuperior(null);
                 }
-                if(i ==aMatrix.length-1)
+                if(i ==aMatrix.length)
                 {
                     newNodo.setInferior(null);
                 }
-                if((i < aMatrix.length-1)&&(i > 0) )
+                if((i < aMatrix.length)&&(i > 0) )
                 {
                     aux = Buscar(aMatrix[i-1][j]);
                     newNodo.setSuperior(aux);
@@ -53,22 +62,27 @@ public class ListaDoblementeEnlazada
                 temp = temp.getSiguiente();
                 totalAlmacenados++;
             }
-            temp = temp.getInferior();
-
+            temp = Buscar(aMatrix[i][0]);
+           if((i+1) < aMatrix[0].length)
+             {
+               newNodo = new Nodo(aMatrix[i + 1][0]);
+               temp.setInferior(newNodo);
+               temp = temp.getInferior();
+             }
         }
         finalLista = newNodo;
 
     }
 
-   public  Integer[] getListaDoble()
+   public  int[] getListaDoble()
     {
 
         Nodo temporal = inicioLista;
-        Integer[] vector;
-        vector = new Integer[totalAlmacenados];
+        int[] vector;
+        vector = new int[totalAlmacenados];
 
 
-        Integer contador=0;
+        int  contador=0;
         while(temporal!=null)
         {
             vector[contador] = temporal.getValor();
@@ -79,13 +93,13 @@ public class ListaDoblementeEnlazada
         return (vector);
 
     }
-    public  Integer[] getListaDoble(Integer tipo)
+    public  int[] getListaDoble(int tipo)
     {
         Nodo temporal = inicioLista;
-        Integer[] vector;
-        vector = new Integer[totalAlmacenados];
+        int [] vector;
+        vector = new int[totalAlmacenados];
 
-        Integer contador=0;
+        int contador=0;
         switch (tipo)
         {
             case 1:
@@ -120,17 +134,17 @@ public class ListaDoblementeEnlazada
             return false;
     }
 
-    public Nodo Buscar(Integer valor)
+    public Nodo Buscar(int valor)
     {
         Nodo temporalX = inicioLista;
         Nodo temporalY = inicioLista;
         Nodo newNodo= new Nodo();
-        Integer cursor = 0;
+        int cursor = 0;
         while(temporalY !=null)
         {
             while(temporalX!=null)
             {
-                if (temporalX.getValor().compareTo(valor)==0)
+                if (temporalX.getValor() == valor)
                 {
                     cursor++;
                     return temporalX;
@@ -148,6 +162,23 @@ public class ListaDoblementeEnlazada
     {
         totalAlmacenados = 0;
         inicioLista = null;
+    }
+    public boolean CambiarNodos(int valor)
+    {
+      Nodo vacio = new Nodo();
+      vacio = Buscar(0);
+      Nodo cambio = new Nodo();
+      cambio = Buscar(valor);
+      int aux;
+      aux = vacio.getValor();
+      if((vacio.getSiguiente().getValor() == valor)||(vacio.getAnterior().getValor() == valor)||
+              (vacio.getSuperior().getValor() == valor)||(vacio.getInferior().getValor() == valor))
+        {
+           vacio.setValor(cambio.getValor());
+           cambio.setValor(aux);
+           return true;
+        }
+        return false;
     }
 
 }

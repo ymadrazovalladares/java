@@ -1,31 +1,18 @@
 package contenedor;
 
-import javafx.application.Application;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
-
-public  class JavaFxGamePrincipal extends Application {
+public  class JavaFxGamePrincipal  {
 
     public static void main(String args[]){
-        launch(args);
+        int tablero[][]= {
+                {    1,   2, 3,  4},
+                {   0, 5, 6,  7},
+                {   8,  9, 10,  11},
+                {   12,   13,  14, 15}   } ;
+        ListaDoblementeEnlazada aux = new ListaDoblementeEnlazada();
+        aux.PushMatrix(tablero);
+        aux.CambiarNodos(5);
 
     }
-
-
-    @Override
-    public void start(Stage primaryStage)  {
-        String tablero[][]= {
-                {    "a",   "b", "c",  "d"},
-                { null,  "f", "e",  "i"},
-                {   "o",  "p",  "p",  "k"},
-                {   "n",   "m",  "l", "j"}
-
-        } ;
-
-        JavaFxGameTablero javaFxGameTablero= new JavaFxGameTablero(tablero);
-        Scene scene = new Scene(javaFxGameTablero.getPane(),600,600);
-        primaryStage.setScene(scene);
-        primaryStage.show();
-    }
-
 }
+
+
