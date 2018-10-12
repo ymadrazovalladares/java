@@ -40,7 +40,6 @@ public class ListaDoblementeEnlazada<Integer>
             for (int j = 1; j < aMatrix[0].length; j++)
             {
                 newNodo = new Nodo();
-               // newNodo.setValor(aMatrix[i][j]);
                 if(i ==0)
                 {
                     newNodo.setSuperior(null);
@@ -61,6 +60,7 @@ public class ListaDoblementeEnlazada<Integer>
                 temp.setSiguiente(newNodo);
                 temp = temp.getSiguiente();
                 totalAlmacenados++;
+                finalLista = newNodo;
             }
             temp = Buscar(aMatrix[i][0]);
            if((i+1) < aMatrix[0].length)
@@ -70,7 +70,7 @@ public class ListaDoblementeEnlazada<Integer>
                temp = temp.getInferior();
              }
         }
-        finalLista = newNodo;
+
 
     }
 
