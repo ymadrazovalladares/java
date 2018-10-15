@@ -159,11 +159,12 @@ public class ListaDoblementeEnlazada
     }
 
 
-    public boolean CambiarNodos(Nodo valor)
+    public Integer CambiarNodos(Nodo valor)
     {
       Nodo vacio = Buscar(0);
       Integer aux;
       aux = vacio.getIdFicha();
+      Integer salida = valor.getIdFicha();
       if(((vacio.getSiguiente() != null)&&(vacio.getSiguiente().getIdFicha() == valor.getIdFicha()))||
               ((vacio.getAnterior() != null)&&(vacio.getAnterior().getIdFicha() == valor.getIdFicha()))||
               ((vacio.getSuperior() != null)&&(vacio.getSuperior().getIdFicha() == valor.getIdFicha()))||
@@ -171,12 +172,13 @@ public class ListaDoblementeEnlazada
         {
            vacio.setIdFicha(valor.getIdFicha());
            vacio.getButton().setText(String.valueOf(valor.getIdFicha()));
+           System.out.print(vacio.getButton().getText());
            valor.getButton().setText(String.valueOf(aux));
            valor.setIdFicha(aux);
 
-            return true;
+            return valor.getIdFicha();
         }
-        return false;
+        return salida;
     }
 
 }

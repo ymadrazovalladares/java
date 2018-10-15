@@ -29,26 +29,6 @@ public  class JavaFxGamePrincipal extends Application
     }
 
 
-
-        /*Integer tablero[][]= {
-                {    1,   2, 3,  4},
-                {   0, 5, 6,  7},
-                {   8,  9, 10,  11},
-                {   12,   13,  14, 15}   } ;
-        /*ListaDoblementeEnlazada aux = new ListaDoblementeEnlazada();
-        aux.PushMatrix(tablero);
-        aux.CambiarNodos(12);
-        int temp[][] = new int[aux.getTotalX()][aux.getTotalY()];
-        temp = aux.getListaDoble();
-        for(int i = 0; i < aux.getTotalX();i++)
-        {
-            for(int j = 0; j < aux.getTotalY();j++)
-            {
-                System.out.print(temp[i][j] + " ");
-            }
-            System.out.println("");
-        }*/
-
 }
 
 
