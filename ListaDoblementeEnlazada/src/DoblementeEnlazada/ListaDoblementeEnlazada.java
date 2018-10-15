@@ -28,6 +28,7 @@ public class ListaDoblementeEnlazada
         finalLista.setSiguiente(newnodo);
         newnodo.setAnterior(finalLista);       // se añade
         finalLista = newnodo;
+        totalAlmacenados++;
         return;
     }
 
@@ -64,6 +65,14 @@ public class ListaDoblementeEnlazada
             {
                 cargarAntesDe(valor, temp.getValor());
                 break;
+            }
+            else
+            {
+                if(temp == finalLista)
+                {
+                    cargarAlFinaldeLaLista(valor);
+                    break;
+                }
             }
             temp = temp.getSiguiente();
         }
@@ -114,10 +123,10 @@ public class ListaDoblementeEnlazada
         }
     }
 
-    public void cargarAntesDe(ListaDoblementeEnlazada listaESimpleDEnteraClase, Integer antesDe)
+    public void cargarAntesDe(ListaDoblementeEnlazada listaEDobleDEnteraClase, Integer antesDe)
     {
         Nodo temporal = inicioLista;
-        Nodo aux = new Nodo(listaESimpleDEnteraClase.inicioLista.getValor());
+        Nodo aux = listaEDobleDEnteraClase.inicioLista;
 
         if (inicioLista ==null)
         {
@@ -200,10 +209,21 @@ public class ListaDoblementeEnlazada
 
     }
 
-    public void cargarDespuesDe(ListaDoblementeEnlazada listaESimpleDEnteraClase, Integer despuesDe)
+    public void cargarListaOrdenada(ListaDoblementeEnlazada listaEDobleDEnteraClase)
+    {
+        Nodo aux = listaEDobleDEnteraClase.inicioLista;
+        for(int i = 0; i < listaEDobleDEnteraClase.totalAlmacenados; i++)
+        {
+            cargarOrdenadamente(aux.getValor());
+            aux = aux.getSiguiente();
+        }
+
+    }
+
+    public void cargarDespuesDe(ListaDoblementeEnlazada listaEDobleDEnteraClase, Integer despuesDe)
     {
         Nodo temporal = inicioLista;
-        Nodo aux = new Nodo(listaESimpleDEnteraClase.inicioLista.getValor());
+        Nodo aux = listaEDobleDEnteraClase.inicioLista;
 
         if (inicioLista == null)
         {
@@ -244,7 +264,8 @@ public class ListaDoblementeEnlazada
 
     }
 
-    public  Integer[] getListaDoble(){
+    public  Integer[] getListaDoble()
+    {
 
         Nodo temporal = inicioLista;
         Integer[] vector;

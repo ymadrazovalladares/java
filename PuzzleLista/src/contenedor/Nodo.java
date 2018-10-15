@@ -1,26 +1,106 @@
 package contenedor;
+import javafx.scene.control.Button;
 
 public class Nodo {
-    public int valor;
+   // public int valor;
     private Nodo siguiente;
     private Nodo anterior;
     private Nodo superior;
     private Nodo inferior;
+    private Integer idFicha;
+    private Button button;
+    private Integer posicionArregloX;
+    private Integer posicionArregloY;
+    // private JavaFxFicha aFicha;
 
-    Nodo(int valor) {
-        this.valor = valor;
+
+    public Nodo()
+    {
         this.siguiente = null;
         this.anterior = null;
         this.superior = null;
         this.inferior = null;
+        this.idFicha = 0;
+        this.button = null;
+        this.posicionArregloX = 0;
+        this.posicionArregloY = 0;
     }
-    Nodo() {
 
+    public Integer getIdFicha() {
+        return idFicha;
+    }
+    public Integer getIdFicha(Integer x, Integer y)
+    {
+        if((x==posicionArregloX)&&(y == posicionArregloY))
+           return idFicha;
+        else
+            return -1;
+    }
+
+    public void setIdFicha(Integer idFicha) {
+        this.idFicha = idFicha;
+    }
+
+    public Button getButton() {
+        return button;
+    }
+
+    public void setButton(Button button) {
+        this.button = button;
+    }
+
+    public Integer getPosicionArregloX() {
+        return posicionArregloX;
+    }
+
+    public void setPosicionArregloX(Integer posicionArregloX) {
+        this.posicionArregloX = posicionArregloX;
+    }
+
+    public Integer getPosicionArregloY() {
+        return posicionArregloY;
+    }
+
+    public void setPosicionArregloY(Integer posicionArregloY) {
+        this.posicionArregloY = posicionArregloY;
+    }
+
+   Nodo(Integer tableroX, Integer tableroY, Integer valor) {
+        //this.valor = valor;
+        //this.aFicha.setIdFicha( valor);
         this.siguiente = null;
         this.anterior = null;
         this.superior = null;
         this.inferior = null;
+       // this.idFicha = IdFicha;
+        if(valor==null)
+            button = new Button("0");
+        else
+            button = new Button(String.valueOf(valor));
+
+        int buttonSize = 100;
+        // button.setMinSize(buttonSize,buttonSize);
+        button.setPrefSize(buttonSize, buttonSize);
+        //button.setMaxSize(buttonSize,buttonSize);
+        button.setStyle(String.format("-fx-font-size: %dpx;", (int) (0.25 * buttonSize)));
+
+        this.posicionArregloX = 1 + tableroX;
+        this.posicionArregloY = 1 + tableroY;
+
+
+        posicionArregloX = posicionArregloX * 100;
+        posicionArregloY = posicionArregloY * 100;
+
+        button.setLayoutX(posicionArregloX);
+        button.setLayoutY(posicionArregloY);
     }
+   /* Nodo() {
+        this.idFicha = 0;
+        this.siguiente = null;
+        this.anterior = null;
+        this.superior = null;
+        this.inferior = null;
+    }*/
 
     public Nodo getSuperior() {
         return superior;
@@ -39,19 +119,18 @@ public class Nodo {
     }
 
     Nodo(Nodo valor) {
-        this.anterior = null;
-        this.superior = null;
-        this.inferior = null;
-        this.superior = null;
+        this.anterior.setAnterior(valor.getAnterior());
+        this.siguiente.setSiguiente(valor.getSiguiente());
+        this.inferior.setInferior(valor.getInferior());
+        this.superior.setSuperior(valor.getSuperior());
+
     }
 
-    public int getValor() {
-        return valor;
-    }
 
-    public void setValor(int valor) {
+
+   /* public void setValor(int valor) {
         this.valor = valor;
-    }
+    }*/
 
     public Nodo getSiguiente() {
         return siguiente;

@@ -8,9 +8,11 @@ public class Nodo {
   Nodo(Integer valor) {
       this.valor = valor;
       this.siguiente = null;
+      this.anterior = null;
   }
     Nodo(Nodo valor) {
         this.valor = valor.getValor();
+        this.anterior = valor.getAnterior();
         this.siguiente = valor.getSiguiente();
     }
 

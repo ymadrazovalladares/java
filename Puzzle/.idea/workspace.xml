@@ -60,13 +60,22 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="123468517">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/contenedor/JavaFxFicha.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="697">
+            <state relative-caret-position="747">
               <caret line="45" selection-start-line="45" selection-end-line="45" />
               <folding>
                 <element signature="e#1081#1082#0" expanded="true" />
@@ -89,16 +98,16 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/contenedor/JavaFxGameTablero.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1156">
-              <caret line="68" column="47" selection-start-line="68" selection-start-column="47" selection-end-line="68" selection-end-column="48" />
+            <state relative-caret-position="282">
+              <caret line="28" column="5" lean-forward="true" selection-start-line="16" selection-start-column="3" selection-end-line="28" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/contenedor/JavaFxGamePrincipal.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="289">
@@ -150,7 +159,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -173,6 +181,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -232,16 +242,18 @@
       <workItem from="1539302442042" duration="2403000" />
       <workItem from="1539371339008" duration="441000" />
       <workItem from="1539373047108" duration="602000" />
+      <workItem from="1539583533630" duration="159000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12266000" />
+    <option name="totallyTimeSpent" value="12425000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19730078" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19987147" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -567,7 +579,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/contenedor/JavaFxFicha.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
+        <state relative-caret-position="747">
           <caret line="45" selection-start-line="45" selection-end-line="45" />
           <folding>
             <element signature="e#1081#1082#0" expanded="true" />
@@ -589,13 +601,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/contenedor/JavaFxGameTablero.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1156">
-          <caret line="68" column="47" selection-start-line="68" selection-start-column="47" selection-end-line="68" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/contenedor/JavaFxGamePrincipal.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -603,6 +608,13 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/contenedor/JavaFxGameTablero.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="28" column="5" lean-forward="true" selection-start-line="16" selection-start-column="3" selection-end-line="28" selection-end-column="5" />
         </state>
       </provider>
     </entry>

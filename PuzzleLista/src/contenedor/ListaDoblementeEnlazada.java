@@ -1,34 +1,50 @@
 package contenedor;
 
-public class ListaDoblementeEnlazada<Integer>
+public class ListaDoblementeEnlazada
 {
     Nodo inicioLista;
     Nodo finalLista;
-    int totalAlmacenados;
+    int totalX;
+    int totalY;
 
-    public int getTotalalmacenados()
-    {
-        return this.totalAlmacenados;
+
+    public int getTotalX() {
+        return totalX;
     }
 
-
-    public ListaDoblementeEnlazada()
-    {
-        inicioLista =null;
-        finalLista =null;
-        totalAlmacenados =0;
+    public void setTotalX(int totalX) {
+        this.totalX = totalX;
     }
 
-    public void PushMatrix(int aMatrix[][])
+    public int getTotalY() {
+        return totalY;
+    }
+
+    public void setTotalY(int totalY) {
+        this.totalY = totalY;
+    }
+
+   public ListaDoblementeEnlazada()
     {
-        inicioLista = new Nodo();
-        inicioLista.setValor(aMatrix[0][0]);
+        inicioLista =new Nodo(0,0,0);;
+        finalLista =new Nodo(0,0,0);
+        totalX = 0;
+        totalY = 0;
+    }
+
+    public void PushMatrix(Integer aMatrix[][])
+    {
+        inicioLista = new Nodo(0,0,aMatrix[0][0]);;
+        inicioLista.setIdFicha(aMatrix[0][0]);
         Nodo newNodo;
         inicioLista.setSuperior(null);
         inicioLista.setAnterior(null);
         Nodo temp = inicioLista;
-        Nodo aux = new Nodo();
-        newNodo = new Nodo();
+        Nodo aux = new Nodo(0,0,aMatrix[0][0]);
+        newNodo = new Nodo(0,0,aMatrix[0][0]);
+        totalX = aMatrix.length;
+        totalY = aMatrix[0].length;
+        int jj = 0;
         for (int i = 0; i < aMatrix.length; i++)
         {
             if((i != 0) )
@@ -39,7 +55,7 @@ public class ListaDoblementeEnlazada<Integer>
             }
             for (int j = 1; j < aMatrix[0].length; j++)
             {
-                newNodo = new Nodo();
+                newNodo = new Nodo(i,j,aMatrix[i][j]);;
                 if(i ==0)
                 {
                     newNodo.setSuperior(null);
@@ -55,101 +71,85 @@ public class ListaDoblementeEnlazada<Integer>
                     aux.setInferior(newNodo);
                 }
 
-                newNodo.setValor(aMatrix[i][j]);
+                newNodo.setIdFicha(aMatrix[i][j]);
                 newNodo.setAnterior(temp);
                 temp.setSiguiente(newNodo);
                 temp = temp.getSiguiente();
-                totalAlmacenados++;
                 finalLista = newNodo;
+                jj = j;
             }
             temp = Buscar(aMatrix[i][0]);
-           if((i+1) < aMatrix[0].length)
-             {
-               newNodo = new Nodo(aMatrix[i + 1][0]);
-               temp.setInferior(newNodo);
-               temp = temp.getInferior();
-             }
+            if((i+1) < aMatrix[0].length)
+               {
+                 newNodo = new Nodo(i+1,0,aMatrix[i + 1][0]);
+                 newNodo.setIdFicha(aMatrix[i + 1][0]);
+                 temp.setInferior(newNodo);
+                 temp = temp.getInferior();
+               }
         }
+  }
 
-
-    }
-
-   public  int[] getListaDoble()
+   public  Integer[][] getListaDoble()
     {
-
-        Nodo temporal = inicioLista;
-        int[] vector;
-        vector = new int[totalAlmacenados];
-
-
-        int  contador=0;
-        while(temporal!=null)
+       Nodo temporal;
+       Nodo aux = inicioLista;
+       Integer vector[][] = new Integer[totalX][totalY];
+       int k=0;
+       int i=0;
+        while(aux!=null)
         {
-            vector[contador] = temporal.getValor();
-            contador++;
-            temporal= temporal.getSiguiente();
+            temporal = aux;
+            while (temporal != null)
+            {
+                vector[k][i] = temporal.getIdFicha();
+                k++;
+                temporal = temporal.getSiguiente();
+            }
+            i++;
+            k = 0;
+
+            aux = aux.getInferior();
         }
-
-        return (vector);
-
-    }
-    public  int[] getListaDoble(int tipo)
-    {
-        Nodo temporal = inicioLista;
-        int [] vector;
-        vector = new int[totalAlmacenados];
-
-        int contador=0;
-        switch (tipo)
-        {
-            case 1:
-                while(temporal!=null)
-                {
-                    vector[contador] = temporal.getValor();
-                    contador++;
-                    temporal= temporal.getSiguiente();
-                };
-                break;
-
-            default:
-                temporal = finalLista;
-
-                while(temporal!=null)
-                {
-                    vector[contador] = temporal.getValor();
-                    contador++;
-                    temporal= temporal.getAnterior();
-                };
-                break;
-        }
-
-        return (vector);
+        return vector;
     }
 
-    public boolean esVacia()
-    {
-        if(totalAlmacenados == 0)
-            return true;
-        else
-            return false;
-    }
-
-    public Nodo Buscar(int valor)
+    public Nodo Buscar(Integer valor)
     {
         Nodo temporalX = inicioLista;
         Nodo temporalY = inicioLista;
-        Nodo newNodo= new Nodo();
-        int cursor = 0;
+        Nodo newNodo= new Nodo(0,0,0);
         while(temporalY !=null)
         {
             while(temporalX!=null)
             {
-                if (temporalX.getValor() == valor)
+              if (temporalX.getIdFicha() == valor)
                 {
-                    cursor++;
                     return temporalX;
                 }
-                cursor++;
+                temporalX = temporalX.getSiguiente();
+            }
+            temporalY = temporalY.getInferior();
+            temporalX = temporalY;
+        }
+        return newNodo;
+    }
+    public Nodo BuscarPorPosicion(Nodo aNodo)
+    {
+        Nodo temporalX = inicioLista;
+        Nodo temporalY = inicioLista;
+        Nodo newNodo= new Nodo(0,0,0);;
+        int a,b,c,d;
+        while(temporalY !=null)
+        {
+            while(temporalX!=null)
+            {  a =temporalX.getPosicionArregloX();
+               b = aNodo.getPosicionArregloY();
+               c = temporalX.getPosicionArregloY();
+               d = aNodo.getPosicionArregloX();
+                if (( a== b)&& (c == d))
+                {
+                    return temporalX;
+                }
                 temporalX = temporalX.getSiguiente();
             }
             temporalY = temporalY.getInferior();
@@ -158,25 +158,23 @@ public class ListaDoblementeEnlazada<Integer>
         return newNodo;
     }
 
-    public void vaciarLista()
+
+    public boolean CambiarNodos(Nodo valor)
     {
-        totalAlmacenados = 0;
-        inicioLista = null;
-    }
-    public boolean CambiarNodos(int valor)
-    {
-      Nodo vacio = new Nodo();
-      vacio = Buscar(0);
-      Nodo cambio = new Nodo();
-      cambio = Buscar(valor);
-      int aux;
-      aux = vacio.getValor();
-      if((vacio.getSiguiente().getValor() == valor)||(vacio.getAnterior().getValor() == valor)||
-              (vacio.getSuperior().getValor() == valor)||(vacio.getInferior().getValor() == valor))
+      Nodo vacio = Buscar(0);
+      Integer aux;
+      aux = vacio.getIdFicha();
+      if(((vacio.getSiguiente() != null)&&(vacio.getSiguiente().getIdFicha() == valor.getIdFicha()))||
+              ((vacio.getAnterior() != null)&&(vacio.getAnterior().getIdFicha() == valor.getIdFicha()))||
+              ((vacio.getSuperior() != null)&&(vacio.getSuperior().getIdFicha() == valor.getIdFicha()))||
+              ((vacio.getInferior() != null)&&(vacio.getInferior().getIdFicha() == valor.getIdFicha())))
         {
-           vacio.setValor(cambio.getValor());
-           cambio.setValor(aux);
-           return true;
+           vacio.setIdFicha(valor.getIdFicha());
+           vacio.getButton().setText(String.valueOf(valor.getIdFicha()));
+           valor.getButton().setText(String.valueOf(aux));
+           valor.setIdFicha(aux);
+
+            return true;
         }
         return false;
     }
