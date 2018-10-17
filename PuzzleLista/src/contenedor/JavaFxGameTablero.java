@@ -43,6 +43,7 @@ public class JavaFxGameTablero {
         Integer temp[][] = new Integer[this.getTotalX()][this.getTotalX()];
         temp = this.getListaDoble();
         //Integer test = 0;
+
         for (Integer i=0; i<temp.length;i++)
             for (Integer j=0; j<temp[0].length;j++)
             {
@@ -75,7 +76,11 @@ public class JavaFxGameTablero {
             valor.getButton().setText(String.valueOf(aux));
             valor.setIdFicha(aux);
             jajavaFxFicha.getButton().setText("0");
-
+            jajavaFxFicha = vacio;
+            jajavaFxFicha.getButton().setOnMouseClicked(event ->
+            {
+                vacio.getButton().setText("1");
+            });
             return valor.getIdFicha();
         }
         return salida;
@@ -184,7 +189,7 @@ public class JavaFxGameTablero {
         return newNodo;
     }
 
-    public Nodo BuscarPorPosicion(Nodo aNodo)
+   public Nodo BuscarPorPosicion(Integer xx, Integer yy)
     {
         Nodo temporalX = inicioLista;
         Nodo temporalY = inicioLista;
@@ -194,9 +199,9 @@ public class JavaFxGameTablero {
         {
             while(temporalX!=null)
             {  a =temporalX.getPosicionArregloX();
-                b = aNodo.getPosicionArregloY();
+                b = yy;
                 c = temporalX.getPosicionArregloY();
-                d = aNodo.getPosicionArregloX();
+                d = xx;
                 if (( a== b)&& (c == d))
                 {
                     return temporalX;
