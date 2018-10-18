@@ -77,10 +77,7 @@ public class JavaFxGameTablero {
             valor.setIdFicha(aux);
             jajavaFxFicha.getButton().setText("0");
             jajavaFxFicha = vacio;
-            jajavaFxFicha.getButton().setOnMouseClicked(event ->
-            {
-                vacio.getButton().setText("1");
-            });
+
             return valor.getIdFicha();
         }
         return salida;
