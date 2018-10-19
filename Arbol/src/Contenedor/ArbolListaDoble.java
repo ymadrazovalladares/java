@@ -64,12 +64,11 @@ public class ArbolListaDoble
 	    }
 
 
-	    public void PostOrden()    //RID
+	    public void PostOrden()    //IDR
 	    {
-	     	//Integer rid []= new Integer[100];
-		    Preorden(this.inicioLista);
+	       PostOrden(this.inicioLista);
     	}
-	    public void PostOrden(Nodo raiz)    //RID
+	    public void PostOrden(Nodo raiz)    //IDR
 	    {
 		   if(raiz.getHojaIzquierda() == null)
 		    	return;
@@ -81,7 +80,6 @@ public class ArbolListaDoble
 
 	    public void Preorden()    //RID
 	    {
-	     	//Integer rid []= new Integer[100];
 		    Preorden(this.inicioLista);
      	}
 	    public void Preorden(Nodo raiz)    //RID
@@ -93,5 +91,20 @@ public class ArbolListaDoble
 		   System.out.print(raiz.getValor() + " ");
 		   Preorden(raiz.getHojaIzquierda());
 		   Preorden(raiz.getHojaDerecha());
+    	}
+	    public void InOrden()    //IRD
+	    {
+	    	//Integer rid []= new Integer[100];
+	    	InOrden(this.inicioLista);
+	    }
+	    public void InOrden(Nodo raiz)    //IRD
+	    {
+	    	if(raiz.getHojaIzquierda() == null)
+	    		return;
+
+		      System.out.print(raiz.getHojaIzquierda().getValor() + " ");
+			  InOrden(raiz);
+		      InOrden(raiz.getHojaDerecha());
+
     	}
 }
