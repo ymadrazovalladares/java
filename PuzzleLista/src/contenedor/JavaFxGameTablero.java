@@ -5,10 +5,8 @@ import javafx.scene.layout.Pane;
 public class JavaFxGameTablero {
     Pane pane;
     Nodo inicioLista;
-    Nodo finalLista;
     int totalX;
     int totalY;
-   // ListaDoblementeEnlazada tablero = new ListaDoblementeEnlazada();
 
     public int getTotalX() {
         return totalX;
@@ -30,8 +28,7 @@ public class JavaFxGameTablero {
     public JavaFxGameTablero(Integer datostablero[][])
     {
         pane = new Pane();
-        inicioLista =new Nodo(0,0,0);;
-        finalLista =new Nodo(0,0,0);
+        inicioLista =new Nodo();
         totalX = 0;
         totalY = 0;
         setFichas(datostablero);
@@ -42,45 +39,105 @@ public class JavaFxGameTablero {
         this.PushMatrix(atablero);
         Integer temp[][] = new Integer[this.getTotalX()][this.getTotalX()];
         temp = this.getListaDoble();
-        //Integer test = 0;
 
         for (Integer i=0; i<temp.length;i++)
             for (Integer j=0; j<temp[0].length;j++)
             {
 
-                Nodo javaFxFicha = new Nodo(i, j, temp[i][j]);
+                Nodo javaFxFicha = GetFicha(i,j);
                 javaFxFicha.getButton().setOnMouseClicked(event ->
                 {
-                  CambiarNodos(Buscar(Integer.parseInt(javaFxFicha.getButton().getText())),javaFxFicha);
-
+                  CambiarNodos(javaFxFicha);
+                  if(Ganador() == true)
+                       Regalo();
                 }
                 );
 
                pane.getChildren().add(javaFxFicha.getButton());
             }
     }
-    public Integer CambiarNodos(Nodo valor,Nodo jajavaFxFicha)
-    {
-        Nodo vacio = Buscar(0);
-        Integer aux;
-        aux = vacio.getIdFicha();
-        Integer salida = valor.getIdFicha();
-        if(((vacio.getSiguiente() != null)&&(vacio.getSiguiente().getIdFicha() == valor.getIdFicha()))||
-                ((vacio.getAnterior() != null)&&(vacio.getAnterior().getIdFicha() == valor.getIdFicha()))||
-                ((vacio.getSuperior() != null)&&(vacio.getSuperior().getIdFicha() == valor.getIdFicha()))||
-                ((vacio.getInferior() != null)&&(vacio.getInferior().getIdFicha() == valor.getIdFicha())))
-        {
-            vacio.setIdFicha(valor.getIdFicha());
-            vacio.getButton().setText(String.valueOf(valor.getIdFicha()));
-            System.out.print(vacio.getButton().getText());
-            valor.getButton().setText(String.valueOf(aux));
-            valor.setIdFicha(aux);
-            jajavaFxFicha.getButton().setText("0");
-            jajavaFxFicha = vacio;
 
-            return valor.getIdFicha();
+    public boolean Ganador()
+    {
+        Nodo temp = new Nodo();
+        temp = inicioLista;
+        Nodo temp1 = new Nodo();
+        temp1 = inicioLista;
+
+        for (Integer i=1; i<=totalY;i++)
+        {
+            for (Integer j = 1; j <= totalX; j++)
+            {
+                if((i == totalY)&&(j == totalX))
+                    return true;
+                if(temp.getIdFicha() != (totalX*(i-1)) + j)
+                    return false;
+                temp = temp.getSiguiente();
+            }
+            temp1 = temp1.getInferior();
+            temp = temp1;
         }
-        return salida;
+        return true;
+    }
+
+    public void Regalo()
+    {
+        Nodo temp = new Nodo();
+        temp = inicioLista;
+        Nodo temp1 = new Nodo();
+        temp1 = inicioLista;
+
+        for (Integer i=1; i<=totalY;i++)
+        {
+            for (Integer j = 1; j <= totalX; j++)
+            {
+                temp.setIdFicha(0);
+                temp.getButton().setText("0");
+                temp = temp.getSiguiente();
+            }
+            temp1 = temp1.getInferior();
+            temp = temp1;
+        }
+
+    }
+
+    public  Nodo GetFicha(int a, int b)
+    {
+        Nodo temp = new Nodo();
+        temp = inicioLista;
+        Nodo temp1 = new Nodo();
+        temp1 = inicioLista;
+
+        for (Integer i=0; i<totalX;i++)
+        {
+            for (Integer j = 0; j < totalY; j++) {
+                if ((i == a) && (j == b))
+                    return temp;
+                temp = temp.getSiguiente();
+            }
+            temp1 = temp1.getInferior();
+            temp = temp1;
+        }
+        return null;
+    }
+
+    public void CambiarNodos(Nodo jajavaFxFicha)
+    {
+
+        Integer aux;
+        Nodo vacio = new Nodo();
+        vacio = Buscar(0);
+        if(((jajavaFxFicha.getSiguiente() != null)&&(jajavaFxFicha.getSiguiente().getIdFicha() == 0))||
+                ((jajavaFxFicha.getAnterior() != null)&&(jajavaFxFicha.getAnterior().getIdFicha() == 0))||
+                ((jajavaFxFicha.getSuperior() != null)&&(jajavaFxFicha.getSuperior().getIdFicha() == 0))||
+                ((jajavaFxFicha.getInferior() != null)&&(jajavaFxFicha.getInferior().getIdFicha() == 0)))
+        {
+            vacio.setIdFicha(jajavaFxFicha.getIdFicha());
+            vacio.getButton().setText(String.valueOf(jajavaFxFicha.getIdFicha()));
+            jajavaFxFicha.getButton().setText(String.valueOf(0));
+            jajavaFxFicha.setIdFicha(0);
+             }
+
     }
 
     public void PushMatrix(Integer aMatrix[][])
@@ -126,7 +183,6 @@ public class JavaFxGameTablero {
                 newNodo.setAnterior(temp);
                 temp.setSiguiente(newNodo);
                 temp = temp.getSiguiente();
-                finalLista = newNodo;
                 jj = j;
             }
             temp = Buscar(aMatrix[i][0]);
@@ -186,7 +242,7 @@ public class JavaFxGameTablero {
         return newNodo;
     }
 
-   public Nodo BuscarPorPosicion(Integer xx, Integer yy)
+   /*public Nodo BuscarPorPosicion(Integer xx, Integer yy)
     {
         Nodo temporalX = inicioLista;
         Nodo temporalY = inicioLista;
@@ -209,7 +265,7 @@ public class JavaFxGameTablero {
             temporalX = temporalY;
         }
         return newNodo;
-    }
+    }*/
 
     public Pane getPane() {
         return pane;

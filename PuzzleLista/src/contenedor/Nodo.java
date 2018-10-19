@@ -65,14 +65,14 @@ public class Nodo {
         this.posicionArregloY = posicionArregloY;
     }
 
-   Nodo(Integer tableroX, Integer tableroY, Integer valor) {
+   Nodo(Integer tableroY, Integer tableroX, Integer valor) {
         //this.valor = valor;
-        //this.aFicha.setIdFicha( valor);
+        this.idFicha = valor;
         this.siguiente = null;
         this.anterior = null;
         this.superior = null;
         this.inferior = null;
-       // this.idFicha = IdFicha;
+
         if(valor==null)
             button = new Button("0");
         else
@@ -87,20 +87,13 @@ public class Nodo {
         this.posicionArregloX = 1 + tableroX;
         this.posicionArregloY = 1 + tableroY;
 
-
         posicionArregloX = posicionArregloX * 100;
         posicionArregloY = posicionArregloY * 100;
 
         button.setLayoutX(posicionArregloX);
         button.setLayoutY(posicionArregloY);
     }
-   /* Nodo() {
-        this.idFicha = 0;
-        this.siguiente = null;
-        this.anterior = null;
-        this.superior = null;
-        this.inferior = null;
-    }*/
+
 
     public Nodo getSuperior() {
         return superior;
@@ -125,12 +118,6 @@ public class Nodo {
         this.superior.setSuperior(valor.getSuperior());
 
     }
-
-
-
-   /* public void setValor(int valor) {
-        this.valor = valor;
-    }*/
 
     public Nodo getSiguiente() {
         return siguiente;
