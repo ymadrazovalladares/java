@@ -3,9 +3,11 @@ package Contenedor;
 public class ArbolListaDoble 
 {
 	 private Nodo inicioLista;
+	 private Nodo finalLista;
 	 
 	    public ArbolListaDoble( int valor ) {
 	        this.inicioLista = new Nodo( valor );
+			this.finalLista = inicioLista;
 	    }
 	 
 	    public ArbolListaDoble( Nodo raiz ) {
@@ -25,6 +27,7 @@ public class ArbolListaDoble
 	       Nodo temp = new Nodo(inicioLista);
 	       temp = inicioLista;
 		   Nodo nodo = new Nodo(valor);
+
 	       if(inicioLista == null)
 		   {
 		   	inicioLista = nodo;
@@ -39,8 +42,9 @@ public class ArbolListaDoble
 				{
 					temp.setHojaDerecha(nodo);
 					nodo.setPadre(temp);
-					temp.setSiguiente(nodo);
-					nodo.setAnterior(temp);
+					finalLista.setSiguiente(nodo);
+					nodo.setAnterior(finalLista);
+					finalLista = finalLista.getSiguiente();
 					return;
 				}
 				temp = temp.getHojaDerecha();
@@ -51,12 +55,16 @@ public class ArbolListaDoble
 					if(temp.getValor() == nodo.getValor())
 					{
 						System.out.print("El nodo" + nodo.getValor()+" existe en el arbol");
+						temp.setSiguiente(null);
 						return;
 					}
 					if (temp.getHojaIzquierda() == null)
 					{
 						temp.setHojaIzquierda(nodo);
 						nodo.setPadre(temp);
+						finalLista.setSiguiente(nodo);
+						nodo.setAnterior(finalLista);
+						finalLista = finalLista.getSiguiente();
 						return;
 					}
 					temp = temp.getHojaIzquierda();
@@ -109,4 +117,15 @@ public class ArbolListaDoble
 			  InOrden(raiz.getHojaDerecha());
 
     	}
+    	public  void GetLista()
+		{
+			Nodo temp = new Nodo(0);
+			temp = inicioLista;
+
+			while (temp != null)
+			{
+				System.out.print(temp.getValor() + " ");
+				temp = temp.getSiguiente();
+			}
+		}
 }

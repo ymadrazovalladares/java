@@ -35,5 +35,8 @@ public class Principal
         System.out.println();
         System.out.println("Recorrido Preorden");
         aArbolListaEnlazada.PostOrden();
+		System.out.println();
+		System.out.println("Recorrido de la lista por el puntero siguiente");
+		aArbolListaEnlazada.GetLista();
 	}
 }
