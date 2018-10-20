@@ -39,6 +39,8 @@ public class ArbolListaDoble
 				{
 					temp.setHojaDerecha(nodo);
 					nodo.setPadre(temp);
+					temp.setSiguiente(nodo);
+					nodo.setAnterior(temp);
 					return;
 				}
 				temp = temp.getHojaDerecha();
@@ -70,12 +72,12 @@ public class ArbolListaDoble
     	}
 	    public void PostOrden(Nodo raiz)    //IDR
 	    {
-		   if(raiz.getHojaIzquierda() == null)
+		   if(raiz== null)
 		    	return;
 
-	       System.out.print(raiz.getHojaIzquierda().getValor() + " ");
+		   PostOrden(raiz.getHojaIzquierda());
 		   PostOrden(raiz.getHojaDerecha());
-		   PostOrden(raiz);
+		   System.out.print(raiz.getValor() + " ");
 	    }
 
 	    public void Preorden()    //RID
@@ -99,12 +101,12 @@ public class ArbolListaDoble
 	    }
 	    public void InOrden(Nodo raiz)    //IRD
 	    {
-	    	if(raiz.getHojaIzquierda() == null)
+	    	if(raiz == null)
 	    		return;
 
-		      System.out.print(raiz.getHojaIzquierda().getValor() + " ");
-			  InOrden(raiz);
-		      InOrden(raiz.getHojaDerecha());
+			  InOrden(raiz.getHojaIzquierda());
+		      System.out.print(raiz.getValor() + " ");
+			  InOrden(raiz.getHojaDerecha());
 
     	}
 }

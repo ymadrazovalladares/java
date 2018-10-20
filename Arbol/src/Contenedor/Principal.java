@@ -31,9 +31,9 @@ public class Principal
 		aArbolListaEnlazada.Preorden();
         System.out.println();
         System.out.println("Recorrido InOrden");
-        //aArbolListaEnlazada.InOrden();
+        aArbolListaEnlazada.InOrden();
         System.out.println();
         System.out.println("Recorrido Preorden");
-        //aArbolListaEnlazada.PostOrden();
+        aArbolListaEnlazada.PostOrden();
 	}
 }
