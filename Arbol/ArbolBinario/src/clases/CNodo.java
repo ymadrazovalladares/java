@@ -12,7 +12,12 @@ public class CNodo{
         hDer=null;
         padre =null;
     }
+    public CNodo( ){
 
+        hIzq=null;
+        hDer=null;
+        padre =null;
+    }
 
     public CNodo getPadre() {
         return padre;

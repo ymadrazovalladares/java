@@ -117,31 +117,62 @@ public class Arbol {
     }
     public void Eliminar(CNodo nodoEliminar)
     {
-        CNodo padre = nodoEliminar.getPadre();
+        CNodo padre = new CNodo();
+        if(nodoEliminar != getRaiz())
+           padre = nodoEliminar.getPadre();
 
-        if((nodoEliminar == padre.gethDer())&&(nodoEliminar.gethIzq() == null)&&(nodoEliminar.gethDer() == null))
+        if(((nodoEliminar == padre.gethDer())||(nodoEliminar == raiz))&&(nodoEliminar.gethIzq() == null)&&(nodoEliminar.gethDer() == null))
         {
+            if(nodoEliminar == raiz)
+            {
+                padre = null;
+                raiz = null;
+                nodoEliminar = null;
+                return;
+            }
             padre.sethDer(null);
             nodoEliminar = null;
             return;
         }
-        if((nodoEliminar == padre.gethIzq())&&(nodoEliminar.gethIzq() == null)&&(nodoEliminar.gethDer() == null))
+        if(((nodoEliminar == padre.gethDer())||(nodoEliminar == raiz))&&(nodoEliminar.gethIzq() == null)&&(nodoEliminar.gethDer() == null))
         {
+            if(nodoEliminar == raiz)
+            {
+                padre = null;
+                raiz = null;
+                nodoEliminar = null;
+                return;
+            }
             padre.sethIzq(null);
             nodoEliminar = null;
             return;
         }
         CNodo subarbol;
-        if((nodoEliminar == padre.gethIzq())&&(nodoEliminar.gethIzq() != null)&&(nodoEliminar.gethDer() == null))
+        if(((nodoEliminar == padre.gethDer())||(nodoEliminar == raiz))&&(nodoEliminar.gethIzq() != null)&&(nodoEliminar.gethDer() == null))
         {
+            if(nodoEliminar == raiz)
+            {
+                padre = null;
+                raiz = nodoEliminar.gethIzq();
+                nodoEliminar = null;
+                return;
+            }
+
             subarbol= nodoEliminar.gethIzq();
             padre.sethIzq(subarbol);
             subarbol.setPadre(padre);
             nodoEliminar = null;
             return;
         }
-        if((nodoEliminar == padre.gethDer())&&(nodoEliminar.gethIzq() == null)&&(nodoEliminar.gethDer() != null))
+        if(((nodoEliminar == padre.gethDer())||(nodoEliminar == raiz))&&(nodoEliminar.gethIzq() == null)&&(nodoEliminar.gethDer() != null))
         {
+            if(nodoEliminar == raiz)
+            {
+                padre = null;
+                raiz = nodoEliminar.gethDer();
+                nodoEliminar = null;
+                return;
+            }
             subarbol= nodoEliminar.gethDer();
             padre.sethDer(subarbol);
             subarbol.setPadre(padre);
