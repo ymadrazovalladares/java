@@ -148,9 +148,9 @@ public class Arbol {
             nodoEliminar = null;
             return;
         }
-   /// nodo con los dos hijos recorrido por el hijo izq
+   /// nodo con los dos hijos recorrido por el metodo del predecesor
         CNodo temp = nodoEliminar;
-        if((nodoEliminar == padre.gethIzq())&&(nodoEliminar.gethIzq() != null)&&(nodoEliminar.gethDer() != null))
+       /* if((nodoEliminar.gethIzq() != null)&&(nodoEliminar.gethDer() != null))
         {
             temp = temp.gethIzq();
 
@@ -161,9 +161,9 @@ public class Arbol {
             nodoEliminar.setValor(temp.getValor());
             Eliminar(temp);
             return;
-        }
-  /// nodo con los dos hijos recorrido por el hijo der
-        if((nodoEliminar == padre.gethDer())&&(nodoEliminar.gethIzq() != null)&&(nodoEliminar.gethDer() != null))
+        }*/
+  ///  nodo con los dos hijos recorrido por el metodo del sucesor
+        if((nodoEliminar.gethIzq() != null)&&(nodoEliminar.gethDer() != null))
         {
             temp = temp.gethDer();
 
