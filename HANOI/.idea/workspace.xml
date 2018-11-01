@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="974135f0-66fb-4fcc-8d0e-20a29b0287ca" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/contenedor/Hanoi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/contenedor/MIPila.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/contenedor/UsaHanoi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Arbol/ArbolBinario.rar" beforeDir="false" afterPath="$PROJECT_DIR$/../Arbol/ArbolBinario.rar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Arbol/ArbolBinario/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Arbol/ArbolBinario/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="974135f0-66fb-4fcc-8d0e-20a29b0287ca" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,7 +13,7 @@
     <session id="-1748738065">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.opened" value="2" />
@@ -72,8 +64,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/contenedor/UsaHanoi.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
+            <state relative-caret-position="391">
+              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
             </state>
           </provider>
         </entry>
@@ -106,7 +98,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="10" />
     <option name="y" value="20" />
     <option name="width" value="1260" />
@@ -195,12 +187,12 @@
       <option name="presentableId" value="Default" />
       <updated>1540583695034</updated>
       <workItem from="1540583696595" duration="1799000" />
-      <workItem from="1540585748858" duration="599000" />
+      <workItem from="1540585748858" duration="1275000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2398000" />
+    <option name="totallyTimeSpent" value="3074000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -259,8 +251,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/contenedor/UsaHanoi.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="391">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
         </state>
       </provider>
     </entry>
