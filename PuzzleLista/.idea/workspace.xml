@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="025a5752-672c-40a0-ae32-c48586055dd5" name="Default Changelist" comment="" />
+    <list default="true" id="025a5752-672c-40a0-ae32-c48586055dd5" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../ajedrez/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ajedrez/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ajedrez/out/production/Puzzle/contenedor/JavaFxFicha.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ajedrez/out/production/Puzzle/contenedor/JavaFxFicha.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ajedrez/out/production/Puzzle/contenedor/JavaFxGamePrincipal.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ajedrez/out/production/Puzzle/contenedor/JavaFxGamePrincipal.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ajedrez/out/production/Puzzle/contenedor/JavaFxGameTablero.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ajedrez/out/production/Puzzle/contenedor/JavaFxGameTablero.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ajedrez/src/contenedor/JavaFxFicha.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ajedrez/src/contenedor/JavaFxFicha.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ajedrez/src/contenedor/JavaFxGamePrincipal.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ajedrez/src/contenedor/JavaFxGamePrincipal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ajedrez/src/contenedor/JavaFxGameTablero.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ajedrez/src/contenedor/JavaFxGameTablero.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -60,7 +68,8 @@
           <entry key="project.closed" value="2" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.2" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.open.time.3" value="1" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -122,11 +131,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/contenedor/Nodo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="335">
-              <caret line="113" column="22" lean-forward="true" selection-start-line="113" selection-start-column="22" selection-end-line="113" selection-end-column="22" />
+            <state relative-caret-position="17">
+              <caret line="67" column="7" selection-start-line="67" selection-start-column="3" selection-end-line="67" selection-end-column="7" />
               <folding>
                 <element signature="e#687#688#0" expanded="true" />
                 <element signature="e#717#718#0" expanded="true" />
@@ -160,8 +169,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/contenedor/JavaFxGamePrincipal.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="30" selection-start-line="30" selection-end-line="30" />
+            <state relative-caret-position="182">
+              <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="22" selection-end-column="11" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -169,11 +178,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/contenedor/JavaFxGameTablero.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2873">
-              <caret line="185" column="23" lean-forward="true" selection-start-line="185" selection-start-column="23" selection-end-line="185" selection-end-column="23" />
+            <state relative-caret-position="348">
+              <caret line="53" column="18" lean-forward="true" selection-start-line="53" selection-start-column="18" selection-end-line="53" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -201,10 +210,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="100" />
-    <option name="y" value="20" />
-    <option name="width" value="1400" />
-    <option name="height" value="820" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1616" />
+    <option name="height" value="876" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -236,7 +245,6 @@
       </pane>
       <pane id="Scope" />
       <pane id="PackagesPane" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -244,7 +252,7 @@
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539927400816" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ajedrez" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.gutterIcons" />
@@ -306,16 +314,18 @@
       <workItem from="1539927900234" duration="1782000" />
       <workItem from="1539929730483" duration="962000" />
       <workItem from="1539931606697" duration="8000" />
+      <workItem from="1541536831754" duration="1766000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79855000" />
+    <option name="totallyTimeSpent" value="81621000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19537275" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19794345" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -324,7 +334,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32974428" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.20592193" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.20592193" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.20053835" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -477,8 +487,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/contenedor/Nodo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="113" column="22" lean-forward="true" selection-start-line="113" selection-start-column="22" selection-end-line="113" selection-end-column="22" />
+        <state relative-caret-position="17">
+          <caret line="67" column="7" selection-start-line="67" selection-start-column="3" selection-end-line="67" selection-end-column="7" />
           <folding>
             <element signature="e#687#688#0" expanded="true" />
             <element signature="e#717#718#0" expanded="true" />
@@ -510,8 +520,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/contenedor/JavaFxGamePrincipal.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
+        <state relative-caret-position="182">
+          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="22" selection-end-column="11" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -520,8 +530,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/contenedor/JavaFxGameTablero.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2873">
-          <caret line="185" column="23" lean-forward="true" selection-start-line="185" selection-start-column="23" selection-end-line="185" selection-end-column="23" />
+        <state relative-caret-position="348">
+          <caret line="53" column="18" lean-forward="true" selection-start-line="53" selection-start-column="18" selection-end-line="53" selection-end-column="18" />
         </state>
       </provider>
     </entry>

@@ -14,19 +14,9 @@ public  class JavaFxGamePrincipal extends Application {
 
     @Override
     public void start(Stage primaryStage)  {
-        String tablero[][]= {
-                {   "","","","","","","",""},
-                {   "","","","","","","",""},
-                {   "","","","","","","",""},
-                {   "","","","","","","",""},
-                {   "","","","","","","",""},
-                {   "","","","","","","",""},
-                {   "","","","","","","",""},
-                {   "","","","","","","",""}
 
-        } ;
 
-        JavaFxGameTablero javaFxGameTablero= new JavaFxGameTablero(tablero);
+        JavaFxGameTablero javaFxGameTablero= new JavaFxGameTablero();
         Scene scene = new Scene(javaFxGameTablero.getPane(),800,800);
         primaryStage.setScene(scene);
         primaryStage.show();
