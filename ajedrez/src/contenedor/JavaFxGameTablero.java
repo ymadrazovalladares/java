@@ -149,6 +149,74 @@ public class JavaFxGameTablero {
             MovimientoTorre(x,y);
         if(this.tablero[x][y].getFicha().getIdFicha() == "Alfil")
             MovimientoAlfil(x,y);
+        if(this.tablero[x][y].getFicha().getIdFicha() == "Reina")
+        {
+            MovimientoAlfil(x,y);
+            MovimientoTorre(x,y);
+        }
+        if(this.tablero[x][y].getFicha().getIdFicha() == "Rey")
+            MovimientoRey(x,y);
+    }
+
+    public void MovimientoRey(int x, int y)
+    {
+        if(x+1<8)
+        {
+            if(this.tablero[x+1][y].getFicha().getIdFicha() == "" ||
+                (this.tablero[x+1][y].getFicha().getIdFicha() != "" &&
+                        this.tablero[x+1][y].getFicha().getJugador() != this.tablero[x][y].getFicha().getJugador()))
+               this.tablero[x+1][y].Sombrear(this.tablero[x][y].getFicha().getJugador());
+        }
+        if(y+1<8)
+        {
+            if(this.tablero[x][y+1].getFicha().getIdFicha() == "" ||
+                    (this.tablero[x][y+1].getFicha().getIdFicha() != "" &&
+                            this.tablero[x][y+1].getFicha().getJugador() != this.tablero[x][y].getFicha().getJugador()))
+                this.tablero[x][y+1].Sombrear(this.tablero[x][y].getFicha().getJugador());
+        }
+        if(x-1>=0 )
+          {
+            if (this.tablero[x - 1][y].getFicha().getIdFicha() == "" ||
+                    (this.tablero[x - 1][y].getFicha().getIdFicha() != "" &&
+                            this.tablero[x - 1][y].getFicha().getJugador() != this.tablero[x][y].getFicha().getJugador()))
+                this.tablero[x - 1][y].Sombrear(this.tablero[x][y].getFicha().getJugador());
+          }
+          if(y-1>=0)
+          {
+              if(this.tablero[x][y-1].getFicha().getIdFicha() == "" ||
+                      (this.tablero[x][y-1].getFicha().getIdFicha() != "" &&
+                              this.tablero[x][y-1].getFicha().getJugador() != this.tablero[x][y].getFicha().getJugador()))
+                   this.tablero[x][y-1].Sombrear(this.tablero[x][y].getFicha().getJugador());
+          }
+        if(x+1 < 8 && y+1 < 8)
+        {
+            if(this.tablero[x+1][y+1].getFicha().getIdFicha() == "" ||
+                    (this.tablero[x+1][y+1].getFicha().getIdFicha() != "" &&
+                            this.tablero[x+1][y+1].getFicha().getJugador() != this.tablero[x][y].getFicha().getJugador()))
+                this.tablero[x+1][y+1].Sombrear(this.tablero[x][y].getFicha().getJugador());
+        }
+        if(x+1 < 8 && y-1 >= 0)
+        {
+            if(this.tablero[x+1][y-1].getFicha().getIdFicha() == "" ||
+                    (this.tablero[x+1][y-1].getFicha().getIdFicha() != "" &&
+                            this.tablero[x+1][y-1].getFicha().getJugador() != this.tablero[x][y].getFicha().getJugador()))
+                this.tablero[x+1][y-1].Sombrear(this.tablero[x][y].getFicha().getJugador());
+        }
+        if(x-1 >= 0 && y+1 < 8)
+        {
+            if(this.tablero[x-1][y+1].getFicha().getIdFicha() == "" ||
+                    (this.tablero[x-1][y+1].getFicha().getIdFicha() != "" &&
+                            this.tablero[x-1][y+1].getFicha().getJugador() != this.tablero[x][y].getFicha().getJugador()))
+                this.tablero[x-1][y+1].Sombrear(this.tablero[x][y].getFicha().getJugador());
+        }
+        if(x-1 >= 0 && y-1 >= 0)
+        {
+            if(this.tablero[x-1][y-1].getFicha().getIdFicha() == "" ||
+                    (this.tablero[x-1][y-1].getFicha().getIdFicha() != "" &&
+                            this.tablero[x-1][y-1].getFicha().getJugador() != this.tablero[x][y].getFicha().getJugador()))
+                this.tablero[x-1][y-1].Sombrear(this.tablero[x][y].getFicha().getJugador());
+        }
+
     }
 
     public void MovimientoAlfil(int x, int y)

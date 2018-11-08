@@ -111,12 +111,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="1842" />
+          <entry key="java" value="2229" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="1842" />
+          <entry key="JAVA" value="2229" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -137,12 +137,12 @@
         <entry file="file://$PROJECT_DIR$/src/contenedor/JavaFxFicha.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="131">
-              <caret line="25" selection-start-line="25" selection-end-line="25" />
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
               <folding>
-                <element signature="e#265#266#0" expanded="true" />
                 <element signature="e#295#296#0" expanded="true" />
                 <element signature="e#341#342#0" expanded="true" />
                 <element signature="e#379#380#0" expanded="true" />
+                <element signature="e#413#414#0" expanded="true" />
                 <element signature="e#443#444#0" expanded="true" />
                 <element signature="e#489#490#0" expanded="true" />
                 <element signature="e#527#528#0" expanded="true" />
@@ -154,8 +154,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/contenedor/Casilla.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="131">
-              <caret line="145" selection-start-line="145" selection-end-line="145" />
+            <state relative-caret-position="97">
+              <caret line="143" lean-forward="true" selection-start-line="143" selection-end-line="143" />
               <folding>
                 <element signature="e#2614#2615#0" expanded="true" />
                 <element signature="e#2642#2643#0" expanded="true" />
@@ -177,6 +177,7 @@
                 <element signature="e#3613#3614#0" expanded="true" />
                 <element signature="e#3664#3665#0" expanded="true" />
                 <element signature="e#3706#3707#0" expanded="true" />
+                <element signature="e#3743#3744#0" expanded="true" />
                 <element signature="e#3771#3772#0" expanded="true" />
                 <element signature="e#3818#3819#0" expanded="true" />
                 <element signature="e#3852#3853#0" expanded="true" />
@@ -206,19 +207,19 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/contenedor/JavaFxGameTablero.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="269">
-              <caret line="241" column="17" selection-start-line="241" selection-start-column="17" selection-end-line="241" selection-end-column="17" />
+            <state relative-caret-position="501">
+              <caret line="221" column="36" lean-forward="true" selection-start-line="221" selection-start-column="36" selection-end-line="221" selection-end-column="36" />
               <folding>
                 <element signature="method#MovimientoAlfil#0;class#JavaFxGameTablero#0" />
                 <element signature="method#RestaurarColores#0;class#JavaFxGameTablero#0" />
-                <element signature="e#13718#13719#0" expanded="true" />
-                <element signature="e#13745#13746#0" expanded="true" />
-                <element signature="e#13783#13784#0" expanded="true" />
-                <element signature="e#13815#13816#0" expanded="true" />
-                <element signature="e#13854#13855#0" expanded="true" />
-                <element signature="e#13884#13885#0" expanded="true" />
-                <element signature="e#13935#13936#0" expanded="true" />
-                <element signature="e#13973#13974#0" expanded="true" />
+                <element signature="e#15695#15696#0" expanded="true" />
+                <element signature="e#15722#15723#0" expanded="true" />
+                <element signature="e#15760#15761#0" expanded="true" />
+                <element signature="e#15792#15793#0" expanded="true" />
+                <element signature="e#15831#15832#0" expanded="true" />
+                <element signature="e#15861#15862#0" expanded="true" />
+                <element signature="e#15912#15913#0" expanded="true" />
+                <element signature="e#15950#15951#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -329,7 +330,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541666048856" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541697894601" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -385,12 +386,12 @@
       <workItem from="1539583533630" duration="159000" />
       <workItem from="1541109232810" duration="11624000" />
       <workItem from="1541537194424" duration="17042000" />
-      <workItem from="1541645340990" duration="19459000" />
+      <workItem from="1541645340990" duration="22634000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60550000" />
+    <option name="totallyTimeSpent" value="63725000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -437,11 +438,17 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/contenedor/JavaFxGameTablero.java</url>
-          <line>226</line>
+          <line>294</line>
           <properties class="contenedor.JavaFxGameTablero" method="MovimientoTorre">
             <option name="EMULATED" value="true" />
           </properties>
           <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/contenedor/JavaFxGameTablero.java</url>
+          <line>162</line>
+          <properties />
+          <option name="timeStamp" value="15" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -759,8 +766,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/contenedor/Casilla.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="145" selection-start-line="145" selection-end-line="145" />
+        <state relative-caret-position="97">
+          <caret line="143" lean-forward="true" selection-start-line="143" selection-end-line="143" />
           <folding>
             <element signature="e#2614#2615#0" expanded="true" />
             <element signature="e#2642#2643#0" expanded="true" />
@@ -782,6 +789,7 @@
             <element signature="e#3613#3614#0" expanded="true" />
             <element signature="e#3664#3665#0" expanded="true" />
             <element signature="e#3706#3707#0" expanded="true" />
+            <element signature="e#3743#3744#0" expanded="true" />
             <element signature="e#3771#3772#0" expanded="true" />
             <element signature="e#3818#3819#0" expanded="true" />
             <element signature="e#3852#3853#0" expanded="true" />
@@ -796,12 +804,12 @@
     <entry file="file://$PROJECT_DIR$/src/contenedor/JavaFxFicha.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="131">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
           <folding>
-            <element signature="e#265#266#0" expanded="true" />
             <element signature="e#295#296#0" expanded="true" />
             <element signature="e#341#342#0" expanded="true" />
             <element signature="e#379#380#0" expanded="true" />
+            <element signature="e#413#414#0" expanded="true" />
             <element signature="e#443#444#0" expanded="true" />
             <element signature="e#489#490#0" expanded="true" />
             <element signature="e#527#528#0" expanded="true" />
@@ -811,19 +819,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/contenedor/JavaFxGameTablero.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="241" column="17" selection-start-line="241" selection-start-column="17" selection-end-line="241" selection-end-column="17" />
+        <state relative-caret-position="501">
+          <caret line="221" column="36" lean-forward="true" selection-start-line="221" selection-start-column="36" selection-end-line="221" selection-end-column="36" />
           <folding>
             <element signature="method#MovimientoAlfil#0;class#JavaFxGameTablero#0" />
             <element signature="method#RestaurarColores#0;class#JavaFxGameTablero#0" />
-            <element signature="e#13718#13719#0" expanded="true" />
-            <element signature="e#13745#13746#0" expanded="true" />
-            <element signature="e#13783#13784#0" expanded="true" />
-            <element signature="e#13815#13816#0" expanded="true" />
-            <element signature="e#13854#13855#0" expanded="true" />
-            <element signature="e#13884#13885#0" expanded="true" />
-            <element signature="e#13935#13936#0" expanded="true" />
-            <element signature="e#13973#13974#0" expanded="true" />
+            <element signature="e#15695#15696#0" expanded="true" />
+            <element signature="e#15722#15723#0" expanded="true" />
+            <element signature="e#15760#15761#0" expanded="true" />
+            <element signature="e#15792#15793#0" expanded="true" />
+            <element signature="e#15831#15832#0" expanded="true" />
+            <element signature="e#15861#15862#0" expanded="true" />
+            <element signature="e#15912#15913#0" expanded="true" />
+            <element signature="e#15950#15951#0" expanded="true" />
           </folding>
         </state>
       </provider>
