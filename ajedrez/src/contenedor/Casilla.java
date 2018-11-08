@@ -4,7 +4,7 @@ import javafx.scene.control.Button;
 
 public class Casilla {
 
-    JavaFxFicha ficha;
+    private JavaFxFicha ficha;
     private String idCasilla;
     private Button button;
     private Integer posicionArregloX;
@@ -80,12 +80,15 @@ public class Casilla {
         return false;
     }
 
-    public boolean Sombrear()
+    public boolean Sombrear(String aJugador)
     {
-        String colorTemp = "-fx-background-color: pink;";
-        button.setStyle(String.format("-fx-font-size: %dpx;" + colorTemp, (int) (0.25 * 100)));
-        sombreada = true;
-        return true;
+       if(this.getFicha().getJugador()!= aJugador) {
+           String colorTemp = "-fx-background-color: pink;";
+           button.setStyle(String.format("-fx-font-size: %dpx;" + colorTemp, (int) (0.25 * 100)));
+           sombreada = true;
+           return true;
+       }
+       return false;
     }
 
     public String getColorFicha() {
@@ -152,5 +155,13 @@ public class Casilla {
         button.setText(idFicha);
         ficha.setIdFicha(idFicha);
         ficha.setJugador(aJugador);
+    }
+
+    public boolean isCambioColor() {
+        return cambioColor;
+    }
+
+    public void setCambioColor(boolean cambioColor) {
+        this.cambioColor = cambioColor;
     }
 }

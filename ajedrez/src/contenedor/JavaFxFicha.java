@@ -29,4 +29,11 @@ public class JavaFxFicha {
     public void setJugador(String jugador) {
         this.jugador = jugador;
     }
+
+    public void MovimientoPeon()
+    {
+
+    }
+
+
 }
