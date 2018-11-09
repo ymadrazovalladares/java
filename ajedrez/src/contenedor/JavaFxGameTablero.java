@@ -5,20 +5,25 @@ import javafx.scene.layout.Pane;
 public class JavaFxGameTablero {
 
     Pane pane;
-    Casilla tablero[][];
+    private Casilla tablero[][];
+    private Hacker hacker;
     private Integer fichaMarcadaX;
     private Integer fichaMarcadaY;
     private boolean fichaMarcada;
     private boolean sombreada;
+    private String turno;
+
 
     public JavaFxGameTablero()
     {
         tablero = new Casilla[8][8];
+        hacker = new Hacker();
         pane = new Pane();
         fichaMarcadaX = 0;
         fichaMarcadaY = 0;
         fichaMarcada = false;
         sombreada = false;
+        turno = "blanco";
         setCasilla();
     }
 
@@ -90,7 +95,7 @@ public class JavaFxGameTablero {
 
          int x1 = acasilla.getPosicionArregloY() / 100;
          int y1 = acasilla.getPosicionArregloX() / 100;
-
+         if(this.getTurno() != acasilla.getFicha().getJugador())
          if (fichaMarcada == false && tablero[x1][y1].getFicha().getIdFicha() != "")
          {
              fichaMarcadaX = x1;
@@ -102,8 +107,8 @@ public class JavaFxGameTablero {
            {
              if (fichaMarcada == true && fichaMarcadaX == x1 && fichaMarcadaY == y1)
                {
-                 fichaMarcadaX = 10;
-                 fichaMarcadaY = 10;
+                 fichaMarcadaX = null;
+                 fichaMarcadaY = null ;
                  fichaMarcada = tablero[x1][y1].BotonPresionado();
                  RestaurarColores();
                }
@@ -123,23 +128,21 @@ public class JavaFxGameTablero {
      }
         public void Movimiento(Casilla acasilla)
         {
-            acasilla.setFicha(this.tablero[fichaMarcadaX][fichaMarcadaY].getFicha());
-            acasilla.getButton().setText(acasilla.getFicha().getIdFicha());
-            this.tablero[fichaMarcadaX][fichaMarcadaY].getButton().setText("");
-            this.tablero[fichaMarcadaX][fichaMarcadaY].setFicha(new JavaFxFicha());
+            if(acasilla.isSombreada())
+            {
+                ActualizarTablaFichas(acasilla);
+                acasilla.setFicha(this.tablero[fichaMarcadaX][fichaMarcadaY].getFicha());
+                acasilla.getButton().setText(acasilla.getFicha().getIdFicha());
+                this.tablero[fichaMarcadaX][fichaMarcadaY].getButton().setText("");
+                this.tablero[fichaMarcadaX][fichaMarcadaY].setFicha(new JavaFxFicha());
+                this.setTurno(acasilla.getFicha().getJugador());
+                RestaurarColores();
+
+                hacker.RellenarListaJugadaHacker(acasilla.getPosicionArregloX(),acasilla.getPosicionArregloY(),acasilla.getFicha().getIdFicha()
+                                    ,acasilla.getFicha().getJugador());
+            }
+
         }
-       /* if(MovePermitido(xNull,yNull,x1,y1))
-         {
-           String tempIdFicha =javaFxFicha.getIdFicha();
-
-           JavaFxFicha fichanull = getFichaNull();
-           fichanull.getButton().setText(String.valueOf(tempIdFicha));
-           fichanull.setIdFicha(tempIdFicha);
-
-           javaFxFicha.getButton().setText(null);
-           javaFxFicha.setIdFicha(null);
-         }*/
-
 
     public void MostrarJugada(int x, int y)
     {
@@ -156,6 +159,29 @@ public class JavaFxGameTablero {
         }
         if(this.tablero[x][y].getFicha().getIdFicha() == "Rey")
             MovimientoRey(x,y);
+        if(this.tablero[x][y].getFicha().getIdFicha() == "caballo")
+            MovimientoCaballo(x,y);
+    }
+
+    public  void MovimientoCaballo(int x, int y)
+    {
+        if(x+1 < 8 && y+2 < 8)
+           this.tablero[x+1][y+2].Sombrear(this.tablero[x][y].getFicha().getJugador());
+        if(x+1 < 8 && y-2 >= 0)
+            this.tablero[x+1][y-2].Sombrear(this.tablero[x][y].getFicha().getJugador());
+        if(x+2 < 8 && y+1 < 8)
+            this.tablero[x+2][y+1].Sombrear(this.tablero[x][y].getFicha().getJugador());
+        if(x+2 < 8 && y-1 >= 0)
+            this.tablero[x+2][y-1].Sombrear(this.tablero[x][y].getFicha().getJugador());
+
+        if(x-1 >= 0 && y+2 < 8)
+            this.tablero[x-1][y+2].Sombrear(this.tablero[x][y].getFicha().getJugador());
+        if(x-1 >= 0 && y-2 >= 0)
+            this.tablero[x-1][y-2].Sombrear(this.tablero[x][y].getFicha().getJugador());
+        if(x-2 >= 0 && y+1 < 8)
+            this.tablero[x-2][y+1].Sombrear(this.tablero[x][y].getFicha().getJugador());
+        if(x-2 >= 0 && y-1 >= 0)
+            this.tablero[x-2][y-1].Sombrear(this.tablero[x][y].getFicha().getJugador());
     }
 
     public void MovimientoRey(int x, int y)
@@ -410,24 +436,10 @@ public class JavaFxGameTablero {
             for (Integer j=0; j<8;j++) {
                 this.tablero[i][j].RestaurarColorCasilla();
                 this.tablero[i][j].setCambioColor(false);
+                this.tablero[i][j].setSombreada(false);
             }
     }
 
-
-    public boolean MovePermitido(int xnull,int ynull, int xText, int yText)
-    {
-        if((xnull == xText) && ((ynull == yText+1)||(ynull == yText-1)))
-        {
-            return true;
-        }
-        else if((ynull == yText) && ((xnull == xText+1)||(xnull == xText-1)))
-            {
-                return true;
-            }
-        else
-          return false ;
-
-    }
 
     public Pane getPane() {
         return pane;
@@ -443,5 +455,27 @@ public class JavaFxGameTablero {
 
     public void setTablero(Casilla[][] tablero) {
         this.tablero = tablero;
+    }
+
+    public String getTurno() {
+        return turno;
+    }
+
+    public void setTurno(String jugador) {
+        this.turno = jugador;
+    }
+
+    public void ActualizarTablaFichas(Casilla aCasilla)
+    {
+        String fichaEliminar = aCasilla.getFicha().getIdFicha();
+        String jugador = aCasilla.getFicha().getJugador();
+        if(jugador == "blanco")
+        {
+            hacker.EliminarFichaBlanca(fichaEliminar);
+        }
+        if(jugador == "negro")
+        {
+            hacker.EliminarFichaNegras(fichaEliminar);
+        }
     }
 }

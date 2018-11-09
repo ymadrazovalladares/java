@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="025a5752-672c-40a0-ae32-c48586055dd5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../ajedrez/src/contenedor/Casilla.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ajedrez/src/contenedor/Hacker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ajedrez/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ajedrez/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ajedrez/out/production/Puzzle/contenedor/JavaFxFicha.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ajedrez/out/production/Puzzle/contenedor/JavaFxFicha.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ajedrez/out/production/Puzzle/contenedor/JavaFxGamePrincipal.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ajedrez/out/production/Puzzle/contenedor/JavaFxGamePrincipal.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ajedrez/out/production/Puzzle/contenedor/JavaFxGameTablero.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ajedrez/out/production/Puzzle/contenedor/JavaFxGameTablero.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ajedrez/src/contenedor/JavaFxFicha.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ajedrez/src/contenedor/JavaFxFicha.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ajedrez/src/contenedor/JavaFxGamePrincipal.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ajedrez/src/contenedor/JavaFxGamePrincipal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ajedrez/src/contenedor/JavaFxGameTablero.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ajedrez/src/contenedor/JavaFxGameTablero.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
