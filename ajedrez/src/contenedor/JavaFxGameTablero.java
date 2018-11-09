@@ -4,7 +4,7 @@ import javafx.scene.layout.Pane;
 
 public class JavaFxGameTablero {
 
-    Pane pane;
+    private Pane pane;
     private Casilla tablero[][];
     private Hacker hacker;
     private Integer fichaMarcadaX;
@@ -130,7 +130,7 @@ public class JavaFxGameTablero {
         {
             if(acasilla.isSombreada())
             {
-              //  ActualizarTablaFichas(acasilla);
+                EliminarTablaFichas(acasilla);
                 acasilla.setFicha(this.tablero[fichaMarcadaX][fichaMarcadaY].getFicha());
                 acasilla.getButton().setText(acasilla.getFicha().getIdFicha());
                 this.tablero[fichaMarcadaX][fichaMarcadaY].getButton().setText("");
@@ -138,6 +138,7 @@ public class JavaFxGameTablero {
                 this.setTurno(acasilla.getFicha().getJugador());
                 RestaurarColores();
 
+                ActualizarTablaFichas(acasilla);
                // hacker.RellenarListaJugadaHacker(acasilla.getPosicionArregloX(),acasilla.getPosicionArregloY(),acasilla.getFicha().getIdFicha()
                                   //  ,acasilla.getFicha().getJugador());
             }
@@ -465,7 +466,7 @@ public class JavaFxGameTablero {
         this.turno = jugador;
     }
 
-    public void ActualizarTablaFichas(Casilla aCasilla)
+    public void EliminarTablaFichas(Casilla aCasilla)
     {
         String fichaEliminar = aCasilla.getFicha().getIdFicha();
         String jugador = aCasilla.getFicha().getJugador();
@@ -477,5 +478,17 @@ public class JavaFxGameTablero {
         {
             hacker.EliminarFichaNegras(fichaEliminar);
         }
+    }
+
+    public void ActualizarTablaFichas(Casilla aCasilla)
+    {
+        String fichaActualizar = aCasilla.getFicha().getIdFicha();
+        String jugador = aCasilla.getFicha().getJugador();
+        if(jugador == "blanco")
+            hacker.LimpiarPosicionesFichaBlanca(fichaActualizar);
+        if(jugador == "negro")
+            hacker.LimpiarPosicionesFichaNegra(fichaActualizar);
+
+        hacker.RellenarListaJugadaHacker(aCasilla.getPosicionArregloX(),aCasilla.getPosicionArregloY(),fichaActualizar, jugador, tablero);
     }
 }

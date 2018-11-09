@@ -82,4 +82,12 @@ public class ListaPosicionHacker {
     public void setNombreFicha(String nombreFicha) {
         this.nombreFicha = nombreFicha;
     }
+
+    public void VaciarLista()
+    {
+        inicioLista = null;
+        finalLista = null;
+        totalAlmacenados = 0;
+
+    }
 }
