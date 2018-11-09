@@ -130,7 +130,7 @@ public class JavaFxGameTablero {
         {
             if(acasilla.isSombreada())
             {
-                ActualizarTablaFichas(acasilla);
+              //  ActualizarTablaFichas(acasilla);
                 acasilla.setFicha(this.tablero[fichaMarcadaX][fichaMarcadaY].getFicha());
                 acasilla.getButton().setText(acasilla.getFicha().getIdFicha());
                 this.tablero[fichaMarcadaX][fichaMarcadaY].getButton().setText("");
@@ -138,8 +138,8 @@ public class JavaFxGameTablero {
                 this.setTurno(acasilla.getFicha().getJugador());
                 RestaurarColores();
 
-                hacker.RellenarListaJugadaHacker(acasilla.getPosicionArregloX(),acasilla.getPosicionArregloY(),acasilla.getFicha().getIdFicha()
-                                    ,acasilla.getFicha().getJugador());
+               // hacker.RellenarListaJugadaHacker(acasilla.getPosicionArregloX(),acasilla.getPosicionArregloY(),acasilla.getFicha().getIdFicha()
+                                  //  ,acasilla.getFicha().getJugador());
             }
 
         }

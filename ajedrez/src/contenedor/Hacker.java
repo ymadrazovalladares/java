@@ -183,7 +183,7 @@ public class Hacker {
     }
 
     public void MovimientoRey(int x, int y,String jugador,String aficha)
-    {
+    {/*
         if(x+1<8)
         {
             if(this.tablero[x+1][y].getFicha().getIdFicha() == "" ||
@@ -240,12 +240,12 @@ public class Hacker {
                             this.tablero[x-1][y-1].getFicha().getJugador() != this.tablero[x][y].getFicha().getJugador()))
                 this.tablero[x-1][y-1].Sombrear(this.tablero[x][y].getFicha().getJugador());
         }
-
+*/
     }
 
     public void MovimientoAlfil(int x, int y,String jugador,String aficha)
     {
-        boolean bandera = false;
+      /*  boolean bandera = false;
         int i = 1;
         while (!bandera && x+i < 8 && y+i < 8)
         {
@@ -313,11 +313,12 @@ public class Hacker {
             }
             else
                 bandera = true;
-        }
+        }*/
     }
 
     public void MovimientoTorre(Integer x, Integer y,String jugador,String aficha)
     {
+       /* PosicionHacker aux = new PosicionHacker();
         for(int i = x+1 ; i < 8; i++)
         {
             if(this.tablero[i][y].getFicha().getIdFicha() == "" ||(
@@ -377,56 +378,33 @@ public class Hacker {
             }
             else
                 break;
-        }
+        }*/
     }
 
     public void MovimientoPeon(int x, int y,String jugador,String aficha)
     {
-        if(this.tablero[x][y].getFicha().getJugador() == "blanco")
+        PosicionHacker aux = new PosicionHacker();
+        if(jugador == "blanco")
         {
             if(x+1<8)
             {
-                this.tablero[x + 1][y].Sombrear("blanco");
-                // this.tablero[x + 2][y].Sombrear("blanco");
-                if(y+1 <8 && this.tablero[x + 1][y+1].getFicha().getJugador() == "negro"
-                        && this.tablero[x + 1][y+1].getFicha().getIdFicha() != ""
-                )
-                {
-                    this.tablero[x + 1][y+1].Sombrear("blanco");
-                }
-                if(y-1 >=0 && this.tablero[x + 1][y-1].getFicha().getJugador() == "negro"
-                        && this.tablero[x + 1][y-1].getFicha().getIdFicha() != ""
-                )
-                {
-                    this.tablero[x + 1][y-1].Sombrear("blanco");
-                }
+                aux = new PosicionHacker(x+1,y+1);
+                hackerBlanco[GetIndiceBlanco(aficha)].cargarAlFinaldeLaLista(aux);
+                aux = new PosicionHacker(x+1,y-1);
+                hackerBlanco[GetIndiceBlanco(aficha)].cargarAlFinaldeLaLista(aux);
             }
         }
         else
         {
             if(x-1>= 0)
             {
-                this.tablero[x - 1][y].Sombrear("negro");
-                //this.tablero[x - 2][y].Sombrear("negro");
-
-                if(y+1 <8 && this.tablero[x - 1][y+1].getFicha().getJugador() == "blanco"
-                        && this.tablero[x - 1][y+1].getFicha().getIdFicha() != ""
-                )
-                {
-                    this.tablero[x - 1][y+1].Sombrear("negro");
-                }
-                if(y-1 >=0 && this.tablero[x - 1][y-1].getFicha().getJugador() == "blanco"
-                        && this.tablero[x - 1][y-1].getFicha().getIdFicha() != ""
-                )
-                {
-                    this.tablero[x - 1][y-1].Sombrear("negro");
-                }
-
+                aux = new PosicionHacker(x-1,y+1);
+                hackerNegro[GetIndiceNegro(aficha)].cargarAlFinaldeLaLista(aux);
+                aux = new PosicionHacker(x-1,y-1);
+                hackerNegro[GetIndiceNegro(aficha)].cargarAlFinaldeLaLista(aux);
             }
-
         }
-        sombreada = true;
-    }
+     }
 
     public Integer GetIndiceBlanco(String aFicha)
     {

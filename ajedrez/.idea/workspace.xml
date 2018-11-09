@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="efb63469-f24b-41ec-8deb-0107223988c2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/contenedor/Hacker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../PuzzleLista/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PuzzleLista/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Puzzle/contenedor/JavaFxGamePrincipal.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Puzzle/contenedor/JavaFxGamePrincipal.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Puzzle/contenedor/JavaFxGameTablero.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Puzzle/contenedor/JavaFxGameTablero.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/contenedor/JavaFxGamePrincipal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/contenedor/JavaFxGamePrincipal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/contenedor/Hacker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/contenedor/Hacker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/contenedor/JavaFxGameTablero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/contenedor/JavaFxGameTablero.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -95,12 +91,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="4664" />
+          <entry key="java" value="4709" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="4664" />
+          <entry key="JAVA" value="4709" />
         </counts>
       </usages-collector>
     </session>
@@ -199,11 +195,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/contenedor/JavaFxGameTablero.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="135" column="83" lean-forward="true" selection-start-line="135" selection-start-column="83" selection-end-line="135" selection-end-column="83" />
+            <state relative-caret-position="204">
+              <caret line="132" column="16" selection-start-line="132" selection-start-column="16" selection-end-line="132" selection-end-column="16" />
               <folding>
                 <element signature="method#ArmarJuego#0;class#JavaFxGameTablero#0" />
                 <element signature="method#PiezasNegras#0;class#JavaFxGameTablero#0" />
@@ -231,11 +227,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/contenedor/Hacker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="379">
-              <caret line="428" column="5" lean-forward="true" selection-start-line="428" selection-start-column="5" selection-end-line="428" selection-end-column="5" />
+            <state relative-caret-position="369">
+              <caret line="333" column="17" lean-forward="true" selection-start-line="333" selection-start-column="17" selection-end-line="333" selection-end-column="17" />
               <folding>
                 <element signature="e#490#491#0" expanded="true" />
                 <element signature="e#525#526#0" expanded="true" />
@@ -256,8 +252,9 @@
                 <element signature="method#MovimientoCaballo#0;class#Hacker#0" />
                 <element signature="method#MovimientoRey#0;class#Hacker#0" />
                 <element signature="method#MovimientoAlfil#0;class#Hacker#0" />
-                <element signature="method#MovimientoTorre#0;class#Hacker#0" />
                 <element signature="method#MovimientoPeon#0;class#Hacker#0" />
+                <element signature="method#GetIndiceBlanco#0;class#Hacker#0" />
+                <element signature="method#GetIndiceNegro#0;class#Hacker#0" />
               </folding>
             </state>
           </provider>
@@ -324,8 +321,8 @@
         <option value="$PROJECT_DIR$/src/contenedor/NodoPuntos.java" />
         <option value="$PROJECT_DIR$/src/contenedor/ListaNodos.java" />
         <option value="$PROJECT_DIR$/src/contenedor/ListaPosicionHacker.java" />
-        <option value="$PROJECT_DIR$/src/contenedor/JavaFxGameTablero.java" />
         <option value="$PROJECT_DIR$/src/contenedor/Hacker.java" />
+        <option value="$PROJECT_DIR$/src/contenedor/JavaFxGameTablero.java" />
       </list>
     </option>
   </component>
@@ -377,7 +374,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541724285752" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541728453388" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -438,7 +435,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77218000" />
+    <option name="totallyTimeSpent" value="78552000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1592" y="-8" width="1616" height="876" extended-state="6" />
@@ -885,10 +882,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/contenedor/Hacker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="369">
+          <caret line="333" column="17" lean-forward="true" selection-start-line="333" selection-start-column="17" selection-end-line="333" selection-end-column="17" />
+          <folding>
+            <element signature="e#490#491#0" expanded="true" />
+            <element signature="e#525#526#0" expanded="true" />
+            <element signature="e#596#597#0" expanded="true" />
+            <element signature="e#644#645#0" expanded="true" />
+            <element signature="e#697#698#0" expanded="true" />
+            <element signature="e#731#732#0" expanded="true" />
+            <element signature="e#800#801#0" expanded="true" />
+            <element signature="e#846#847#0" expanded="true" />
+            <element signature="e#891#892#0" expanded="true" />
+            <element signature="e#931#932#0" expanded="true" />
+            <element signature="e#998#999#0" expanded="true" />
+            <element signature="e#1056#1057#0" expanded="true" />
+            <element signature="e#1100#1101#0" expanded="true" />
+            <element signature="e#1139#1140#0" expanded="true" />
+            <element signature="e#1204#1205#0" expanded="true" />
+            <element signature="e#1260#1261#0" expanded="true" />
+            <element signature="method#MovimientoCaballo#0;class#Hacker#0" />
+            <element signature="method#MovimientoRey#0;class#Hacker#0" />
+            <element signature="method#MovimientoAlfil#0;class#Hacker#0" />
+            <element signature="method#MovimientoPeon#0;class#Hacker#0" />
+            <element signature="method#GetIndiceBlanco#0;class#Hacker#0" />
+            <element signature="method#GetIndiceNegro#0;class#Hacker#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/contenedor/JavaFxGameTablero.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="135" column="83" lean-forward="true" selection-start-line="135" selection-start-column="83" selection-end-line="135" selection-end-column="83" />
+        <state relative-caret-position="204">
+          <caret line="132" column="16" selection-start-line="132" selection-start-column="16" selection-end-line="132" selection-end-column="16" />
           <folding>
             <element signature="method#ArmarJuego#0;class#JavaFxGameTablero#0" />
             <element signature="method#PiezasNegras#0;class#JavaFxGameTablero#0" />
@@ -911,36 +939,6 @@
             <element signature="e#18603#18604#0" expanded="true" />
             <element signature="e#18647#18648#0" expanded="true" />
             <element signature="e#18683#18684#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/contenedor/Hacker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="428" column="5" lean-forward="true" selection-start-line="428" selection-start-column="5" selection-end-line="428" selection-end-column="5" />
-          <folding>
-            <element signature="e#490#491#0" expanded="true" />
-            <element signature="e#525#526#0" expanded="true" />
-            <element signature="e#596#597#0" expanded="true" />
-            <element signature="e#644#645#0" expanded="true" />
-            <element signature="e#697#698#0" expanded="true" />
-            <element signature="e#731#732#0" expanded="true" />
-            <element signature="e#800#801#0" expanded="true" />
-            <element signature="e#846#847#0" expanded="true" />
-            <element signature="e#891#892#0" expanded="true" />
-            <element signature="e#931#932#0" expanded="true" />
-            <element signature="e#998#999#0" expanded="true" />
-            <element signature="e#1056#1057#0" expanded="true" />
-            <element signature="e#1100#1101#0" expanded="true" />
-            <element signature="e#1139#1140#0" expanded="true" />
-            <element signature="e#1204#1205#0" expanded="true" />
-            <element signature="e#1260#1261#0" expanded="true" />
-            <element signature="method#MovimientoCaballo#0;class#Hacker#0" />
-            <element signature="method#MovimientoRey#0;class#Hacker#0" />
-            <element signature="method#MovimientoAlfil#0;class#Hacker#0" />
-            <element signature="method#MovimientoTorre#0;class#Hacker#0" />
-            <element signature="method#MovimientoPeon#0;class#Hacker#0" />
           </folding>
         </state>
       </provider>
