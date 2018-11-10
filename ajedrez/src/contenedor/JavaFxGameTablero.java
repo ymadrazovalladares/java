@@ -131,7 +131,7 @@ public class JavaFxGameTablero {
      }
         public void Movimiento(Casilla acasilla)
         {
-            if(acasilla.isSombreada())
+          if(acasilla.isSombreada())
             {
                 LimpiarTablaFichas(GetCasilla(fichaMarcadaX, fichaMarcadaY));
                 acasilla.setFicha(this.tablero[fichaMarcadaX][fichaMarcadaY].getFicha());
@@ -140,11 +140,9 @@ public class JavaFxGameTablero {
                 this.tablero[fichaMarcadaX][fichaMarcadaY].setFicha(new JavaFxFicha());
                 this.setTurno(acasilla.getFicha().getJugador());
                 RestaurarColores();
-
                 ActualizarTablaFichas(acasilla);
           }
-
-        }
+  }
 
     public void MostrarJugada(int x, int y)
     {

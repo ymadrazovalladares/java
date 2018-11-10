@@ -1,6 +1,8 @@
 package contenedor;
 
 import javafx.scene.control.Button;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 
 public class Casilla {
 
@@ -31,11 +33,13 @@ public class Casilla {
 
 //se le pone el color a los botones
         if ((tableroX %2 == 0 && tableroY %2 == 1)||(tableroX %2 == 1 && tableroY %2 == 0))
-            color = "-fx-background-color: black;";
+            color = "-fx-background-color: d38f69;";
         else
-            color = "-fx-background-color: white;";
+            color = "-fx-background-color: faf4f1;";
         button.setStyle(String.format("-fx-font-size: %dpx;" + color, (int) (0.25 * buttonSize)));
 
+        //Image image = new Image(getClass().getResourceAsStream("peon negro.jpg"));
+        //button.setGraphic(new ImageView(image));
 
         this.posicionArregloX =  tableroX;
         this.posicionArregloY =  tableroY;
