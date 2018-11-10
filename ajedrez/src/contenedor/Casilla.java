@@ -47,6 +47,11 @@ public class Casilla {
         button.setLayoutY(posicionArregloY);
     }
 
+    public Casilla()
+    {
+        posicionArregloX = null;
+        posicionArregloY = null;
+    }
     public String getCasilla() {
         return idCasilla;
     }
@@ -163,5 +168,10 @@ public class Casilla {
 
     public void setCambioColor(boolean cambioColor) {
         this.cambioColor = cambioColor;
+    }
+    public void ColorHacker()
+    {
+        String colorTemp = "-fx-background-color: pink;";
+        button.setStyle(String.format("-fx-font-size: %dpx;" + colorTemp, (int) (0.25 * 100)));
     }
 }

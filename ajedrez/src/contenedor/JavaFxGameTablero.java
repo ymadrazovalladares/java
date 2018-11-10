@@ -33,7 +33,8 @@ public class JavaFxGameTablero {
 
                 Casilla acasilla = new Casilla(i, j, "");
                 acasilla.getButton().setOnMouseClicked(event -> {
-                    moverFicha(acasilla);
+                    if(this.getTurno() != acasilla.getFicha().getJugador() ||acasilla.isSombreada() == true)
+                        moverFicha(acasilla);
                 });
 
                 this.tablero[i][j] = acasilla;
@@ -50,43 +51,43 @@ public class JavaFxGameTablero {
 
     public void PiezasBlancas()
     {
-        this.tablero[0][0].addIdFicha("Torre","blanco");
-        this.tablero[0][1].addIdFicha("caballo","blanco");
-        this.tablero[0][2].addIdFicha("Alfil","blanco");
-        this.tablero[0][3].addIdFicha("Reina","blanco");
-        this.tablero[0][4].addIdFicha("Rey","blanco");
-        this.tablero[0][5].addIdFicha("Alfil","blanco");
-        this.tablero[0][6].addIdFicha("caballo","blanco");
-        this.tablero[0][7].addIdFicha("Torre","blanco");
-        this.tablero[1][0].addIdFicha("peon","blanco");
-        this.tablero[1][1].addIdFicha("peon","blanco");
-        this.tablero[1][2].addIdFicha("peon","blanco");
-        this.tablero[1][3].addIdFicha("peon","blanco");
-        this.tablero[1][4].addIdFicha("peon","blanco");
-        this.tablero[1][5].addIdFicha("peon","blanco");
-        this.tablero[1][6].addIdFicha("peon","blanco");
-        this.tablero[1][7].addIdFicha("peon","blanco");
+        this.tablero[0][0].addIdFicha("torre1","blanco");
+        this.tablero[0][1].addIdFicha("caballo1","blanco");
+        this.tablero[0][2].addIdFicha("alfil1","blanco");
+        this.tablero[0][3].addIdFicha("reina","blanco");
+        this.tablero[0][4].addIdFicha("rey","blanco");
+        this.tablero[0][5].addIdFicha("alfil2","blanco");
+        this.tablero[0][6].addIdFicha("caballo2","blanco");
+        this.tablero[0][7].addIdFicha("torre2","blanco");
+        this.tablero[1][0].addIdFicha("peon1","blanco");
+        this.tablero[1][1].addIdFicha("peon2","blanco");
+        this.tablero[1][2].addIdFicha("peon3","blanco");
+        this.tablero[1][3].addIdFicha("peon4","blanco");
+        this.tablero[1][4].addIdFicha("peon5","blanco");
+        this.tablero[1][5].addIdFicha("peon6","blanco");
+        this.tablero[1][6].addIdFicha("peon7","blanco");
+        this.tablero[1][7].addIdFicha("peon8","blanco");
 
   }
 
     public void PiezasNegras()
     {
-        this.tablero[7][0].addIdFicha("Torre","negro");
-        this.tablero[7][1].addIdFicha("caballo","negro");
-        this.tablero[7][2].addIdFicha("Alfil","negro");
-        this.tablero[7][3].addIdFicha("Reina","negro");
-        this.tablero[7][4].addIdFicha("Rey","negro");
-        this.tablero[7][5].addIdFicha("Alfil","negro");
-        this.tablero[7][6].addIdFicha("caballo","negro");
-        this.tablero[7][7].addIdFicha("Torre","negro");
-        this.tablero[6][0].addIdFicha("peon","negro");
-        this.tablero[6][1].addIdFicha("peon","negro");
-        this.tablero[6][2].addIdFicha("peon","negro");
-        this.tablero[6][3].addIdFicha("peon","negro");
-        this.tablero[6][4].addIdFicha("peon","negro");
-        this.tablero[6][5].addIdFicha("peon","negro");
-        this.tablero[6][6].addIdFicha("peon","negro");
-        this.tablero[6][7].addIdFicha("peon","negro");
+        this.tablero[7][0].addIdFicha("torre1","negro");
+        this.tablero[7][1].addIdFicha("caballo1","negro");
+        this.tablero[7][2].addIdFicha("alfil1","negro");
+        this.tablero[7][3].addIdFicha("reina","negro");
+        this.tablero[7][4].addIdFicha("rey","negro");
+        this.tablero[7][5].addIdFicha("alfil2","negro");
+        this.tablero[7][6].addIdFicha("caballo2","negro");
+        this.tablero[7][7].addIdFicha("torre2","negro");
+        this.tablero[6][0].addIdFicha("peon1","negro");
+        this.tablero[6][1].addIdFicha("peon2","negro");
+        this.tablero[6][2].addIdFicha("peon3","negro");
+        this.tablero[6][3].addIdFicha("peon4","negro");
+        this.tablero[6][4].addIdFicha("peon5","negro");
+        this.tablero[6][5].addIdFicha("peon6","negro");
+        this.tablero[6][6].addIdFicha("peon7","negro");
+        this.tablero[6][7].addIdFicha("peon8","negro");
 
     }
 
@@ -95,7 +96,7 @@ public class JavaFxGameTablero {
 
          int x1 = acasilla.getPosicionArregloY() / 100;
          int y1 = acasilla.getPosicionArregloX() / 100;
-         if(this.getTurno() != acasilla.getFicha().getJugador())
+         //if(this.getTurno() != acasilla.getFicha().getJugador())
          if (fichaMarcada == false && tablero[x1][y1].getFicha().getIdFicha() != "")
          {
              fichaMarcadaX = x1;
@@ -122,15 +123,17 @@ public class JavaFxGameTablero {
                      RestaurarColores();
                      fichaMarcadaX = null;
                      fichaMarcadaY = null;
+                     RevisarHacker();
                    }
                 }
            }
+        // RevisarHacker();
      }
         public void Movimiento(Casilla acasilla)
         {
             if(acasilla.isSombreada())
             {
-                EliminarTablaFichas(acasilla);
+                LimpiarTablaFichas(GetCasilla(fichaMarcadaX, fichaMarcadaY));
                 acasilla.setFicha(this.tablero[fichaMarcadaX][fichaMarcadaY].getFicha());
                 acasilla.getButton().setText(acasilla.getFicha().getIdFicha());
                 this.tablero[fichaMarcadaX][fichaMarcadaY].getButton().setText("");
@@ -139,29 +142,28 @@ public class JavaFxGameTablero {
                 RestaurarColores();
 
                 ActualizarTablaFichas(acasilla);
-               // hacker.RellenarListaJugadaHacker(acasilla.getPosicionArregloX(),acasilla.getPosicionArregloY(),acasilla.getFicha().getIdFicha()
-                                  //  ,acasilla.getFicha().getJugador());
-            }
+          }
 
         }
 
     public void MostrarJugada(int x, int y)
     {
-        if(this.tablero[x][y].getFicha().getIdFicha() == "peon")
-            MovimientoPeon(x,y);
-        if(this.tablero[x][y].getFicha().getIdFicha() == "Torre")
+        if(this.tablero[x][y].getFicha().getIdFicha().contains("peon"))
+          MovimientoPeon(x,y);
+        if(this.tablero[x][y].getFicha().getIdFicha().contains("torre"))
             MovimientoTorre(x,y);
-        if(this.tablero[x][y].getFicha().getIdFicha() == "Alfil")
+        if(this.tablero[x][y].getFicha().getIdFicha().contains("alfil"))
             MovimientoAlfil(x,y);
-        if(this.tablero[x][y].getFicha().getIdFicha() == "Reina")
+        if(this.tablero[x][y].getFicha().getIdFicha().contains("reina"))
         {
             MovimientoAlfil(x,y);
             MovimientoTorre(x,y);
         }
-        if(this.tablero[x][y].getFicha().getIdFicha() == "Rey")
+        if(this.tablero[x][y].getFicha().getIdFicha().contains("rey"))
             MovimientoRey(x,y);
-        if(this.tablero[x][y].getFicha().getIdFicha() == "caballo")
+        if(this.tablero[x][y].getFicha().getIdFicha().contains("caballo"))
             MovimientoCaballo(x,y);
+
     }
 
     public  void MovimientoCaballo(int x, int y)
@@ -192,56 +194,64 @@ public class JavaFxGameTablero {
             if(this.tablero[x+1][y].getFicha().getIdFicha() == "" ||
                 (this.tablero[x+1][y].getFicha().getIdFicha() != "" &&
                         this.tablero[x+1][y].getFicha().getJugador() != this.tablero[x][y].getFicha().getJugador()))
-               this.tablero[x+1][y].Sombrear(this.tablero[x][y].getFicha().getJugador());
+                if(hacker.IsReyHacker(y,x+1,getTurno()) == false)
+                  this.tablero[x+1][y].Sombrear(this.tablero[x][y].getFicha().getJugador());
         }
         if(y+1<8)
         {
             if(this.tablero[x][y+1].getFicha().getIdFicha() == "" ||
                     (this.tablero[x][y+1].getFicha().getIdFicha() != "" &&
                             this.tablero[x][y+1].getFicha().getJugador() != this.tablero[x][y].getFicha().getJugador()))
-                this.tablero[x][y+1].Sombrear(this.tablero[x][y].getFicha().getJugador());
+                if(hacker.IsReyHacker(y+1,x,getTurno()) == false)
+                  this.tablero[x][y+1].Sombrear(this.tablero[x][y].getFicha().getJugador());
         }
         if(x-1>=0 )
           {
             if (this.tablero[x - 1][y].getFicha().getIdFicha() == "" ||
                     (this.tablero[x - 1][y].getFicha().getIdFicha() != "" &&
                             this.tablero[x - 1][y].getFicha().getJugador() != this.tablero[x][y].getFicha().getJugador()))
-                this.tablero[x - 1][y].Sombrear(this.tablero[x][y].getFicha().getJugador());
+                if(hacker.IsReyHacker(y,x-1,getTurno()) == false)
+                  this.tablero[x - 1][y].Sombrear(this.tablero[x][y].getFicha().getJugador());
           }
           if(y-1>=0)
           {
               if(this.tablero[x][y-1].getFicha().getIdFicha() == "" ||
                       (this.tablero[x][y-1].getFicha().getIdFicha() != "" &&
                               this.tablero[x][y-1].getFicha().getJugador() != this.tablero[x][y].getFicha().getJugador()))
-                   this.tablero[x][y-1].Sombrear(this.tablero[x][y].getFicha().getJugador());
+                   if(hacker.IsReyHacker(y-1,x,getTurno()) == false)
+                      this.tablero[x][y-1].Sombrear(this.tablero[x][y].getFicha().getJugador());
           }
         if(x+1 < 8 && y+1 < 8)
         {
             if(this.tablero[x+1][y+1].getFicha().getIdFicha() == "" ||
                     (this.tablero[x+1][y+1].getFicha().getIdFicha() != "" &&
                             this.tablero[x+1][y+1].getFicha().getJugador() != this.tablero[x][y].getFicha().getJugador()))
-                this.tablero[x+1][y+1].Sombrear(this.tablero[x][y].getFicha().getJugador());
+                if(hacker.IsReyHacker(y+1,x+1,getTurno()) == false)
+                  this.tablero[x+1][y+1].Sombrear(this.tablero[x][y].getFicha().getJugador());
         }
         if(x+1 < 8 && y-1 >= 0)
         {
             if(this.tablero[x+1][y-1].getFicha().getIdFicha() == "" ||
                     (this.tablero[x+1][y-1].getFicha().getIdFicha() != "" &&
                             this.tablero[x+1][y-1].getFicha().getJugador() != this.tablero[x][y].getFicha().getJugador()))
-                this.tablero[x+1][y-1].Sombrear(this.tablero[x][y].getFicha().getJugador());
+                if(hacker.IsReyHacker(y-1,x+1,getTurno()) == false)
+                   this.tablero[x+1][y-1].Sombrear(this.tablero[x][y].getFicha().getJugador());
         }
         if(x-1 >= 0 && y+1 < 8)
         {
             if(this.tablero[x-1][y+1].getFicha().getIdFicha() == "" ||
                     (this.tablero[x-1][y+1].getFicha().getIdFicha() != "" &&
                             this.tablero[x-1][y+1].getFicha().getJugador() != this.tablero[x][y].getFicha().getJugador()))
-                this.tablero[x-1][y+1].Sombrear(this.tablero[x][y].getFicha().getJugador());
+                if(hacker.IsReyHacker(y+1,x-1,getTurno()) == false)
+                   this.tablero[x-1][y+1].Sombrear(this.tablero[x][y].getFicha().getJugador());
         }
         if(x-1 >= 0 && y-1 >= 0)
         {
             if(this.tablero[x-1][y-1].getFicha().getIdFicha() == "" ||
                     (this.tablero[x-1][y-1].getFicha().getIdFicha() != "" &&
                             this.tablero[x-1][y-1].getFicha().getJugador() != this.tablero[x][y].getFicha().getJugador()))
-                this.tablero[x-1][y-1].Sombrear(this.tablero[x][y].getFicha().getJugador());
+                if(hacker.IsReyHacker(y-1,x-1,getTurno()) == false)
+                   this.tablero[x-1][y-1].Sombrear(this.tablero[x][y].getFicha().getJugador());
         }
 
     }
@@ -466,10 +476,10 @@ public class JavaFxGameTablero {
         this.turno = jugador;
     }
 
-    public void EliminarTablaFichas(Casilla aCasilla)
+    public void EliminarTablaFichas()
     {
-        String fichaEliminar = aCasilla.getFicha().getIdFicha();
-        String jugador = aCasilla.getFicha().getJugador();
+        String fichaEliminar = tablero[fichaMarcadaX][fichaMarcadaY].getFicha().getIdFicha();
+        String jugador = tablero[fichaMarcadaX][fichaMarcadaY].getFicha().getJugador();
         if(jugador == "blanco")
         {
             hacker.EliminarFichaBlanca(fichaEliminar);
@@ -480,7 +490,7 @@ public class JavaFxGameTablero {
         }
     }
 
-    public void ActualizarTablaFichas(Casilla aCasilla)
+    public void LimpiarTablaFichas(Casilla aCasilla)
     {
         String fichaActualizar = aCasilla.getFicha().getIdFicha();
         String jugador = aCasilla.getFicha().getJugador();
@@ -489,6 +499,48 @@ public class JavaFxGameTablero {
         if(jugador == "negro")
             hacker.LimpiarPosicionesFichaNegra(fichaActualizar);
 
-        hacker.RellenarListaJugadaHacker(aCasilla.getPosicionArregloX(),aCasilla.getPosicionArregloY(),fichaActualizar, jugador, tablero);
+       // hacker.RellenarListaJugadaHacker(aCasilla.getPosicionArregloX()/100,aCasilla.getPosicionArregloY()/100,fichaActualizar, jugador, tablero);
+    }
+    public void ActualizarTablaFichas(Casilla aCasilla)
+    {
+        String fichaActualizar = aCasilla.getFicha().getIdFicha();
+        String jugador = aCasilla.getFicha().getJugador();
+        LimpiarTablaFichas(aCasilla);
+        hacker.RellenarListaJugadaHacker(aCasilla.getPosicionArregloX()/100,aCasilla.getPosicionArregloY()/100,fichaActualizar, jugador, tablero);
+    }
+
+    public Casilla CasillaRey(String jugador)
+    {
+        for(int i = 0; i < 8; i++)
+        {
+            for(int j = 0; j < 8; j++)
+            {
+                if(tablero[i][j].getFicha().getIdFicha() == "rey" && tablero[i][j].getFicha().getJugador() == jugador)
+                    return tablero[i][j];
+            }
+        }
+        return null;
+    }
+    public void RevisarHacker()
+    {
+        Casilla temp = new Casilla();
+        boolean isHacker = false;
+        if(getTurno() == "negro")
+        {
+            temp = CasillaRey("blanco");
+            isHacker = hacker.IsReyBlancoHacker(temp.getPosicionArregloX()/100, temp.getPosicionArregloY()/100);
+        }
+        if(getTurno() == "blanco")
+        {
+            temp = CasillaRey("negro");
+            isHacker = hacker.IsReyNegroHacker(temp.getPosicionArregloX()/100, temp.getPosicionArregloY()/100);
+        }
+        if(isHacker)
+            tablero[temp.getPosicionArregloY()/100][temp.getPosicionArregloX()/100].ColorHacker();
+    }
+
+    public Casilla GetCasilla(int x, int y)
+    {
+        return tablero[x][y];
     }
 }

@@ -18,10 +18,10 @@ public class ListaPosicionHacker {
         this.inicioLista = inicioLista;
     }
 
-    public ListaPosicionHacker() {
+    public ListaPosicionHacker(String aNombreFicha) {
         inicioLista =null;
         finalLista =null;
-        nombreFicha = null;
+        nombreFicha = aNombreFicha;
         totalAlmacenados =0;
     }
     public ListaPosicionHacker(PosicionHacker aNodoPunto,String aNombre) {
@@ -88,6 +88,16 @@ public class ListaPosicionHacker {
         inicioLista = null;
         finalLista = null;
         totalAlmacenados = 0;
-
+    }
+    public boolean IsHaker(int x, int y)
+    {
+        PosicionHacker temp = inicioLista;
+        while (temp != null)
+        {
+            if(temp.getValorX() == x && temp.getValorY() == y)
+                return true;
+            temp = temp.getSiguiente();
+        }
+        return false;
     }
 }

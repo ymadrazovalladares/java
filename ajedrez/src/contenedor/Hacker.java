@@ -6,11 +6,47 @@ public class Hacker {
     private Integer cantFichasBlancas;
     private Integer cantFichasNegras;
 
-    public Hacker() {
+    public Hacker()
+    {
         cantFichasBlancas =16;
         cantFichasNegras = 16;
         hackerBlanco = new ListaPosicionHacker[cantFichasBlancas];
         hackerNegro = new ListaPosicionHacker[cantFichasNegras];
+
+        hackerNegro[0] = new ListaPosicionHacker("peon1");
+        hackerNegro[1] = new ListaPosicionHacker("peon2");
+        hackerNegro[2] = new ListaPosicionHacker("peon3");
+        hackerNegro[3] = new ListaPosicionHacker("peon4");
+        hackerNegro[4] = new ListaPosicionHacker("peon5");
+        hackerNegro[5] = new ListaPosicionHacker("peon6");
+        hackerNegro[6] = new ListaPosicionHacker("peon7");
+        hackerNegro[7] = new ListaPosicionHacker("peon8");
+        hackerNegro[8] = new ListaPosicionHacker("torre1");
+        hackerNegro[9] = new ListaPosicionHacker("torre2");
+        hackerNegro[10] = new ListaPosicionHacker("alfil1");
+        hackerNegro[11] = new ListaPosicionHacker("alfil2");
+        hackerNegro[12] = new ListaPosicionHacker("caballo1");
+        hackerNegro[13] = new ListaPosicionHacker("caballo2");
+        hackerNegro[14] = new ListaPosicionHacker("reina");
+        hackerNegro[15] = new ListaPosicionHacker("rey");
+
+        hackerBlanco[0] = new ListaPosicionHacker("peon1");
+        hackerBlanco[1] = new ListaPosicionHacker("peon2");
+        hackerBlanco[2] = new ListaPosicionHacker("peon3");
+        hackerBlanco[3] = new ListaPosicionHacker("peon4");
+        hackerBlanco[4] = new ListaPosicionHacker("peon5");
+        hackerBlanco[5] = new ListaPosicionHacker("peon6");
+        hackerBlanco[6] = new ListaPosicionHacker("peon7");
+        hackerBlanco[7] = new ListaPosicionHacker("peon8");
+        hackerBlanco[8] = new ListaPosicionHacker("torre1");
+        hackerBlanco[9] = new ListaPosicionHacker("torre2");
+        hackerBlanco[10] = new ListaPosicionHacker("alfil1");
+        hackerBlanco[11] = new ListaPosicionHacker("alfil2");
+        hackerBlanco[12] = new ListaPosicionHacker("caballo1");
+        hackerBlanco[13] = new ListaPosicionHacker("caballo2");
+        hackerBlanco[14] = new ListaPosicionHacker("reina");
+        hackerBlanco[15] = new ListaPosicionHacker("rey");
+
     }
 
     public ListaPosicionHacker[] getHackerBlanco() {
@@ -97,20 +133,20 @@ public class Hacker {
    //////////////arreglar///////////////
    public void RellenarListaJugadaHacker(int x, int y, String ficha, String jugador, Casilla tablero[][])
    {
-       if(ficha == "peon")
+       if(ficha.contains("peon"))
            MovimientoPeon(x,y,jugador,ficha);
-       if(ficha == "Torre")
+       if(ficha.contains("torre"))
            MovimientoTorre(x,y,jugador,ficha, tablero);
-       if(ficha == "Alfil")
+       if(ficha.contains("alfil"))
            MovimientoAlfil(x,y,jugador,ficha, tablero);
-       if(ficha == "Reina")
+       if(ficha == "reina")
        {
            MovimientoAlfil(x,y,jugador,ficha, tablero);
            MovimientoTorre(x,y,jugador,ficha, tablero);
        }
-       if(ficha == "Rey")
+       if(ficha == "rey")
            MovimientoRey(x,y,jugador,ficha, tablero);
-       if(ficha == "caballo")
+       if(ficha.contains("caballo"))
            MovimientoCaballo(x,y,jugador, ficha);
    }
 
@@ -384,9 +420,9 @@ public class Hacker {
                 else
                     hackerNegro[GetIndiceNegro(aficha)].cargarAlFinaldeLaLista(aux);
 
-                if(tablero[x-i][y-i].getFicha().getJugador() != tablero[x][y].getFicha().getJugador()&&
-                        tablero[x-i][y-i].getFicha().getJugador() != ""  )
-                    bandera = true;i++;
+                if(tablero[y-i][x-i].getFicha().getJugador() != tablero[y][x].getFicha().getJugador() &&  tablero[y-i][x-i].getFicha().getJugador() != "" )
+                    bandera = true;
+                i++;
             }
             else
                 bandera = true;
@@ -482,22 +518,34 @@ public class Hacker {
         PosicionHacker aux = new PosicionHacker();
         if(jugador == "blanco")
         {
-            if(x+1<8)
+            if(y+1<8)
             {
-                aux = new PosicionHacker(x+1,y+1);
-                hackerBlanco[GetIndiceBlanco(aficha)].cargarAlFinaldeLaLista(aux);
-                aux = new PosicionHacker(x+1,y-1);
-                hackerBlanco[GetIndiceBlanco(aficha)].cargarAlFinaldeLaLista(aux);
+                if(x+1<8)
+                {
+                    aux = new PosicionHacker(x + 1, y + 1);
+                    hackerBlanco[GetIndiceBlanco(aficha)].cargarAlFinaldeLaLista(aux);
+                }
+                if(x-1>=0)
+                {
+                    aux = new PosicionHacker(x + 1, y - 1);
+                    hackerBlanco[GetIndiceBlanco(aficha)].cargarAlFinaldeLaLista(aux);
+                }
             }
-        }
+       }
         else
         {
-            if(x-1>= 0)
+            if(y-1>= 0)
             {
-                aux = new PosicionHacker(x-1,y+1);
-                hackerNegro[GetIndiceNegro(aficha)].cargarAlFinaldeLaLista(aux);
+                if(x+1<8)
+                {
+                    aux = new PosicionHacker(x+1,y-1);
+                    hackerNegro[GetIndiceNegro(aficha)].cargarAlFinaldeLaLista(aux);
+                }
+                if(x-1>=0)
+                {
                 aux = new PosicionHacker(x-1,y-1);
                 hackerNegro[GetIndiceNegro(aficha)].cargarAlFinaldeLaLista(aux);
+                }
             }
         }
      }
@@ -508,9 +556,9 @@ public class Hacker {
         for(int i = 0; i < cantFichasBlancas; i++)
         {
             if(aFicha == hackerBlanco[i].getNombreFicha())
-                temp = i;
+                return i;
         }
-        return -1;
+        return temp;
     }
     public Integer GetIndiceNegro(String aFicha)
     {
@@ -518,9 +566,9 @@ public class Hacker {
         for(int i = 0; i < cantFichasNegras; i++)
         {
             if(aFicha == hackerNegro[i].getNombreFicha())
-                temp = i;
+                return i;
         }
-        return -1;
+        return temp;
     }
 
     public void LimpiarPosicionesFichaBlanca(String ficha)
@@ -545,5 +593,35 @@ public class Hacker {
                 break;
             }
         }
+    }
+
+    public boolean IsReyBlancoHacker(Integer x, Integer y)
+    {
+        boolean temp = false;
+        for(int i = 0; i < cantFichasNegras;i++)
+        {
+            temp = hackerNegro[i].IsHaker(x,y);
+            if(temp)
+                return true;
+        }
+        return temp;
+    }
+    public boolean IsReyNegroHacker(Integer x, Integer y)
+    {
+        boolean temp = false;
+        for(int i = 0; i < cantFichasBlancas;i++)
+        {
+            temp = hackerBlanco[i].IsHaker(x,y);
+            if(temp)
+                return true;
+        }
+        return temp;
+    }
+    public boolean IsReyHacker(Integer x, Integer y, String jugador)
+    {
+        if(jugador == "negro")
+            return IsReyBlancoHacker(x,y);
+        else
+            return IsReyNegroHacker(x,y);
     }
 }
