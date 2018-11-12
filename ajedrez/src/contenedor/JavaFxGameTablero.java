@@ -1,5 +1,9 @@
 package contenedor;
 
+import javafx.scene.control.Button;
+import javafx.scene.control.Dialog;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 
 public class JavaFxGameTablero {
@@ -51,43 +55,43 @@ public class JavaFxGameTablero {
 
     public void PiezasBlancas()
     {
-        this.tablero[0][0].addIdFicha("torre1","blanco");
-        this.tablero[0][1].addIdFicha("caballo1","blanco");
-        this.tablero[0][2].addIdFicha("alfil1","blanco");
-        this.tablero[0][3].addIdFicha("reina","blanco");
-        this.tablero[0][4].addIdFicha("rey","blanco");
-        this.tablero[0][5].addIdFicha("alfil2","blanco");
-        this.tablero[0][6].addIdFicha("caballo2","blanco");
-        this.tablero[0][7].addIdFicha("torre2","blanco");
-        this.tablero[1][0].addIdFicha("peon1","blanco");
-        this.tablero[1][1].addIdFicha("peon2","blanco");
-        this.tablero[1][2].addIdFicha("peon3","blanco");
-        this.tablero[1][3].addIdFicha("peon4","blanco");
-        this.tablero[1][4].addIdFicha("peon5","blanco");
-        this.tablero[1][5].addIdFicha("peon6","blanco");
-        this.tablero[1][6].addIdFicha("peon7","blanco");
-        this.tablero[1][7].addIdFicha("peon8","blanco");
+        this.tablero[0][0].addIdFicha("torre1","blanco", "torreB");
+        this.tablero[0][1].addIdFicha("caballo1","blanco","caballoB");
+        this.tablero[0][2].addIdFicha("alfil1","blanco", "alfilB");
+        this.tablero[0][3].addIdFicha("reina","blanco","reinaB");
+        this.tablero[0][4].addIdFicha("rey","blanco","reyB");
+        this.tablero[0][5].addIdFicha("alfil2","blanco","alfilB");
+        this.tablero[0][6].addIdFicha("caballo2","blanco","caballoB");
+        this.tablero[0][7].addIdFicha("torre2","blanco","torreB");
+        this.tablero[1][0].addIdFicha("peon1","blanco","peonB");
+        this.tablero[1][1].addIdFicha("peon2","blanco","peonB");
+        this.tablero[1][2].addIdFicha("peon3","blanco","peonB");
+        this.tablero[1][3].addIdFicha("peon4","blanco","peonB");
+        this.tablero[1][4].addIdFicha("peon5","blanco","peonB");
+        this.tablero[1][5].addIdFicha("peon6","blanco","peonB");
+        this.tablero[1][6].addIdFicha("peon7","blanco","peonB");
+        this.tablero[1][7].addIdFicha("peon8","blanco","peonB");
 
   }
 
     public void PiezasNegras()
     {
-        this.tablero[7][0].addIdFicha("torre1","negro");
-        this.tablero[7][1].addIdFicha("caballo1","negro");
-        this.tablero[7][2].addIdFicha("alfil1","negro");
-        this.tablero[7][3].addIdFicha("reina","negro");
-        this.tablero[7][4].addIdFicha("rey","negro");
-        this.tablero[7][5].addIdFicha("alfil2","negro");
-        this.tablero[7][6].addIdFicha("caballo2","negro");
-        this.tablero[7][7].addIdFicha("torre2","negro");
-        this.tablero[6][0].addIdFicha("peon1","negro");
-        this.tablero[6][1].addIdFicha("peon2","negro");
-        this.tablero[6][2].addIdFicha("peon3","negro");
-        this.tablero[6][3].addIdFicha("peon4","negro");
-        this.tablero[6][4].addIdFicha("peon5","negro");
-        this.tablero[6][5].addIdFicha("peon6","negro");
-        this.tablero[6][6].addIdFicha("peon7","negro");
-        this.tablero[6][7].addIdFicha("peon8","negro");
+        this.tablero[7][0].addIdFicha("torre1","negro","torre");
+        this.tablero[7][1].addIdFicha("caballo1","negro","caballo");
+        this.tablero[7][2].addIdFicha("alfil1","negro", "alfil");
+        this.tablero[7][3].addIdFicha("reina","negro", "reina");
+        this.tablero[7][4].addIdFicha("rey","negro","rey");
+        this.tablero[7][5].addIdFicha("alfil2","negro","alfil");
+        this.tablero[7][6].addIdFicha("caballo2","negro","caballo");
+        this.tablero[7][7].addIdFicha("torre2","negro","torre");
+        this.tablero[6][0].addIdFicha("peon1","negro","peon");
+        this.tablero[6][1].addIdFicha("peon2","negro","peon");
+        this.tablero[6][2].addIdFicha("peon3","negro","peon");
+        this.tablero[6][3].addIdFicha("peon4","negro","peon");
+        this.tablero[6][4].addIdFicha("peon5","negro","peon");
+        this.tablero[6][5].addIdFicha("peon6","negro","peon");
+        this.tablero[6][6].addIdFicha("peon7","negro","peon");
+        this.tablero[6][7].addIdFicha("peon8","negro","peon");
 
     }
 
@@ -131,12 +135,20 @@ public class JavaFxGameTablero {
      }
         public void Movimiento(Casilla acasilla)
         {
+           /* Image image = new Image(getClass().getResourceAsStream("peon.png"));
+            Button temp = new Button();
+            temp.setGraphic(this.tablero[fichaMarcadaX][fichaMarcadaY].getButton().getGraphic());
+            */
           if(acasilla.isSombreada())
             {
                 LimpiarTablaFichas(GetCasilla(fichaMarcadaX, fichaMarcadaY));
                 acasilla.setFicha(this.tablero[fichaMarcadaX][fichaMarcadaY].getFicha());
-                acasilla.getButton().setText(acasilla.getFicha().getIdFicha());
-                this.tablero[fichaMarcadaX][fichaMarcadaY].getButton().setText("");
+
+               // acasilla.getButton().setText(acasilla.getFicha().getIdFicha());
+                acasilla.getButton().setGraphic(this.tablero[fichaMarcadaX][fichaMarcadaY].getButton().getGraphic());
+
+                this.tablero[fichaMarcadaX][fichaMarcadaY].getButton().setGraphic(new ImageView());
+
                 this.tablero[fichaMarcadaX][fichaMarcadaY].setFicha(new JavaFxFicha());
                 this.setTurno(acasilla.getFicha().getJugador());
                 RestaurarColores();

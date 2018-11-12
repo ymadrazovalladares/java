@@ -38,9 +38,6 @@ public class Casilla {
             color = "-fx-background-color: faf4f1;";
         button.setStyle(String.format("-fx-font-size: %dpx;" + color, (int) (0.25 * buttonSize)));
 
-        //Image image = new Image(getClass().getResourceAsStream("peon negro.jpg"));
-        //button.setGraphic(new ImageView(image));
-
         this.posicionArregloX =  tableroX;
         this.posicionArregloY =  tableroY;
 
@@ -159,9 +156,11 @@ public class Casilla {
         this.ficha = ficha;
     }
 
-    public void addIdFicha(String idFicha,String aJugador)
+    public void addIdFicha(String idFicha,String aJugador, String figura)
     {
-        button.setText(idFicha);
+        //button.setText(idFicha);
+        Image image = new Image(getClass().getResourceAsStream(figura+".png"));
+        button.setGraphic(new ImageView(image));
         ficha.setIdFicha(idFicha);
         ficha.setJugador(aJugador);
     }

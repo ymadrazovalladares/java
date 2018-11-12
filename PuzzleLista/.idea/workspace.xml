@@ -5,13 +5,9 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ajedrez/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ajedrez/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ajedrez/out/production/Puzzle/contenedor/Casilla.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ajedrez/out/production/Puzzle/contenedor/Casilla.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ajedrez/out/production/Puzzle/contenedor/Hacker.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ajedrez/out/production/Puzzle/contenedor/Hacker.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ajedrez/out/production/Puzzle/contenedor/JavaFxGameTablero.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ajedrez/out/production/Puzzle/contenedor/JavaFxGameTablero.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ajedrez/out/production/Puzzle/contenedor/ListaPosicionHacker.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ajedrez/out/production/Puzzle/contenedor/ListaPosicionHacker.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ajedrez/src/contenedor/Casilla.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ajedrez/src/contenedor/Casilla.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ajedrez/src/contenedor/Hacker.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ajedrez/src/contenedor/Hacker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ajedrez/src/contenedor/JavaFxGameTablero.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ajedrez/src/contenedor/JavaFxGameTablero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ajedrez/src/contenedor/ListaPosicionHacker.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ajedrez/src/contenedor/ListaPosicionHacker.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
