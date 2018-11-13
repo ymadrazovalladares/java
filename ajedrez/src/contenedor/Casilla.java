@@ -177,4 +177,16 @@ public class Casilla {
         String colorTemp = "-fx-background-color: pink;";
         button.setStyle(String.format("-fx-font-size: %dpx;" + colorTemp, (int) (0.25 * 100)));
     }
+
+    public void LimpiarCsailla()
+    {
+          ficha = null;
+          idCasilla = null;
+          button = null;
+          posicionArregloX = null;
+          posicionArregloY = null;
+          cambioColor = false;
+          sombreada = false;
+          color = null;
+    }
 }

@@ -108,7 +108,7 @@ public class Hacker {
         cantFichasNegras--;
     }
 
-    public void AddCasillasHackerBlancas(String idFicha, PosicionHacker aPosocion)
+   /* public void AddCasillasHackerBlancas(String idFicha, PosicionHacker aPosocion)
     {
         for(int i = 0; i < cantFichasBlancas ; i++)
         {
@@ -128,7 +128,7 @@ public class Hacker {
                 hackerNegro[i].cargarAlFinaldeLaLista(aPosocion);
             }
         }
-    }
+    }*/
 
    //////////////arreglar///////////////
    public void RellenarListaJugadaHacker(int x, int y, String ficha, String jugador, Casilla tablero[][])

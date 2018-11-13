@@ -29,6 +29,7 @@ public class JavaFxGameTablero {
         sombreada = false;
         turno = "blanco";
         setCasilla();
+       // ResetearListaHacker();
     }
 
     public void setCasilla(){
@@ -100,6 +101,7 @@ public class JavaFxGameTablero {
 
          int x1 = acasilla.getPosicionArregloY() / 100;
          int y1 = acasilla.getPosicionArregloX() / 100;
+         ResetearListaHacker();
          //if(this.getTurno() != acasilla.getFicha().getJugador())
          if (fichaMarcada == false && tablero[x1][y1].getFicha().getIdFicha() != "")
          {
@@ -135,24 +137,37 @@ public class JavaFxGameTablero {
      }
         public void Movimiento(Casilla acasilla)
         {
-           /* Image image = new Image(getClass().getResourceAsStream("peon.png"));
-            Button temp = new Button();
-            temp.setGraphic(this.tablero[fichaMarcadaX][fichaMarcadaY].getButton().getGraphic());
-            */
-          if(acasilla.isSombreada())
+           if(acasilla.isSombreada())
             {
+                if(acasilla.getFicha() != null)
+                    EliminarTablaFichas(acasilla);
                 LimpiarTablaFichas(GetCasilla(fichaMarcadaX, fichaMarcadaY));
                 acasilla.setFicha(this.tablero[fichaMarcadaX][fichaMarcadaY].getFicha());
-
-               // acasilla.getButton().setText(acasilla.getFicha().getIdFicha());
                 acasilla.getButton().setGraphic(this.tablero[fichaMarcadaX][fichaMarcadaY].getButton().getGraphic());
-
                 this.tablero[fichaMarcadaX][fichaMarcadaY].getButton().setGraphic(new ImageView());
-
                 this.tablero[fichaMarcadaX][fichaMarcadaY].setFicha(new JavaFxFicha());
                 this.setTurno(acasilla.getFicha().getJugador());
-                RestaurarColores();
-                ActualizarTablaFichas(acasilla);
+                ResetearListaHacker();
+
+                String color = "blanco";
+                if(turno == "blanco")
+                    color = "negro";
+                if(hacker.IsReyHacker(GetCasilla("rey", turno).getPosicionArregloX()/100,
+                        GetCasilla("rey", turno).getPosicionArregloY()/100,color))
+                {
+                    this.tablero[fichaMarcadaX][fichaMarcadaY].getButton().setGraphic(acasilla.getButton().getGraphic());
+                    this.tablero[fichaMarcadaX][fichaMarcadaY].setFicha(acasilla.getFicha());
+                    acasilla.setFicha(new JavaFxFicha());
+                    acasilla.getButton().setGraphic(new ImageView());
+                    this.setTurno(acasilla.getFicha().getJugador());
+                    RestaurarColores();
+                    fichaMarcada = false;
+                    ResetearListaHacker();
+                }
+                else {
+                    RestaurarColores();
+                    ActualizarTablaFichas(acasilla);
+                }
           }
   }
 
@@ -486,10 +501,10 @@ public class JavaFxGameTablero {
         this.turno = jugador;
     }
 
-    public void EliminarTablaFichas()
+    public void EliminarTablaFichas(Casilla aCasilla)
     {
-        String fichaEliminar = tablero[fichaMarcadaX][fichaMarcadaY].getFicha().getIdFicha();
-        String jugador = tablero[fichaMarcadaX][fichaMarcadaY].getFicha().getJugador();
+        String fichaEliminar =aCasilla.getFicha().getIdFicha();
+        String jugador = aCasilla.getFicha().getJugador();
         if(jugador == "blanco")
         {
             hacker.EliminarFichaBlanca(fichaEliminar);
@@ -553,4 +568,37 @@ public class JavaFxGameTablero {
     {
         return tablero[x][y];
     }
+
+    public void ResetearListaHacker()
+    {
+        Casilla casilla = new Casilla();
+        for(int i = 0; i < hacker.getCantFichasBlancas(); i++)
+          {
+              hacker.LimpiarPosicionesFichaBlanca(hacker.getHackerBlanco()[i].getNombreFicha());
+              casilla = GetCasilla(hacker.getHackerBlanco()[i].getNombreFicha(),"blanco");
+              hacker.RellenarListaJugadaHacker(casilla.getPosicionArregloX()/100,casilla.getPosicionArregloY()/100,
+                hacker.getHackerBlanco()[i].getNombreFicha(),"blanco",tablero);
+          }
+        for(int i = 0; i < hacker.getCantFichasNegras(); i++)
+        {
+            hacker.LimpiarPosicionesFichaNegra(hacker.getHackerNegro()[i].getNombreFicha());
+            casilla = GetCasilla(hacker.getHackerNegro()[i].getNombreFicha(),"negro");
+            hacker.RellenarListaJugadaHacker(casilla.getPosicionArregloX()/100,casilla.getPosicionArregloY()/100,
+                    hacker.getHackerNegro()[i].getNombreFicha(),"negro",tablero);
+        }
+  }
+
+  public Casilla GetCasilla(String aIdFicha, String aJugador)
+  {
+      for(int i = 0; i < 8;i++)
+      {
+          for(int j = 0; j < 8; j++)
+          {
+              if (tablero[i][j].getFicha().getIdFicha() == aIdFicha &&
+                    tablero[i][j].getFicha().getJugador() == aJugador)
+                  return tablero[i][j];
+          }
+      }
+      return null;
+  }
 }
