@@ -2,8 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="025a5752-672c-40a0-ae32-c48586055dd5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../conexion/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../conexion/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../conexion/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../conexion/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../conexion/conexion.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../conexion/src/conexion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../conexion/src/recibir.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ajedrez/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ajedrez/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ajedrez/out/production/Puzzle/contenedor/JavaFxGameTablero.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ajedrez/out/production/Puzzle/contenedor/JavaFxGameTablero.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -177,7 +184,7 @@
         <entry file="file://$PROJECT_DIR$/src/contenedor/JavaFxGameTablero.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="348">
-              <caret line="53" column="18" lean-forward="true" selection-start-line="53" selection-start-column="18" selection-end-line="53" selection-end-column="18" />
+              <caret line="53" column="18" selection-start-line="53" selection-start-column="18" selection-end-line="53" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -205,10 +212,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1616" />
-    <option name="height" value="876" />
+    <option name="x" value="67" />
+    <option name="y" value="47" />
+    <option name="width" value="1400" />
+    <option name="height" value="820" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -526,7 +533,7 @@
     <entry file="file://$PROJECT_DIR$/src/contenedor/JavaFxGameTablero.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="348">
-          <caret line="53" column="18" lean-forward="true" selection-start-line="53" selection-start-column="18" selection-end-line="53" selection-end-column="18" />
+          <caret line="53" column="18" selection-start-line="53" selection-start-column="18" selection-end-line="53" selection-end-column="18" />
         </state>
       </provider>
     </entry>
