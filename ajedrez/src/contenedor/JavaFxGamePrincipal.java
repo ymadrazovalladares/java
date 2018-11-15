@@ -18,9 +18,7 @@ public  class JavaFxGamePrincipal extends Application {
     @Override
     public void start(Stage primaryStage)  {
 
-         Servidor servidor = new Servidor();
-         Cliente cliente = new Cliente();
-        JavaFxGameTablero javaFxGameTablero= new JavaFxGameTablero(servidor,cliente);
+        JavaFxGameTablero javaFxGameTablero= new JavaFxGameTablero();
         Scene scene = new Scene(javaFxGameTablero.getPane(),860,800);
         primaryStage.setScene(scene);
         primaryStage.show();

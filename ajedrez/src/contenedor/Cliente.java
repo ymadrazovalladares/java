@@ -8,6 +8,7 @@ import java.util.Scanner;
 
 public class Cliente {
     private Socket socket;
+    private String cadena;
     private DataInputStream bufferDeEntrada = null;
     private DataOutputStream bufferDeSalida = null;
     Scanner teclado = new Scanner(System.in);
@@ -81,6 +82,7 @@ public class Cliente {
             do {
                 st = (String) bufferDeEntrada.readUTF();
                 mostrarTexto("\n[Servidor] => " + st);
+                cadena = st;
                 System.out.print("\n[Usted] => ");
             } while (!st.equals(COMANDO_TERMINACION));
         } catch (IOException e) {}
@@ -95,7 +97,13 @@ public class Cliente {
                 enviar(entrada);
         }
     }
+    public String getCadena() {
+        return cadena;
+    }
 
+    public void setCadena(String cadena) {
+        this.cadena = cadena;
+    }
    /* public static void main(String[] argumentos) {
         Cliente cliente = new Cliente();
         Scanner escaner = new Scanner(System.in);
