@@ -6,6 +6,10 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 
+import java.util.Scanner;
+
+import static contenedor.Servidor.mostrarTexto;
+
 public class JavaFxGameTablero {
 
     private Pane pane;
@@ -16,9 +20,13 @@ public class JavaFxGameTablero {
     private boolean fichaMarcada;
     private boolean sombreada;
     private String turno;
+    private Servidor servidor;
+    private Cliente cliente;
+    private boolean servidorCliente;
+    private boolean clienteServidor;
 
 
-    public JavaFxGameTablero()
+    public JavaFxGameTablero(Servidor aServidor, Cliente aCliente)
     {
         tablero = new Casilla[8][8];
         hacker = new Hacker();
@@ -27,9 +35,55 @@ public class JavaFxGameTablero {
         fichaMarcadaY = 0;
         fichaMarcada = false;
         sombreada = false;
-        turno = "blanco";
-        setCasilla();
+        turno = "negro";
+        servidorCliente = false;
+        clienteServidor = false;
+        cliente = aCliente;
+        servidor = aServidor;
+        Cliente_Servidor();
+        //setCasilla();
        // ResetearListaHacker();
+    }
+
+    public void Cliente_Servidor()
+    {
+        mostrarTexto("Cliente 0/Servidor 1");
+        Scanner escaner = new Scanner(System.in);
+        String estado = escaner.nextLine();
+        if(estado.toCharArray()[0] == '0')
+        {
+
+            mostrarTexto("Ingresa la IP: [localhost por defecto] ");
+            String ip = escaner.nextLine();
+            if (ip.length() <= 0) ip = "localhost";
+                mostrarTexto("Puerto: [5050 por defecto] ");
+            String puerto = escaner.nextLine();
+            if (puerto.length() <= 0) puerto = "5050";
+            cliente.ejecutarConexion(ip, Integer.parseInt(puerto));
+            clienteServidor = true;
+            setCasilla();
+            cliente.escribirDatos();
+        }
+        if(estado.toCharArray()[0] == '1')
+        {
+            Scanner sc = new Scanner(System.in);
+            mostrarTexto("Ingresa el puerto [5050 por defecto]: ");
+            String puerto = sc.nextLine();
+            if (puerto.length() <= 0) puerto = "5050";
+                servidor.ejecutarConexion(Integer.parseInt(puerto));
+
+            servidorCliente  = true;
+            setCasilla();
+            //servidor.escribirDatos();
+
+        }
+
+
+    }
+
+    public void LeerEnvio()
+    {
+        servidor.recibirDatos();
     }
 
     public void setCasilla(){
@@ -103,38 +157,56 @@ public class JavaFxGameTablero {
          int y1 = acasilla.getPosicionArregloX() / 100;
          ResetearListaHacker();
          //if(this.getTurno() != acasilla.getFicha().getJugador())
-         if (fichaMarcada == false && tablero[x1][y1].getFicha().getIdFicha() != "")
-         {
-             fichaMarcadaX = x1;
-             fichaMarcadaY = y1;
-             fichaMarcada = tablero[x1][y1].BotonPresionado();
-             MostrarJugada(x1,y1);
-         }
-         else
-           {
-             if (fichaMarcada == true && fichaMarcadaX == x1 && fichaMarcadaY == y1)
-               {
-                 fichaMarcadaX = null;
-                 fichaMarcadaY = null ;
+         if(servidorCliente && getTurno() == "negro") {
+             if (fichaMarcada == false && tablero[x1][y1].getFicha().getIdFicha() != "") {
+                 fichaMarcadaX = x1;
+                 fichaMarcadaY = y1;
                  fichaMarcada = tablero[x1][y1].BotonPresionado();
-                 RestaurarColores();
-               }
-               else
-                 {
-                   if (fichaMarcada == true && acasilla.isSombreada() == true)
-                    {
-                     Movimiento(tablero[x1][y1]);
-                     fichaMarcada = false;
-                     sombreada = false;
-                     RestaurarColores();
+                 MostrarJugada(x1, y1);
+             } else {
+                 if (fichaMarcada == true && fichaMarcadaX == x1 && fichaMarcadaY == y1) {
                      fichaMarcadaX = null;
                      fichaMarcadaY = null;
-                     RevisarHacker();
-                   }
-                }
-           }
+                     fichaMarcada = tablero[x1][y1].BotonPresionado();
+                     RestaurarColores();
+                 } else {
+                     if (fichaMarcada == true && acasilla.isSombreada() == true) {
+                         Movimiento(tablero[x1][y1]);
+                         fichaMarcada = false;
+                         sombreada = false;
+                         RestaurarColores();
+                         fichaMarcadaX = null;
+                         fichaMarcadaY = null;
+                         RevisarHacker();
+                         pane.setOnMouseMoved(event -> {if(servidorCliente && getTurno() == "blanco")
+                         {
+                            DescomponerString(servidor.getCadena());
+                         }
+                         });
+                     }
+                 }
+             }
+         }
         // RevisarHacker();
      }
+
+     public void DescomponerString(String dato) {
+         if (dato != null) {
+             String aux[] = new String[2];
+             int contador = 0;
+             for (int i = 0; i < dato.length(); i++) {
+                 if (dato.toCharArray()[i] == ' ')
+                     contador++;
+                 else
+                     aux[contador] += dato.toCharArray()[i];
+             }
+             tablero[Integer.parseInt(aux[3])][Integer.parseInt(aux[2])].getButton().setGraphic(
+                     this.tablero[Integer.parseInt(aux[1])][Integer.parseInt(aux[0])].getButton().getGraphic());
+             tablero[Integer.parseInt(aux[3])][Integer.parseInt(aux[2])].setFicha(this.tablero
+                     [Integer.parseInt(aux[1])][Integer.parseInt(aux[0])].getFicha());
+         }
+     }
+
         public void Movimiento(Casilla acasilla)
         {
            if(acasilla.isSombreada())
@@ -168,7 +240,16 @@ public class JavaFxGameTablero {
                     RestaurarColores();
                     ActualizarTablaFichas(acasilla);
                 }
-          }
+               if(turno == "blanco" && servidorCliente == true)
+                {
+                   servidor.enviar(fichaMarcadaY +" " + fichaMarcadaX +" "+acasilla.getPosicionArregloX()/100+" "+ acasilla.getPosicionArregloY()/100);
+                }
+                }
+                if(turno == "negro" && clienteServidor == true)
+                {
+                    cliente.enviar(fichaMarcadaY +" " + fichaMarcadaX +" "+acasilla.getPosicionArregloX()/100+" "+ acasilla.getPosicionArregloY()/100);
+                }
+
   }
 
     public void MostrarJugada(int x, int y)
