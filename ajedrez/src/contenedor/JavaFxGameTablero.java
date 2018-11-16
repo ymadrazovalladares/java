@@ -29,6 +29,7 @@ public class JavaFxGameTablero {
 
     public JavaFxGameTablero()
     {
+       // javaFXGT = new JavaFxGameTablero();
         tablero = new Casilla[8][8];
         hacker = new Hacker();
         pane = new Pane();
@@ -87,8 +88,13 @@ public class JavaFxGameTablero {
 
                 Casilla acasilla = new Casilla(i, j, "");
                 acasilla.getButton().setOnMouseClicked(event -> {
-                    if(this.getTurno() != acasilla.getFicha().getJugador() ||acasilla.isSombreada() == true)
-                        moverFicha(acasilla);
+                    if(this.getTurno() != acasilla.getFicha().getJugador() ||acasilla.isSombreada() == true) {
+                        try {
+                            moverFicha(acasilla);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                    }
                 });
 
                 this.tablero[i][j] = acasilla;
@@ -147,7 +153,7 @@ public class JavaFxGameTablero {
     }
 
 
-     public void moverFicha(Casilla acasilla) {
+     public void moverFicha(Casilla acasilla) throws InterruptedException {
 
          int x1 = acasilla.getPosicionArregloY() / 100;
          int y1 = acasilla.getPosicionArregloX() / 100;
@@ -158,42 +164,59 @@ public class JavaFxGameTablero {
              Integer a = 0;
              while (cliente.getCadena() == "" || cliente.getCadena() == null)
              {
-                 a++;
+                 a++;  //this.wait();
              }
              ActualizarTablaFichas(DescomponerString(cliente.getCadena()));
+
              turno = "blanco";
              cliente.setCadena("");
 
          }
-         if(servidorCliente && getTurno() == "negro" || clienteServidor && getTurno() == "blanco")
+         else if(servidorCliente && getTurno() == "blanco" )
          {
-             if (fichaMarcada == false && tablero[x1][y1].getFicha().getIdFicha() != "") {
-                 fichaMarcadaX = x1;
-                 fichaMarcadaY = y1;
-                 fichaMarcada = tablero[x1][y1].BotonPresionado();
-                 MostrarJugada(x1, y1);
-             } else {
-                 if (fichaMarcada == true && fichaMarcadaX == x1 && fichaMarcadaY == y1) {
-                     fichaMarcadaX = null;
-                     fichaMarcadaY = null;
+             Integer a = 0;
+             while (servidor.getCadena() == "" || servidor.getCadena() == null)
+             {
+                 a++;  //this.wait();
+             }
+             ActualizarTablaFichas(DescomponerString(servidor.getCadena()));
+
+             turno = "negro";
+             servidor.setCadena("");
+
+         }
+         else {
+             if (servidorCliente && getTurno() == "negro" || clienteServidor && getTurno() == "blanco") {
+                 if (fichaMarcada == false && tablero[x1][y1].getFicha().getIdFicha() != "") {
+                     fichaMarcadaX = x1;
+                     fichaMarcadaY = y1;
                      fichaMarcada = tablero[x1][y1].BotonPresionado();
-                     RestaurarColores();
+                     MostrarJugada(x1, y1);
                  } else {
-                     if (fichaMarcada == true && acasilla.isSombreada() == true) {
-                         Movimiento(tablero[x1][y1]);
-                         fichaMarcada = false;
-                         sombreada = false;
-                         RestaurarColores();
+                     if (fichaMarcada == true && fichaMarcadaX == x1 && fichaMarcadaY == y1) {
                          fichaMarcadaX = null;
                          fichaMarcadaY = null;
-                         RevisarHacker();
+                         fichaMarcada = tablero[x1][y1].BotonPresionado();
+                         RestaurarColores();
+                     } else {
+                         if (fichaMarcada == true && acasilla.isSombreada() == true) {
+                             Movimiento(tablero[x1][y1]);
+                             fichaMarcada = false;
+                             sombreada = false;
+                             RestaurarColores();
+                             fichaMarcadaX = null;
+                             fichaMarcadaY = null;
+                             RevisarHacker();
 
+                         }
                      }
                  }
              }
-
          }
-        // RevisarHacker();
+
+
+
+         // RevisarHacker();
      }
 
      public Casilla DescomponerString(String dato)
@@ -210,19 +233,15 @@ public class JavaFxGameTablero {
                      aux1 = "";
                  }
              }
-             int a = Integer.parseInt(aux[3]);
-             int b = Integer.parseInt(aux[2]);
-             int c = Integer.parseInt(aux[1]);
-             int d = Integer.parseInt(aux[0]);
-             tablero[a][b].getButton().setGraphic(
-                     this.tablero[c][d].getButton().getGraphic());
-             tablero[a][b].setFicha(this.tablero
-                     [c][d].getFicha());
-        return tablero[a][b];
+
+             tablero[Integer.parseInt(aux[3])][Integer.parseInt(aux[2])].getButton().setGraphic(
+                     this.tablero[Integer.parseInt(aux[1])][Integer.parseInt(aux[0])].getButton().getGraphic());
+             tablero[Integer.parseInt(aux[3])][Integer.parseInt(aux[2])].setFicha(this.tablero
+                     [Integer.parseInt(aux[1])][Integer.parseInt(aux[0])].getFicha());
+        return tablero[Integer.parseInt(aux[3])][Integer.parseInt(aux[2])];
      }
 
-        public void Movimiento(Casilla acasilla)
-        {
+        public void Movimiento(Casilla acasilla) throws InterruptedException {
            if(acasilla.isSombreada())
             {
                 if(acasilla.getFicha() != null)
@@ -254,33 +273,20 @@ public class JavaFxGameTablero {
                     RestaurarColores();
                     ActualizarTablaFichas(acasilla);
                 }
-               if(turno == "blanco" && servidorCliente == true)
-                {
-                   servidor.enviar(fichaMarcadaY +" " + fichaMarcadaX +" "+acasilla.getPosicionArregloX()/100+" "+ acasilla.getPosicionArregloY()/100);
-                   Integer a = 0;
-                   while (servidor.getCadena() == "" || servidor.getCadena() == null)
-                   {
-                       a++;
-                   }
-                    DescomponerString(servidor.getCadena());
-                    turno = "negro";
+                if(turno == "blanco" && servidorCliente == true) {
+                    servidor.enviar(fichaMarcadaY + " " + fichaMarcadaX + " " + acasilla.getPosicionArregloX() / 100 + " " + acasilla.getPosicionArregloY() / 100);
+                    //turno = "negro";
                     servidor.setCadena("");
                 }
-                }
+                else
                 if(turno == "negro" && clienteServidor == true)
                 {
                     cliente.enviar(fichaMarcadaY +" " + fichaMarcadaX +" "+acasilla.getPosicionArregloX()/100+" "+ acasilla.getPosicionArregloY()/100);
-                    Integer a = 0;
-                    while (cliente.getCadena() == "" || cliente.getCadena() == null)
-                    {
-                        a++;
-                    }
-                    DescomponerString(cliente.getCadena());
-                    turno = "blanco";
+                    //turno = "blanco";
                     cliente.setCadena("");
                 }
-            ActualizarTablaFichas(acasilla);
-  }
+          }
+ }
 
     public void MostrarJugada(int x, int y)
     {
@@ -589,6 +595,7 @@ public class JavaFxGameTablero {
 
 
     public Pane getPane() {
+
         return pane;
     }
 

@@ -2,38 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="efb63469-f24b-41ec-8deb-0107223988c2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Cliente/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Cliente/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Cliente/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Cliente/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Cliente/Cliente.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Cliente/src/Cliente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Cliente/src/Conexion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Cliente/src/Servidor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ClienteServidor/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ClienteServidor/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ClienteServidor/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ClienteServidor/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ClienteServidor/ClienteServidor.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ClienteServidor/src/contenedor/Cliente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ClienteServidor/src/contenedor/Conexion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ClienteServidor/src/contenedor/Servidor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/contenedor/Cliente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/contenedor/Servidor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../socket/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../socket/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../socket/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../socket/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../socket/socket.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../socket/src/contenedor/Cliente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../socket/src/contenedor/Conexion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../socket/src/contenedor/Servidor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ClienteServidor/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ClienteServidor/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../PuzzleLista/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PuzzleLista/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ajedrez.rar" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Puzzle/contenedor/JavaFxGamePrincipal.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Puzzle/contenedor/JavaFxGamePrincipal.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/contenedor/JavaFxGamePrincipal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/contenedor/JavaFxGamePrincipal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Puzzle/contenedor/Cliente$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Puzzle/contenedor/Cliente$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Puzzle/contenedor/Cliente.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Puzzle/contenedor/Cliente.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Puzzle/contenedor/JavaFxGameTablero.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Puzzle/contenedor/JavaFxGameTablero.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Puzzle/contenedor/Servidor$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Puzzle/contenedor/Servidor$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Puzzle/contenedor/Servidor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Puzzle/contenedor/Servidor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/contenedor/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/contenedor/Cliente.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/contenedor/JavaFxGameTablero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/contenedor/JavaFxGameTablero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../conexion/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../conexion/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/contenedor/Servidor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/contenedor/Servidor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socket/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../socket/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -102,31 +83,32 @@
     <session id="-2085434">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
-          <entry key="project.open.time.0" value="1" />
+          <entry key="project.closed" value="4" />
+          <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.11" value="1" />
+          <entry key="project.open.time.35" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.opened" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="34" />
+          <entry key="java" value="37" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="34" />
+          <entry key="JAVA" value="37" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="8617" />
+          <entry key="java" value="9139" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="8617" />
+          <entry key="JAVA" value="9139" />
         </counts>
       </usages-collector>
     </session>
@@ -163,19 +145,47 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/contenedor/JavaFxFicha.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/contenedor/JavaFxGameTablero.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="195">
+              <caret line="287" column="11" lean-forward="true" selection-start-line="287" selection-start-column="11" selection-end-line="287" selection-end-column="11" />
               <folding>
-                <element signature="e#295#296#0" expanded="true" />
-                <element signature="e#341#342#0" expanded="true" />
-                <element signature="e#379#380#0" expanded="true" />
-                <element signature="e#413#414#0" expanded="true" />
-                <element signature="e#443#444#0" expanded="true" />
-                <element signature="e#489#490#0" expanded="true" />
-                <element signature="e#527#528#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#26463#26464#0" expanded="true" />
+                <element signature="e#26495#26496#0" expanded="true" />
+                <element signature="e#26534#26535#0" expanded="true" />
+                <element signature="e#26564#26565#0" expanded="true" />
+                <element signature="e#26615#26616#0" expanded="true" />
+                <element signature="e#26653#26654#0" expanded="true" />
+                <element signature="e#26685#26686#0" expanded="true" />
+                <element signature="e#26713#26714#0" expanded="true" />
+                <element signature="e#26757#26758#0" expanded="true" />
+                <element signature="e#26793#26794#0" expanded="true" />
+                <element signature="e#29176#29177#0" expanded="true" />
+                <element signature="e#29212#29213#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/javafx-src.zip!/javafx/event/Event.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="432">
+              <caret line="198" selection-start-line="198" selection-end-line="198" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/javafx-src.zip!/javafx/scene/Scene.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="3771" selection-start-line="3771" selection-end-line="3771" />
+              <folding>
+                <element signature="e#66572#66573#0" expanded="true" />
+                <element signature="e#66618#66619#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -184,64 +194,15 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/contenedor/Casilla.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="26" />
+            <state relative-caret-position="238">
+              <caret line="135" selection-start-line="135" selection-end-line="135" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#BotonPresionado#0;class#Casilla#0" />
                 <element signature="method#Sombrear#0;class#Casilla#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/contenedor/JavaFxGameTablero.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="295">
-              <caret line="163" column="30" lean-forward="true" selection-start-line="163" selection-start-column="30" selection-end-line="163" selection-end-column="30" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#24888#24889#0" expanded="true" />
-                <element signature="e#24915#24916#0" expanded="true" />
-                <element signature="e#24953#24954#0" expanded="true" />
-                <element signature="e#24985#24986#0" expanded="true" />
-                <element signature="e#25024#25025#0" expanded="true" />
-                <element signature="e#25054#25055#0" expanded="true" />
-                <element signature="e#25105#25106#0" expanded="true" />
-                <element signature="e#25143#25144#0" expanded="true" />
-                <element signature="e#25175#25176#0" expanded="true" />
-                <element signature="e#25203#25204#0" expanded="true" />
-                <element signature="e#25247#25248#0" expanded="true" />
-                <element signature="e#25283#25284#0" expanded="true" />
-                <element signature="e#27666#27667#0" expanded="true" />
-                <element signature="e#27702#27703#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/contenedor/Cliente.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="522">
-              <caret line="105" column="5" selection-start-line="105" selection-start-column="5" selection-end-line="105" selection-end-column="5" />
-              <folding>
-                <element signature="e#2921#2922#0" expanded="true" />
-                <element signature="e#2950#2951#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/contenedor/Servidor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="364">
-              <caret line="114" column="4" lean-forward="true" selection-start-line="114" selection-start-column="4" selection-end-line="116" selection-end-column="5" />
-              <folding>
-                <element signature="e#3216#3217#0" expanded="true" />
-                <element signature="e#3245#3246#0" expanded="true" />
+                <element signature="e#3372#3373#0" expanded="true" />
+                <element signature="e#3411#3412#0" expanded="true" />
+                <element signature="e#3615#3616#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -287,7 +248,28 @@
         <entry file="file://$PROJECT_DIR$/src/contenedor/JavaFxGamePrincipal.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="272">
-              <caret line="20" column="7" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
+              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/contenedor/Cliente.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="90" selection-start-line="90" selection-end-line="90" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/contenedor/Servidor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="44" column="16" lean-forward="true" selection-start-line="44" selection-start-column="16" selection-end-line="44" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -315,9 +297,9 @@
         <option value="$PROJECT_DIR$/src/contenedor/ListaPosicionHacker.java" />
         <option value="$PROJECT_DIR$/src/contenedor/Hacker.java" />
         <option value="$PROJECT_DIR$/src/contenedor/Casilla.java" />
-        <option value="$PROJECT_DIR$/src/contenedor/Servidor.java" />
-        <option value="$PROJECT_DIR$/src/contenedor/Cliente.java" />
         <option value="$PROJECT_DIR$/src/contenedor/JavaFxGamePrincipal.java" />
+        <option value="$PROJECT_DIR$/src/contenedor/Cliente.java" />
+        <option value="$PROJECT_DIR$/src/contenedor/Servidor.java" />
         <option value="$PROJECT_DIR$/src/contenedor/JavaFxGameTablero.java" />
       </list>
     </option>
@@ -340,6 +322,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -362,16 +345,14 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
-      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542246491953" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542299111803" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ajedrez proyecto1" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -435,17 +416,18 @@
       <workItem from="1541914224794" duration="282000" />
       <workItem from="1541920044406" duration="214000" />
       <workItem from="1542215720084" duration="14061000" />
+      <workItem from="1542299229027" duration="9963000" />
+      <workItem from="1542312217982" duration="10132000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="152647000" />
+    <option name="totallyTimeSpent" value="173054000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20758355" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18316196" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -454,8 +436,8 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.21130551" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.18304172" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.21130551" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.243607" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -492,23 +474,9 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/contenedor/JavaFxGameTablero.java</url>
-          <line>258</line>
+          <line>259</line>
           <properties />
-          <option name="timeStamp" value="63" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/contenedor/JavaFxGameTablero.java</url>
-          <line>64</line>
-          <properties />
-          <option name="timeStamp" value="66" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/contenedor/JavaFxGameTablero.java</url>
-          <line>198</line>
-          <properties class="contenedor.JavaFxGameTablero" method="DescomponerString">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="64" />
+          <option name="timeStamp" value="55" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -790,70 +758,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/contenedor/Casilla.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#BotonPresionado#0;class#Casilla#0" />
-            <element signature="method#Sombrear#0;class#Casilla#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/contenedor/PosicionHacker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="43" selection-start-line="43" selection-end-line="43" />
-          <folding>
-            <element signature="e#985#986#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/contenedor/ListaPosicionHacker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/contenedor/Hacker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2040">
-          <caret line="356" column="67" selection-start-line="356" selection-start-column="67" selection-end-line="356" selection-end-column="67" />
-          <folding>
-            <element signature="method#Hacker#0;class#Hacker#0" />
-            <element signature="method#MovimientoCaballo#0;class#Hacker#0" />
-            <element signature="method#MovimientoRey#0;class#Hacker#0" />
-            <element signature="method#MovimientoPeon#0;class#Hacker#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/javafx-src.zip!/javafx/event/EventHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="44" column="9" selection-start-line="44" selection-start-column="9" selection-end-line="44" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/javafx-src.zip!/javafx/scene/Scene.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="2494" selection-start-line="2494" selection-end-line="2494" />
-          <folding>
-            <element signature="e#66572#66573#0" expanded="true" />
-            <element signature="e#66618#66619#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/javafx-src.zip!/javafx/event/Event.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="398">
-          <caret line="198" selection-start-line="198" selection-end-line="198" />
         </state>
       </provider>
     </entry>
@@ -872,24 +780,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/contenedor/Servidor.java">
+    <entry file="file://$PROJECT_DIR$/src/contenedor/Hacker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="114" column="4" lean-forward="true" selection-start-line="114" selection-start-column="4" selection-end-line="116" selection-end-column="5" />
+        <state relative-caret-position="2040">
+          <caret line="356" column="67" selection-start-line="356" selection-start-column="67" selection-end-line="356" selection-end-column="67" />
           <folding>
-            <element signature="e#3216#3217#0" expanded="true" />
-            <element signature="e#3245#3246#0" expanded="true" />
+            <element signature="method#Hacker#0;class#Hacker#0" />
+            <element signature="method#MovimientoCaballo#0;class#Hacker#0" />
+            <element signature="method#MovimientoRey#0;class#Hacker#0" />
+            <element signature="method#MovimientoPeon#0;class#Hacker#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/contenedor/Cliente.java">
+    <entry file="file://$PROJECT_DIR$/src/contenedor/ListaPosicionHacker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="105" column="5" selection-start-line="105" selection-start-column="5" selection-end-line="105" selection-end-column="5" />
+        <state relative-caret-position="204">
+          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/contenedor/PosicionHacker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="43" selection-start-line="43" selection-end-line="43" />
           <folding>
-            <element signature="e#2921#2922#0" expanded="true" />
-            <element signature="e#2950#2951#0" expanded="true" />
+            <element signature="e#985#986#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/contenedor/Casilla.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="135" selection-start-line="135" selection-end-line="135" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#BotonPresionado#0;class#Casilla#0" />
+            <element signature="method#Sombrear#0;class#Casilla#0" />
+            <element signature="e#3372#3373#0" expanded="true" />
+            <element signature="e#3411#3412#0" expanded="true" />
+            <element signature="e#3615#3616#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -897,30 +828,63 @@
     <entry file="file://$PROJECT_DIR$/src/contenedor/JavaFxGamePrincipal.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
-          <caret line="20" column="7" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/contenedor/Cliente.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="90" selection-start-line="90" selection-end-line="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/contenedor/Servidor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="44" column="16" lean-forward="true" selection-start-line="44" selection-start-column="16" selection-end-line="44" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/javafx-src.zip!/javafx/event/Event.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="198" selection-start-line="198" selection-end-line="198" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/javafx-src.zip!/javafx/scene/Scene.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="3771" selection-start-line="3771" selection-end-line="3771" />
+          <folding>
+            <element signature="e#66572#66573#0" expanded="true" />
+            <element signature="e#66618#66619#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/contenedor/JavaFxGameTablero.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="163" column="30" lean-forward="true" selection-start-line="163" selection-start-column="30" selection-end-line="163" selection-end-column="30" />
+        <state relative-caret-position="195">
+          <caret line="287" column="11" lean-forward="true" selection-start-line="287" selection-start-column="11" selection-end-line="287" selection-end-column="11" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#24888#24889#0" expanded="true" />
-            <element signature="e#24915#24916#0" expanded="true" />
-            <element signature="e#24953#24954#0" expanded="true" />
-            <element signature="e#24985#24986#0" expanded="true" />
-            <element signature="e#25024#25025#0" expanded="true" />
-            <element signature="e#25054#25055#0" expanded="true" />
-            <element signature="e#25105#25106#0" expanded="true" />
-            <element signature="e#25143#25144#0" expanded="true" />
-            <element signature="e#25175#25176#0" expanded="true" />
-            <element signature="e#25203#25204#0" expanded="true" />
-            <element signature="e#25247#25248#0" expanded="true" />
-            <element signature="e#25283#25284#0" expanded="true" />
-            <element signature="e#27666#27667#0" expanded="true" />
-            <element signature="e#27702#27703#0" expanded="true" />
+            <element signature="e#26463#26464#0" expanded="true" />
+            <element signature="e#26495#26496#0" expanded="true" />
+            <element signature="e#26534#26535#0" expanded="true" />
+            <element signature="e#26564#26565#0" expanded="true" />
+            <element signature="e#26615#26616#0" expanded="true" />
+            <element signature="e#26653#26654#0" expanded="true" />
+            <element signature="e#26685#26686#0" expanded="true" />
+            <element signature="e#26713#26714#0" expanded="true" />
+            <element signature="e#26757#26758#0" expanded="true" />
+            <element signature="e#26793#26794#0" expanded="true" />
+            <element signature="e#29176#29177#0" expanded="true" />
+            <element signature="e#29212#29213#0" expanded="true" />
           </folding>
         </state>
       </provider>

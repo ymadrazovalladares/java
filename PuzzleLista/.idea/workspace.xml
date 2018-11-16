@@ -2,38 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="025a5752-672c-40a0-ae32-c48586055dd5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Cliente/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Cliente/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Cliente/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Cliente/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Cliente/Cliente.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Cliente/src/Cliente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Cliente/src/Conexion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Cliente/src/Servidor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ClienteServidor/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ClienteServidor/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ClienteServidor/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ClienteServidor/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ClienteServidor/ClienteServidor.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ClienteServidor/src/contenedor/Cliente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ClienteServidor/src/contenedor/Conexion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ClienteServidor/src/contenedor/Servidor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ajedrez/src/contenedor/Cliente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ajedrez/src/contenedor/Servidor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../socket/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../socket/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../socket/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../socket/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../socket/socket.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../socket/src/contenedor/Cliente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../socket/src/contenedor/Conexion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../socket/src/contenedor/Servidor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ClienteServidor/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ClienteServidor/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ajedrez/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ajedrez/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ajedrez/out/production/Puzzle/contenedor/JavaFxGamePrincipal.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ajedrez/out/production/Puzzle/contenedor/JavaFxGamePrincipal.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ajedrez/src/contenedor/JavaFxGamePrincipal.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ajedrez/src/contenedor/JavaFxGamePrincipal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ajedrez/src/contenedor/JavaFxGameTablero.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ajedrez/src/contenedor/JavaFxGameTablero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../conexion/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../conexion/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../socket/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../socket/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -90,7 +61,7 @@
     <session id="450495937">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.3" value="1" />
@@ -235,7 +206,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1616" />
@@ -349,7 +320,8 @@
     <option name="totallyTimeSpent" value="82808000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="876" extended-state="7" />
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17287917" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
