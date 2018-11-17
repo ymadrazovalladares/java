@@ -1,5 +1,7 @@
 package contenedor;
 
+import javafx.scene.image.ImageView;
+
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
@@ -7,7 +9,8 @@ import java.net.Socket;
 import java.util.Scanner;
 
 public class Cliente {
-    private JavaFxGameTablero javaFXGT;
+    private Casilla casilla = new Casilla();
+    private Casilla tablero[][] = new Casilla[8][8];
     private Socket socket;
     private String cadena;
     private DataInputStream bufferDeEntrada = null;
@@ -39,10 +42,13 @@ public class Cliente {
         }
     }
 
-    public void enviar(String s) {
+    public void enviar(String s, Casilla aTablero[][]) {
         try {
             bufferDeSalida.writeUTF(s);
             bufferDeSalida.flush();
+            for(int i = 0; i<8; i++)
+                for(int j = 0; j<8; j++)
+                    this.tablero[i][j] = aTablero[i][j];
         } catch (IOException e) {
             mostrarTexto("IOException on enviar");
         }
@@ -83,22 +89,49 @@ public class Cliente {
             do {
                 st = (String) bufferDeEntrada.readUTF();
                 mostrarTexto("\n[Servidor] => " + st);
+                if(st != "" && st != cadena)
+                    DescomponerString(st);
                 cadena = st;
-
                 System.out.print("\n[Usted] => ");
             } while (!st.equals(COMANDO_TERMINACION));
         } catch (IOException e) {}
 
     }
 
+    public void DescomponerString(String dato)
+    {
+        String aux1 = "";
+        String aux[] = new String[4];
+        int contador = 0;
+        for (int i = 0; i < dato.length(); i++) {
+            if (dato.toCharArray()[i] == ' ')
+                contador++;
+            else {
+                aux1 += dato.charAt(i);
+                aux[contador] = aux1;
+                aux1 = "";
+            }
+        }
+
+        tablero[Integer.parseInt(aux[3])][Integer.parseInt(aux[2])].getButton().setGraphic(
+                this.tablero[Integer.parseInt(aux[1])][Integer.parseInt(aux[0])].getButton().getGraphic());
+        tablero[Integer.parseInt(aux[3])][Integer.parseInt(aux[2])].setFicha(this.tablero
+                [Integer.parseInt(aux[1])][Integer.parseInt(aux[0])].getFicha());
+
+        tablero[Integer.parseInt(aux[1])][Integer.parseInt(aux[0])].setFicha(new JavaFxFicha());
+        tablero[Integer.parseInt(aux[1])][Integer.parseInt(aux[0])].getButton().setGraphic(new ImageView());
+        casilla = tablero[Integer.parseInt(aux[3])][Integer.parseInt(aux[2])];
+        cadena = "";
+    }
+
     public void escribirDatos() {
-        String entrada = "";
+        /*String entrada = "";
         while (true) {
             System.out.print("[Usted] => ");
             entrada = teclado.nextLine();
             if(entrada.length() > 0)
                 enviar(entrada);
-        }
+        }*/
     }
     public String getCadena() {
         return cadena;
@@ -107,7 +140,12 @@ public class Cliente {
     public void setCadena(String cadena) {
         this.cadena = cadena;
     }
-   /* public static void main(String[] argumentos) {
+
+    public Casilla getCasilla() {
+        return casilla;
+    }
+
+    /* public static void main(String[] argumentos) {
         Cliente cliente = new Cliente();
         Scanner escaner = new Scanner(System.in);
         mostrarTexto("Ingresa la IP: [localhost por defecto] ");

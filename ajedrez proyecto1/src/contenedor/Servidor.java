@@ -9,7 +9,6 @@ import java.util.Scanner;
 
 
 public class Servidor {
-    private JavaFxGameTablero javaFXGT;
     private Socket socket;
     private String cadena;
     private ServerSocket serverSocket;

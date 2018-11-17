@@ -2,14 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="efb63469-f24b-41ec-8deb-0107223988c2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../ClienteServidor/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ClienteServidor/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../PuzzleLista/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../PuzzleLista/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Puzzle/contenedor/JavaFxGameTablero.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Puzzle/contenedor/JavaFxGameTablero.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ajedrez 1er proyecto.rar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ajedrez proyecto1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ajedrez proyecto1/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ajedrez proyecto1/out/production/Puzzle/contenedor/JavaFxGameTablero.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ajedrez proyecto1/out/production/Puzzle/contenedor/JavaFxGameTablero.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ajedrez proyecto1/src/contenedor/JavaFxGameTablero.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ajedrez proyecto1/src/contenedor/JavaFxGameTablero.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ajedrez/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ajedrez/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ajedrez/out/production/Puzzle/contenedor/Cliente$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ajedrez/out/production/Puzzle/contenedor/Cliente.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../ajedrez/out/production/Puzzle/contenedor/JavaFxGameTablero.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ajedrez/out/production/Puzzle/contenedor/JavaFxGameTablero.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ajedrez/out/production/Puzzle/contenedor/Servidor$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ajedrez/out/production/Puzzle/contenedor/Servidor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ajedrez/src/contenedor/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ajedrez proyecto1/src/contenedor/Cliente.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ajedrez/src/contenedor/JavaFxGameTablero.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ajedrez/src/contenedor/JavaFxGameTablero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../socket/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../socket/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ajedrez/src/contenedor/Servidor.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ajedrez proyecto1/src/contenedor/Servidor.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -149,16 +155,37 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="1771085318">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/contenedor/JavaFxGameTablero.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="654" column="5" lean-forward="true" selection-start-line="654" selection-start-column="5" selection-end-line="654" selection-end-column="5" />
+            <state relative-caret-position="-731">
+              <caret line="152" column="5" lean-forward="true" selection-start-line="152" selection-start-column="5" selection-end-line="152" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#MostrarJugada#0;class#JavaFxGameTablero#0" />
+                <element signature="method#MovimientoCaballo#0;class#JavaFxGameTablero#0" />
+                <element signature="method#MovimientoRey#0;class#JavaFxGameTablero#0" />
+                <element signature="method#MovimientoAlfil#0;class#JavaFxGameTablero#0" />
+                <element signature="method#MovimientoTorre#0;class#JavaFxGameTablero#0" />
+                <element signature="method#MovimientoPeon#0;class#JavaFxGameTablero#0" />
+                <element signature="method#RestaurarColores#0;class#JavaFxGameTablero#0" />
+                <element signature="method#getPane#0;class#JavaFxGameTablero#0" />
+                <element signature="method#EliminarTablaFichas#0;class#JavaFxGameTablero#0" />
+                <element signature="method#LimpiarTablaFichas#0;class#JavaFxGameTablero#0" />
+                <element signature="method#ActualizarTablaFichas#0;class#JavaFxGameTablero#0" />
+                <element signature="method#CasillaRey#0;class#JavaFxGameTablero#0" />
+                <element signature="method#RevisarHacker#0;class#JavaFxGameTablero#0" />
               </folding>
             </state>
           </provider>
@@ -212,17 +239,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/contenedor/Cliente.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="86" column="74" lean-forward="true" selection-start-line="86" selection-start-column="74" selection-end-line="86" selection-end-column="74" />
-              <folding>
-                <element signature="e#3117#3118#0" expanded="true" />
-                <element signature="e#3146#3147#0" expanded="true" />
-                <element signature="e#3190#3191#0" expanded="true" />
-                <element signature="e#3226#3227#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="1360">
+              <caret line="86" column="74" selection-start-line="86" selection-start-column="74" selection-end-line="86" selection-end-column="74" />
             </state>
           </provider>
         </entry>
@@ -230,7 +251,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/contenedor/Servidor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
+            <state relative-caret-position="850">
               <caret line="55" column="11" selection-start-line="55" selection-start-column="11" selection-end-line="55" selection-end-column="11" />
               <folding>
                 <element signature="e#2297#2298#0" expanded="true" />
@@ -280,7 +301,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1616" />
@@ -292,8 +313,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -316,6 +335,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -388,17 +409,17 @@
       <workItem from="1542215720084" duration="14061000" />
       <workItem from="1542299229027" duration="9963000" />
       <workItem from="1542312217982" duration="1671000" />
+      <workItem from="1542403244770" duration="1529000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="165568000" />
+    <option name="totallyTimeSpent" value="167097000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1593" y="6" width="1616" height="876" extended-state="0" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18316196" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18573265" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -822,19 +843,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/contenedor/JavaFxGameTablero.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="654" column="5" lean-forward="true" selection-start-line="654" selection-start-column="5" selection-end-line="654" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/contenedor/Servidor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
+        <state relative-caret-position="850">
           <caret line="55" column="11" selection-start-line="55" selection-start-column="11" selection-end-line="55" selection-end-column="11" />
           <folding>
             <element signature="e#2297#2298#0" expanded="true" />
@@ -849,13 +860,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/contenedor/Cliente.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="86" column="74" lean-forward="true" selection-start-line="86" selection-start-column="74" selection-end-line="86" selection-end-column="74" />
+        <state relative-caret-position="1360">
+          <caret line="86" column="74" selection-start-line="86" selection-start-column="74" selection-end-line="86" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/contenedor/JavaFxGameTablero.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-731">
+          <caret line="152" column="5" lean-forward="true" selection-start-line="152" selection-start-column="5" selection-end-line="152" selection-end-column="5" />
           <folding>
-            <element signature="e#3117#3118#0" expanded="true" />
-            <element signature="e#3146#3147#0" expanded="true" />
-            <element signature="e#3190#3191#0" expanded="true" />
-            <element signature="e#3226#3227#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="method#MostrarJugada#0;class#JavaFxGameTablero#0" />
+            <element signature="method#MovimientoCaballo#0;class#JavaFxGameTablero#0" />
+            <element signature="method#MovimientoRey#0;class#JavaFxGameTablero#0" />
+            <element signature="method#MovimientoAlfil#0;class#JavaFxGameTablero#0" />
+            <element signature="method#MovimientoTorre#0;class#JavaFxGameTablero#0" />
+            <element signature="method#MovimientoPeon#0;class#JavaFxGameTablero#0" />
+            <element signature="method#RestaurarColores#0;class#JavaFxGameTablero#0" />
+            <element signature="method#getPane#0;class#JavaFxGameTablero#0" />
+            <element signature="method#EliminarTablaFichas#0;class#JavaFxGameTablero#0" />
+            <element signature="method#LimpiarTablaFichas#0;class#JavaFxGameTablero#0" />
+            <element signature="method#ActualizarTablaFichas#0;class#JavaFxGameTablero#0" />
+            <element signature="method#CasillaRey#0;class#JavaFxGameTablero#0" />
+            <element signature="method#RevisarHacker#0;class#JavaFxGameTablero#0" />
           </folding>
         </state>
       </provider>
