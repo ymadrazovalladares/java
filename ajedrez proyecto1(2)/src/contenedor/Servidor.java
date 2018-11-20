@@ -11,15 +11,24 @@ import java.util.Scanner;
 
 
 public class Servidor {
-    public Casilla tablero[][] = new Casilla[8][8];
-    private Casilla casilla = new Casilla();
+    private JavaFxGameTablero tablero;
     private Socket socket;
     private String cadena;
     private ServerSocket serverSocket;
     private DataInputStream bufferDeEntrada = null;
     private DataOutputStream bufferDeSalida = null;
-    Scanner escaner = new Scanner(System.in);
+    Scanner escaner;
     final String COMANDO_TERMINACION = "salir()";
+
+    public Servidor( ) {
+        this.tablero = null;
+        this.socket = null;
+        this.cadena = "";
+        this.serverSocket = null;
+        this.bufferDeEntrada = null;
+        this.bufferDeSalida = null;
+        this.escaner = new Scanner(System.in);
+    }
 
     public void levantarConexion(int puerto) {
         try {
@@ -64,9 +73,7 @@ public class Servidor {
         try {
             bufferDeSalida.writeUTF(s);
             bufferDeSalida.flush();
-            for(int i = 0; i<8; i++)
-                for(int j = 0; j<8; j++)
-                   this.tablero[i][j] = aTablero[i][j];
+
         } catch (IOException e) {
             mostrarTexto("Error en enviar(): " + e.getMessage());
         }
@@ -139,22 +146,25 @@ public class Servidor {
             }
         }
 
-        tablero[Integer.parseInt(aux[3])][Integer.parseInt(aux[2])].getButton().setGraphic(
-                this.tablero[Integer.parseInt(aux[1])][Integer.parseInt(aux[0])].getButton().getGraphic());
-        tablero[Integer.parseInt(aux[3])][Integer.parseInt(aux[2])].setFicha(this.tablero
-                [Integer.parseInt(aux[1])][Integer.parseInt(aux[0])].getFicha());
+        tablero.setFichaMarcadaX(Integer.parseInt(aux[1]));
+        tablero.setFichaMarcadaY(Integer.parseInt(aux[0]));
+        tablero.getTablero()[Integer.parseInt(aux[3])][Integer.parseInt(aux[2])].setSombreada(true);
+        tablero.Movimiento(tablero.getTablero()[Integer.parseInt(aux[3])][Integer.parseInt(aux[2])]);
 
-        tablero[Integer.parseInt(aux[1])][Integer.parseInt(aux[0])].setFicha(new JavaFxFicha());
-        tablero[Integer.parseInt(aux[1])][Integer.parseInt(aux[0])].getButton().setGraphic(new ImageView());
-        casilla = tablero[Integer.parseInt(aux[3])][Integer.parseInt(aux[2])];
         cadena = "";
+        tablero.ActualizarTablaFichas(tablero.getTablero()[Integer.parseInt(aux[3])][Integer.parseInt(aux[2])]);
+        tablero.RevisarHacker();
     }
 
-    public Casilla getCasilla() {
-        return casilla;
+    public JavaFxGameTablero getTablero() {
+        return tablero;
     }
 
-/*public static void main(String[] args) throws IOException {
+    public void setTablero(JavaFxGameTablero tablero) {
+        this.tablero = tablero;
+    }
+
+    /*public static void main(String[] args) throws IOException {
         Servidor s = new Servidor();
         Scanner sc = new Scanner(System.in);
 
