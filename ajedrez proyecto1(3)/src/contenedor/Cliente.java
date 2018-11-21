@@ -25,6 +25,7 @@ public class Cliente extends Thread{
         this.bufferDeEntrada = bufferDeEntrada;
         this.bufferDeSalida = bufferDeSalida;
         this.teclado = teclado;
+        start();
     }
 
     public void levantarConexion(String ip, int puerto) {
@@ -80,21 +81,16 @@ public class Cliente extends Thread{
         }
     }
 
-    public void ejecutarConexion(String ip, int puerto) {
-        Thread hilo = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                try {
-                    levantarConexion(ip, puerto);
-                    abrirFlujos();
-                    recibirDatos();
-                    enviar();
-                } finally {
-                    cerrarConexion();
-                }
-            }
-        });
-        hilo.start();
+
+    public void run() {
+        try {
+            levantarConexion("localhost", 5050);
+            abrirFlujos();
+            recibirDatos();
+            enviar();
+        } finally {
+            cerrarConexion();
+        }
     }
 
     public void recibirDatos() {

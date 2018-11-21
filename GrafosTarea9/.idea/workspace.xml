@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a78931e8-46b9-433c-8202-68d1de65c6a8" name="Default Changelist" comment="" />
+    <list default="true" id="a78931e8-46b9-433c-8202-68d1de65c6a8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ajedrez proyecto1(3)/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ajedrez proyecto1(3)/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ajedrez proyecto1(3)/out/production/Puzzle/contenedor/Cliente$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ajedrez proyecto1(3)/out/production/Puzzle/contenedor/Cliente.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ajedrez proyecto1(3)/out/production/Puzzle/contenedor/Cliente.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ajedrez proyecto1(3)/out/production/Puzzle/contenedor/JavaFxGamePrincipal.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ajedrez proyecto1(3)/out/production/Puzzle/contenedor/JavaFxGamePrincipal.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ajedrez proyecto1(3)/out/production/Puzzle/contenedor/JavaFxGameTablero.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ajedrez proyecto1(3)/out/production/Puzzle/contenedor/JavaFxGameTablero.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ajedrez proyecto1(3)/out/production/Puzzle/contenedor/Servidor$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ajedrez proyecto1(3)/out/production/Puzzle/contenedor/Servidor.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ajedrez proyecto1(3)/out/production/Puzzle/contenedor/Servidor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ajedrez proyecto1(3)/src/contenedor/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ajedrez proyecto1(3)/src/contenedor/Cliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ajedrez proyecto1(3)/src/contenedor/JavaFxGamePrincipal.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ajedrez proyecto1(3)/src/contenedor/JavaFxGamePrincipal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ajedrez proyecto1(3)/src/contenedor/JavaFxGameTablero.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ajedrez proyecto1(3)/src/contenedor/JavaFxGameTablero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ajedrez proyecto1(3)/src/contenedor/Servidor.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ajedrez proyecto1(3)/src/contenedor/Servidor.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -74,7 +87,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/contenedor/ClaseBfsGrafo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="222">
+            <state relative-caret-position="289">
               <caret line="18" column="10" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -86,7 +99,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/contenedor/ClaseDfsGrafo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="327">
+            <state relative-caret-position="425">
               <caret line="27" column="12" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="24" />
             </state>
           </provider>
@@ -95,7 +108,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/contenedor/ClassGrafo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
+            <state relative-caret-position="289">
               <caret line="27" column="16" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -117,8 +130,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/contenedor/UsaGrafo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="112">
-              <caret line="33" column="19" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
+            <state relative-caret-position="272">
+              <caret line="19" column="27" lean-forward="true" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -152,7 +165,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-8" />
     <option name="width" value="1616" />
     <option name="height" value="876" />
@@ -163,7 +176,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -186,7 +199,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="AndroidView" />
     </panes>
   </component>
@@ -195,7 +208,7 @@
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542665057816" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ajedrez proyecto1(4)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.gutterIcons" />
@@ -250,12 +263,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13738000" />
+    <option name="totallyTimeSpent" value="14845000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2596401" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26285347" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -294,7 +308,7 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/contenedor/ClassGrafo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
+        <state relative-caret-position="289">
           <caret line="27" column="16" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -314,14 +328,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/contenedor/ClaseDfsGrafo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
+        <state relative-caret-position="425">
           <caret line="27" column="12" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/contenedor/ClaseBfsGrafo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
+        <state relative-caret-position="289">
           <caret line="18" column="10" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -329,21 +343,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/contenedor/Dijkstra.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1849">
-          <caret line="148" column="24" selection-start-line="148" selection-start-column="17" selection-end-line="148" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1881#1895#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/contenedor/Dijkstra.java" />
     <entry file="file://$PROJECT_DIR$/src/contenedor/UsaGrafo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="33" column="19" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
+        <state relative-caret-position="272">
+          <caret line="19" column="27" lean-forward="true" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
         </state>
       </provider>
     </entry>

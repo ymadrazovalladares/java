@@ -30,6 +30,7 @@ public class Servidor extends Thread{
         this.bufferDeSalida = null;
         this.escaner = new Scanner(System.in);
         envio = false;
+        start();
     }
 
     public void levantarConexion(int puerto) {
@@ -110,25 +111,18 @@ public class Servidor extends Thread{
     }
 
 
+    public void run() {
+        while (true) {
+            try {
+                levantarConexion(5050);
+                flujos();
+                escribirDatos();
+                recibirDatos();
 
-    public void ejecutarConexion(int puerto) {
-        Thread hilo = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                while (true) {
-                    try {
-                        levantarConexion(puerto);
-                        flujos();
-                        escribirDatos();
-                        recibirDatos();
-
-                    } finally {
-                        cerrarConexion();
-                    }
-                }
+            } finally {
+                cerrarConexion();
             }
-        });
-        hilo.start();
+        }
     }
 
     public String getCadena() {
