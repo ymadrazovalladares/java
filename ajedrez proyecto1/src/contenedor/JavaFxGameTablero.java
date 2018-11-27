@@ -6,10 +6,6 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 
-import java.util.Scanner;
-
-import static contenedor.Servidor.mostrarTexto;
-
 public class JavaFxGameTablero {
 
     private Pane pane;
@@ -20,10 +16,7 @@ public class JavaFxGameTablero {
     private boolean fichaMarcada;
     private boolean sombreada;
     private String turno;
-    private Servidor servidor;
-    private Cliente cliente;
-    private boolean servidorCliente;
-    private boolean clienteServidor;
+
 
     public JavaFxGameTablero()
     {
@@ -35,46 +28,7 @@ public class JavaFxGameTablero {
         fichaMarcada = false;
         sombreada = false;
         turno = "negro";
-        servidorCliente = false;
-        clienteServidor = false;
-        cliente = new Cliente();
-        servidor = new Servidor();
-        Cliente_Servidor();
-        //setCasilla();
-    }
-    public void Cliente_Servidor()
-    {
-        mostrarTexto("Cliente 0/Servidor 1");
-        Scanner escaner = new Scanner(System.in);
-        String estado = escaner.nextLine();
-        if(estado.toCharArray()[0] == '0')
-        {
-
-            mostrarTexto("Ingresa la IP: [localhost por defecto] ");
-            String ip = escaner.nextLine();
-            if (ip.length() <= 0) ip = "localhost";
-            mostrarTexto("Puerto: [5050 por defecto] ");
-            String puerto = escaner.nextLine();
-            if (puerto.length() <= 0) puerto = "5050";
-            cliente.ejecutarConexion(ip, Integer.parseInt(puerto));
-            clienteServidor = true;
-            setCasilla();
-
-            //cliente.escribirDatos();
-        }
-        if(estado.toCharArray()[0] == '1')
-        {
-            Scanner sc = new Scanner(System.in);
-            mostrarTexto("Ingresa el puerto [5050 por defecto]: ");
-            String puerto = sc.nextLine();
-            if (puerto.length() <= 0) puerto = "5050";
-            servidor.ejecutarConexion(Integer.parseInt(puerto));
-
-            servidorCliente  = true;
-            setCasilla();
-        }
-
-
+        setCasilla();
     }
 
     public void setCasilla(){
@@ -171,11 +125,10 @@ public class JavaFxGameTablero {
                          fichaMarcada = false;
                          sombreada = false;
                          RestaurarColores();
-
+                         fichaMarcadaX = null;
+                         fichaMarcadaY = null;
                          RevisarHacker();
                      }
-                        fichaMarcadaX = null;
-                        fichaMarcadaY = null;
                    }
                 }
            }
@@ -203,12 +156,10 @@ public class JavaFxGameTablero {
                 {
                     this.tablero[fichaMarcadaX][fichaMarcadaY].getButton().setGraphic(acasilla.getButton().getGraphic());
                     this.tablero[fichaMarcadaX][fichaMarcadaY].setFicha(acasilla.getFicha());
-                    acasilla.setFicha(new JavaFxFicha());
-                    acasilla.getButton().setGraphic(new ImageView());
                     this.setTurno(color);
                     RestaurarColores();
                     fichaMarcada = false;
-                    ActualizarTablaFichas(this.tablero[fichaMarcadaX][fichaMarcadaY]);
+                    //ResetearListaHacker();
                     return false;
                 }
                 else {

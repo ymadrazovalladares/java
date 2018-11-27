@@ -199,17 +199,15 @@ public class JavaFxGameTablero {
                          fichaMarcada = tablero[x1][y1].BotonPresionado();
                          RestaurarColores();
                      } else {
-                         if (fichaMarcada == true && acasilla.isSombreada() == true)
-                         {
-                             if(Movimiento(tablero[x1][y1])) {
-                                 fichaMarcada = false;
-                                 sombreada = false;
-                                 RestaurarColores();
-
-                                 RevisarHacker();
-                             }
+                         if (fichaMarcada == true && acasilla.isSombreada() == true) {
+                             Movimiento(tablero[x1][y1]);
+                             fichaMarcada = false;
+                             sombreada = false;
+                             RestaurarColores();
                              fichaMarcadaX = null;
                              fichaMarcadaY = null;
+                             RevisarHacker();
+
                          }
                      }
                  }
@@ -243,7 +241,7 @@ public class JavaFxGameTablero {
         return tablero[Integer.parseInt(aux[3])][Integer.parseInt(aux[2])];
      }
 
-        public boolean Movimiento(Casilla acasilla) throws InterruptedException {
+        public void Movimiento(Casilla acasilla) throws InterruptedException {
            if(acasilla.isSombreada())
             {
                 if(acasilla.getFicha() != null)
@@ -266,12 +264,10 @@ public class JavaFxGameTablero {
                     this.tablero[fichaMarcadaX][fichaMarcadaY].setFicha(acasilla.getFicha());
                     acasilla.setFicha(new JavaFxFicha());
                     acasilla.getButton().setGraphic(new ImageView());
-                    this.setTurno(color);
+                    this.setTurno(acasilla.getFicha().getJugador());
                     RestaurarColores();
                     fichaMarcada = false;
-                    ActualizarTablaFichas(this.tablero[fichaMarcadaX][fichaMarcadaY]);
-                    return false;
-
+                    ResetearListaHacker();
                 }
                 else {
                     RestaurarColores();
@@ -290,7 +286,6 @@ public class JavaFxGameTablero {
                     cliente.setCadena("");
                 }
           }
-          return true;
  }
 
     public void MostrarJugada(int x, int y)
