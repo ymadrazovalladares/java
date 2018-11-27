@@ -18,13 +18,15 @@ public  class JavaFxGamePrincipal extends Application {
        Servidor servidor;
        boolean Servidorcliente;
 
-    @Override
-    public void start(Stage primaryStage)  {
+   public void start(Stage primaryStage)  {
 
         JavaFxGameTablero javaFxGameTablero= new JavaFxGameTablero();
-        cliente = new Cliente(javaFxGameTablero);
-        servidor = new Servidor(javaFxGameTablero);
         Cliente_Servidor();
+        if(Servidorcliente)
+           servidor = new Servidor(javaFxGameTablero);
+       else
+           cliente = new Cliente(javaFxGameTablero);
+
         javaFxGameTablero.setServidorCliente(Servidorcliente);
         Scene scene = new Scene(javaFxGameTablero.getPane(),860,800);
         primaryStage.setScene(scene);
@@ -42,7 +44,8 @@ public  class JavaFxGamePrincipal extends Application {
             mostrarTexto("Puerto: [5050 por defecto] ");
             String puerto = escaner.nextLine();
             if (puerto.length() <= 0) puerto = "5050";
-            cliente.ejecutarConexion(ip, Integer.parseInt(puerto));
+            //   cliente.start();
+            //cliente.ejecutarConexion(ip, Integer.parseInt(puerto));
             Servidorcliente = false;
          }
         if (estado.toCharArray()[0] == '1') {
@@ -50,7 +53,8 @@ public  class JavaFxGamePrincipal extends Application {
             mostrarTexto("Ingresa el puerto [5050 por defecto]: ");
             String puerto = sc.nextLine();
             if (puerto.length() <= 0) puerto = "5050";
-            servidor.ejecutarConexion(Integer.parseInt(puerto));
+              // servidor.start();
+            //servidor.ejecutarConexion(Integer.parseInt(puerto));
             Servidorcliente = true;
         }
 
