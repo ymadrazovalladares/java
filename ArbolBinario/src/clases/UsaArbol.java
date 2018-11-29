@@ -20,7 +20,10 @@ public class UsaArbol {
         estruturaArbol.add(125);
         estruturaArbol.add(175);
 
-
+        System.out.println("PreOrden");
+        estruturaArbol.preorden();
+        System.out.println("");
+        estruturaArbol.Eliminar(estruturaArbol.BuscarPreorrden(estruturaArbol.getRaiz(),98));
         System.out.println("PostOrden");
         estruturaArbol.postorden();
         System.out.println("");
@@ -29,9 +32,9 @@ public class UsaArbol {
         System.out.println("");
         System.out.println("PreOrden");
         estruturaArbol.preorden();
-        estruturaArbol.Eliminar(estruturaArbol.BuscarPreorrden(estruturaArbol.getRaiz(),90));
-        System.out.println("");
-        System.out.println("PreOrden");
-        estruturaArbol.preorden();
+        //estruturaArbol.Eliminar(estruturaArbol.BuscarPreorrden(estruturaArbol.getRaiz(),90));
+
+
+
     }
 }
