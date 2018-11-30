@@ -35,7 +35,7 @@ public class JavaFxGameTablero {
                     fichaMarcada = false;
                     sombreada = false;
                     turno = "negro";
-                    cadenaEnviar = "1 1 1 2";
+                    cadenaEnviar = "";
                     setCasilla();
    }
 
