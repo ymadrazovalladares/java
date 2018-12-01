@@ -62,13 +62,12 @@ public class UsaGrafo {
 
         ClassGrafoPonderado<String> grafoCopia =grafo;
         ClassGrafoPonderado<String> grafoClon = grafo.getGrafoclonado();
-
-
         grafo.eliminaNodo("A");
 
         System.out.println();
-        System.out.println("****GRAFO COPIA RESULTADO***");
+        System.out.println("****GRAFO COPIADO****");
         System.out.println();
+
         it=grafoCopia.getGrafo().keySet().iterator();
         System.out.println("Lectura de Grafo ");
         while(it.hasNext()){
@@ -88,16 +87,17 @@ public class UsaGrafo {
 
         }
 
+
         System.out.println();
         System.out.println("****GRAFO CLONADO****");
         System.out.println();
 
-        it =grafoClon.getGrafo().keySet().iterator();
+        it=grafoClon.getGrafo().keySet().iterator();
         System.out.println("Lectura de Grafo ");
         while(it.hasNext()){
             String valor = (String) it.next();
             System.out.println(valor);
-            if (grafoClon.getGrafo().get(valor)!=null) {
+            if (  grafoClon.getGrafo().get(valor)!=null) {
                 TreeMap<String, Integer> listaadyacente=grafoClon.getGrafo().get(valor);
 
                 Iterator<String> itAdyacentes =listaadyacente.keySet().iterator();
@@ -111,8 +111,7 @@ public class UsaGrafo {
 
         }
 
-
-    }
+   }
 
 
 

@@ -194,7 +194,8 @@ public class JavaFxGameTablero {
                 this.tablero[fichaMarcadaX][fichaMarcadaY].getButton().setGraphic(new ImageView());
                 //this.setTurno(acasilla.getFicha().getJugador());
                 ResetearListaHacker();
-                Minimax();
+                if(turno == "blanco")
+                    Minimax();
 
                 String color = "blanco";
                 if(turno == "blanco")
@@ -243,6 +244,7 @@ public class JavaFxGameTablero {
     {
         String ficha = "";
         PosicionHacker temp = new PosicionHacker();
+        PosicionHacker primeraJ = new PosicionHacker();
         Integer x = 10;
         Integer y = 10;
         Integer mayor = 0;
@@ -250,11 +252,12 @@ public class JavaFxGameTablero {
         {
 
             temp = hacker.getHackerBlanco()[i].getInicioLista();
+            primeraJ = hacker.getHackerBlanco()[i].getInicioLista();
             while (temp != null)
             {
                if(tablero[temp.getValorY()][temp.getValorX()].getFicha().getIdFicha()!= "")
                  {
-                    if(GetPonderacion(tablero[temp.getValorY()][temp.getValorX()].getFicha().getIdFicha())>mayor
+                    if(GetPonderacion(tablero[temp.getValorY()][temp.getValorX()].getFicha().getIdFicha())>=mayor
                         && getTurno() == "negro")
                     {
                         x= temp.getValorX();
@@ -273,10 +276,15 @@ public class JavaFxGameTablero {
         }
         else
         {
-            fichaMarcadaX = getCasillla(hacker.getHackerBlanco()[0].getNombreFicha()).getPosicionArregloX();
-            fichaMarcadaY = getCasillla(hacker.getHackerBlanco()[0].getNombreFicha()).getPosicionArregloY();
-            tablero[temp.getValorX()][temp.getValorY()].setSombreada(true);
-            Movimiento(tablero[temp.getValorX()][temp.getValorY()]);
+            Casilla acasilla = new Casilla();
+            //acasilla = getCasillla(hacker.getHackerBlanco()[8].getNombreFicha());
+           // fichaMarcadaX = acasilla.getPosicionArregloX();
+            //fichaMarcadaY = acasilla.getPosicionArregloY();
+            fichaMarcadaX = 1;
+            fichaMarcadaY = 1;
+            tablero[2][1].setSombreada(true);
+            setTurno("negro");
+            Movimiento(tablero[2][1]);
         }
     }
 
