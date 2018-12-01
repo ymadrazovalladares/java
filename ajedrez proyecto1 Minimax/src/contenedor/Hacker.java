@@ -114,6 +114,7 @@ public class Hacker {
         {
             if(idFicha == hackerBlanco[i].getNombreFicha())
             {
+                aPosocion.setPonderacion(ObtenerPeso(idFicha));
                 hackerBlanco[i].cargarAlFinaldeLaLista(aPosocion);
             }
          }
@@ -125,6 +126,7 @@ public class Hacker {
         {
             if(idFicha == hackerNegro[i].getNombreFicha())
             {
+                aPosocion.setPonderacion(ObtenerPeso(idFicha));
                 hackerNegro[i].cargarAlFinaldeLaLista(aPosocion);
             }
         }
@@ -134,7 +136,7 @@ public class Hacker {
    public void RellenarListaJugadaHacker(int x, int y, String ficha, String jugador, Casilla tablero[][])
    {
        if(ficha.contains("peon"))
-           MovimientoPeon(x,y,jugador,ficha);
+           MovimientoPeon(x,y,jugador,ficha,tablero);
        if(ficha.contains("torre"))
            MovimientoTorre(x,y,jugador,ficha, tablero);
        if(ficha.contains("alfil"))
@@ -147,14 +149,14 @@ public class Hacker {
        if(ficha == "rey")
            MovimientoRey(x,y,jugador,ficha, tablero);
        if(ficha.contains("caballo"))
-           MovimientoCaballo(x,y,jugador, ficha);
+           MovimientoCaballo(x,y,jugador, ficha,tablero);
    }
 
-    public  void MovimientoCaballo(int x, int y,String jugador,String aficha)
+    public  void MovimientoCaballo(int x, int y,String jugador,String aficha, Casilla[][] aTablero)
     {
         PosicionHacker aux = new PosicionHacker();
         if(x+1 < 8 && y+2 < 8) {
-            aux = new PosicionHacker(x+1,y+2);
+            aux = new PosicionHacker(x+1,y+2,ObtenerPeso(aTablero[y+2][x+1].getFicha().getIdFicha()));
             if(jugador == "blanco")
                 hackerBlanco[GetIndiceBlanco(aficha)].cargarAlFinaldeLaLista(aux);
             else
@@ -162,7 +164,7 @@ public class Hacker {
         }
         if(x+1 < 8 && y-2 >= 0)
         {
-            aux = new PosicionHacker(x+1,y-2);
+            aux = new PosicionHacker(x+1,y-2,ObtenerPeso(aTablero[y-2][x+1].getFicha().getIdFicha()));
             if(jugador == "blanco")
                 hackerBlanco[GetIndiceBlanco(aficha)].cargarAlFinaldeLaLista(aux);
             else
@@ -170,7 +172,7 @@ public class Hacker {
         }
         if(x+2 < 8 && y+1 < 8)
         {
-            aux = new PosicionHacker(x+2,y+1);
+            aux = new PosicionHacker(x+2,y+1,ObtenerPeso(aTablero[y+1][x+2].getFicha().getIdFicha()));
             if(jugador == "blanco")
                 hackerBlanco[GetIndiceBlanco(aficha)].cargarAlFinaldeLaLista(aux);
             else
@@ -178,7 +180,7 @@ public class Hacker {
         }
         if(x+2 < 8 && y-1 >= 0)
         {
-            aux = new PosicionHacker(x+2,y-1);
+            aux = new PosicionHacker(x+2,y-1,ObtenerPeso(aTablero[y-1][x+2].getFicha().getIdFicha()));
             if(jugador == "blanco")
                 hackerBlanco[GetIndiceBlanco(aficha)].cargarAlFinaldeLaLista(aux);
             else
@@ -186,7 +188,7 @@ public class Hacker {
         }
         if(x-1 >= 0 && y+2 < 8)
         {
-            aux = new PosicionHacker(x-1,y+2);
+            aux = new PosicionHacker(x-1,y+2,ObtenerPeso(aTablero[y+2][x-1].getFicha().getIdFicha()));
             if(jugador == "blanco")
                 hackerBlanco[GetIndiceBlanco(aficha)].cargarAlFinaldeLaLista(aux);
             else
@@ -194,7 +196,7 @@ public class Hacker {
         }
         if(x-1 >= 0 && y-2 >= 0)
         {
-            aux = new PosicionHacker(x-1,y-2);
+            aux = new PosicionHacker(x-1,y-2,ObtenerPeso(aTablero[y-2][x-1].getFicha().getIdFicha()));
             if(jugador == "blanco")
                 hackerBlanco[GetIndiceBlanco(aficha)].cargarAlFinaldeLaLista(aux);
             else
@@ -202,7 +204,7 @@ public class Hacker {
         }
         if(x-2 >= 0 && y+1 < 8)
         {
-            aux = new PosicionHacker(x-2,y+1);
+            aux = new PosicionHacker(x-2,y+1,ObtenerPeso(aTablero[y+1][x-2].getFicha().getIdFicha()));
             if(jugador == "blanco")
                 hackerBlanco[GetIndiceBlanco(aficha)].cargarAlFinaldeLaLista(aux);
             else
@@ -210,7 +212,7 @@ public class Hacker {
         }
         if(x-2 >= 0 && y-1 >= 0)
         {
-            aux = new PosicionHacker(x-2,y-1);
+            aux = new PosicionHacker(x-2,y-1,ObtenerPeso(aTablero[y-1][x-2].getFicha().getIdFicha()));
             if(jugador == "blanco")
                 hackerBlanco[GetIndiceBlanco(aficha)].cargarAlFinaldeLaLista(aux);
             else
@@ -227,7 +229,7 @@ public class Hacker {
                     (tablero[x+1][y].getFicha().getIdFicha() != "" &&
                             tablero[x+1][y].getFicha().getJugador() != tablero[x][y].getFicha().getJugador()))
             {
-                aux = new PosicionHacker(x+1,y);
+                aux = new PosicionHacker(x+1,y,ObtenerPeso(tablero[y][x+1].getFicha().getIdFicha()));
                 if(jugador == "blanco")
                     hackerBlanco[GetIndiceBlanco(aficha)].cargarAlFinaldeLaLista(aux);
                 else
@@ -241,7 +243,7 @@ public class Hacker {
                     (tablero[x][y+1].getFicha().getIdFicha() != "" &&
                             tablero[x][y+1].getFicha().getJugador() != tablero[x][y].getFicha().getJugador()))
             {
-                aux = new PosicionHacker(x,y+1);
+                aux = new PosicionHacker(x,y+1,ObtenerPeso(tablero[y+1][x].getFicha().getIdFicha()));
                 if(jugador == "blanco")
                     hackerBlanco[GetIndiceBlanco(aficha)].cargarAlFinaldeLaLista(aux);
                 else
@@ -255,7 +257,7 @@ public class Hacker {
                     (tablero[x - 1][y].getFicha().getIdFicha() != "" &&
                             tablero[x - 1][y].getFicha().getJugador() != tablero[x][y].getFicha().getJugador()))
             {
-                aux = new PosicionHacker(x-1,y);
+                aux = new PosicionHacker(x-1,y,ObtenerPeso(tablero[y][x-1].getFicha().getIdFicha()));
                 if(jugador == "blanco")
                     hackerBlanco[GetIndiceBlanco(aficha)].cargarAlFinaldeLaLista(aux);
                 else
@@ -269,7 +271,7 @@ public class Hacker {
                     (tablero[x][y-1].getFicha().getIdFicha() != "" &&
                             tablero[x][y-1].getFicha().getJugador() != tablero[x][y].getFicha().getJugador()))
             {
-                aux = new PosicionHacker(x,y-1);
+                aux = new PosicionHacker(x,y-1,ObtenerPeso(tablero[y-1][x].getFicha().getIdFicha()));
                 if(jugador == "blanco")
                     hackerBlanco[GetIndiceBlanco(aficha)].cargarAlFinaldeLaLista(aux);
                 else
@@ -283,7 +285,7 @@ public class Hacker {
                     (tablero[x+1][y+1].getFicha().getIdFicha() != "" &&
                             tablero[x+1][y+1].getFicha().getJugador() != tablero[x][y].getFicha().getJugador()))
             {
-                aux = new PosicionHacker(x+1,y+1);
+                aux = new PosicionHacker(x+1,y+1,ObtenerPeso(tablero[y+1][x+1].getFicha().getIdFicha()));
                 if(jugador == "blanco")
                     hackerBlanco[GetIndiceBlanco(aficha)].cargarAlFinaldeLaLista(aux);
                 else
@@ -297,7 +299,7 @@ public class Hacker {
                     (tablero[x+1][y-1].getFicha().getIdFicha() != "" &&
                             tablero[x+1][y-1].getFicha().getJugador() != tablero[x][y].getFicha().getJugador()))
             {
-                aux = new PosicionHacker(x+1,y-1);
+                aux = new PosicionHacker(x+1,y-1,ObtenerPeso(tablero[y-1][x+1].getFicha().getIdFicha()));
                 if(jugador == "blanco")
                     hackerBlanco[GetIndiceBlanco(aficha)].cargarAlFinaldeLaLista(aux);
                 else
@@ -311,7 +313,7 @@ public class Hacker {
                     (tablero[x-1][y+1].getFicha().getIdFicha() != "" &&
                             tablero[x-1][y+1].getFicha().getJugador() != tablero[x][y].getFicha().getJugador()))
             {
-                aux = new PosicionHacker(x-1,y+1);
+                aux = new PosicionHacker(x-1,y+1,ObtenerPeso(tablero[y+1][x-1].getFicha().getIdFicha()));
                 if(jugador == "blanco")
                     hackerBlanco[GetIndiceBlanco(aficha)].cargarAlFinaldeLaLista(aux);
                 else
@@ -325,7 +327,7 @@ public class Hacker {
                     (tablero[x-1][y-1].getFicha().getIdFicha() != "" &&
                             tablero[x-1][y-1].getFicha().getJugador() != tablero[x][y].getFicha().getJugador()))
             {
-                aux = new PosicionHacker(x-1,y-1);
+                aux = new PosicionHacker(x-1,y-1,ObtenerPeso(tablero[y-1][x-1].getFicha().getIdFicha()));
                 if(jugador == "blanco")
                     hackerBlanco[GetIndiceBlanco(aficha)].cargarAlFinaldeLaLista(aux);
                 else
@@ -347,7 +349,7 @@ public class Hacker {
                     tablero[y+i][x+i].getFicha().getJugador() != "" &&
                             tablero[y+i][x+i].getFicha().getJugador() != tablero[y][x].getFicha().getJugador()))
             {
-                aux = new PosicionHacker(x+i,y+i);
+                aux = new PosicionHacker(x+i,y+i,ObtenerPeso(tablero[y+i][x+i].getFicha().getIdFicha()));
                 if(jugador == "blanco")
                     hackerBlanco[GetIndiceBlanco(aficha)].cargarAlFinaldeLaLista(aux);
                 else
@@ -370,7 +372,7 @@ public class Hacker {
                     tablero[y+i][x-i].getFicha().getJugador() != "" &&
                             tablero[y+i][x-i].getFicha().getJugador() != tablero[y][x].getFicha().getJugador()))
             {
-                aux = new PosicionHacker(x-i,y+i);
+                aux = new PosicionHacker(x-i,y+i,ObtenerPeso(tablero[y+i][x-i].getFicha().getIdFicha()));
                 if(jugador == "blanco")
                     hackerBlanco[GetIndiceBlanco(aficha)].cargarAlFinaldeLaLista(aux);
                 else
@@ -392,7 +394,7 @@ public class Hacker {
                     tablero[y-i][x+i].getFicha().getJugador() != "" &&
                             tablero[y-i][x+i].getFicha().getJugador() != tablero[y][x].getFicha().getJugador()))
             {
-                aux = new PosicionHacker(x+i,y-i);
+                aux = new PosicionHacker(x+i,y-i, ObtenerPeso(tablero[y-i][x+i].getFicha().getIdFicha()));
                 if(jugador == "blanco")
                     hackerBlanco[GetIndiceBlanco(aficha)].cargarAlFinaldeLaLista(aux);
                 else
@@ -414,7 +416,7 @@ public class Hacker {
                     tablero[y-i][x-i].getFicha().getJugador() != "" &&
                             tablero[y-i][x-i].getFicha().getJugador() != tablero[y][x].getFicha().getJugador()))
             {
-                aux = new PosicionHacker(x-i,y-i);
+                aux = new PosicionHacker(x-i,y-i,ObtenerPeso(tablero[y-i][x-i].getFicha().getIdFicha()));
                 if(jugador == "blanco")
                     hackerBlanco[GetIndiceBlanco(aficha)].cargarAlFinaldeLaLista(aux);
                 else
@@ -439,7 +441,7 @@ public class Hacker {
                     tablero[y][i].getFicha().getJugador() != "" &&
                             tablero[y][i].getFicha().getJugador() != tablero[y][x].getFicha().getJugador()))
             {
-                aux = new PosicionHacker(i,y);
+                aux = new PosicionHacker(i,y, ObtenerPeso(tablero[y][i].getFicha().getIdFicha()));
                 if(jugador == "blanco")
                    hackerBlanco[GetIndiceBlanco(aficha)].cargarAlFinaldeLaLista(aux);
                 else
@@ -460,7 +462,7 @@ public class Hacker {
                     tablero[i][x].getFicha().getJugador() != "" &&
                             tablero[i][x].getFicha().getJugador() != tablero[y][x].getFicha().getJugador()))
             {
-                aux = new PosicionHacker(x,i);
+                aux = new PosicionHacker(x,i,ObtenerPeso(tablero[i][x].getFicha().getIdFicha()));
                 if(jugador == "blanco")
                    hackerBlanco[GetIndiceBlanco(aficha)].cargarAlFinaldeLaLista(aux);
                 else
@@ -480,7 +482,7 @@ public class Hacker {
                     tablero[y][i].getFicha().getJugador() != "" &&
                             tablero[y][i].getFicha().getJugador() != tablero[y][x].getFicha().getJugador()))
             {
-                aux = new PosicionHacker(i,y);
+                aux = new PosicionHacker(i,y,ObtenerPeso(tablero[y][i].getFicha().getIdFicha()));
                 if(jugador == "blanco")
                     hackerBlanco[GetIndiceBlanco(aficha)].cargarAlFinaldeLaLista(aux);
                 else
@@ -499,7 +501,7 @@ public class Hacker {
                     tablero[i][x].getFicha().getJugador() != "" &&
                             tablero[i][x].getFicha().getJugador() != tablero[y][x].getFicha().getJugador()))
             {
-                aux = new PosicionHacker(x,i);
+                aux = new PosicionHacker(x,i,ObtenerPeso(tablero[i][x].getFicha().getIdFicha()));
                 if(jugador == "blanco")
                     hackerBlanco[GetIndiceBlanco(aficha)].cargarAlFinaldeLaLista(aux);
                 else
@@ -514,7 +516,7 @@ public class Hacker {
         }
     }
 
-    public void MovimientoPeon(int x, int y,String jugador,String aficha)
+    public void MovimientoPeon(int x, int y,String jugador,String aficha,Casilla[][] aTablero)
     {
         PosicionHacker aux = new PosicionHacker();
         if(jugador == "blanco")
@@ -523,12 +525,12 @@ public class Hacker {
             {
                 if(x+1<8)
                 {
-                    aux = new PosicionHacker(x + 1, y + 1);
+                    aux = new PosicionHacker(x+1, y+1,ObtenerPeso(aTablero[y+1][x+1].getFicha().getIdFicha()));
                     hackerBlanco[GetIndiceBlanco(aficha)].cargarAlFinaldeLaLista(aux);
                 }
                 if(x-1>=0)
                 {
-                    aux = new PosicionHacker(x - 1, y + 1);
+                    aux = new PosicionHacker(x-1,y+1,ObtenerPeso(aTablero[y+1][x-1].getFicha().getIdFicha()));
                     hackerBlanco[GetIndiceBlanco(aficha)].cargarAlFinaldeLaLista(aux);
                 }
             }
@@ -539,12 +541,12 @@ public class Hacker {
             {
                 if(x+1<8)
                 {
-                    aux = new PosicionHacker(x+1,y-1);
+                    aux = new PosicionHacker(x+1,y-1,ObtenerPeso(aTablero[y-1][x+1].getFicha().getIdFicha()));
                     hackerNegro[GetIndiceNegro(aficha)].cargarAlFinaldeLaLista(aux);
                 }
                 if(x-1>=0)
                 {
-                aux = new PosicionHacker(x-1,y-1);
+                aux = new PosicionHacker(x-1,y-1,ObtenerPeso(aTablero[y-1][x-1].getFicha().getIdFicha()));
                 hackerNegro[GetIndiceNegro(aficha)].cargarAlFinaldeLaLista(aux);
                 }
             }
@@ -625,4 +627,23 @@ public class Hacker {
         else
             return IsReyNegroHacker(x,y);
     }
+
+    public Integer ObtenerPeso(String aficha)
+    {
+        if(aficha.contains("peon"))
+            return 10;
+        if(aficha.contains("alfil"))
+            return 30;
+        if(aficha.contains("caballo"))
+            return 30;
+        if(aficha.contains("torre"))
+            return 50;
+        if(aficha.contains("reina"))
+            return 90;
+        if(aficha.contains("rey"))
+            return 900;
+
+        return 0;
+    }
+
 }

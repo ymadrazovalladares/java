@@ -196,7 +196,6 @@ public class JavaFxGameTablero {
                 ResetearListaHacker();
                 if(turno == "blanco")
                     Minimax();
-
                 String color = "blanco";
                 if(turno == "blanco")
                     color = "negro";
@@ -216,7 +215,9 @@ public class JavaFxGameTablero {
                 else {
                     RestaurarColores();
                     ActualizarTablaFichas(acasilla);
+                    turno = "blanco";
                 }
+
           }return true;
   }
 
@@ -255,44 +256,64 @@ public class JavaFxGameTablero {
             primeraJ = hacker.getHackerBlanco()[i].getInicioLista();
             while (temp != null)
             {
-               if(tablero[temp.getValorY()][temp.getValorX()].getFicha().getIdFicha()!= "")
-                 {
-                    if(GetPonderacion(tablero[temp.getValorY()][temp.getValorX()].getFicha().getIdFicha())>=mayor
-                        && getTurno() == "negro")
+               String a = tablero[temp.getValorY()][temp.getValorX()].getFicha().getIdFicha();
+               if(a!= "")
+                 { Integer b = GetPonderacion(tablero[temp.getValorY()][temp.getValorX()].getFicha().getIdFicha());
+                   String c = tablero[temp.getValorY()][temp.getValorX()].getFicha().getJugador();
+                    if(b>=mayor
+                        && c == "negro")
                     {
-                        x= temp.getValorX();
+                        x = temp.getValorX();
                         y = temp.getValorY();
                         ficha = hacker.getHackerBlanco()[i].getNombreFicha();
-                        mayor = GetPonderacion(tablero[temp.getValorX()][temp.getValorY()].getFicha().getIdFicha());
+                        mayor = GetPonderacion(tablero[temp.getValorY()][temp.getValorX()].getFicha().getIdFicha());
                     }
                  }
                 temp = temp.getSiguiente();
             }
-
-        }
+          }
         if(ficha!="")
         {
+            fichaMarcadaX = getCasillla(ficha,"blanco").getPosicionArregloY()/100;
+            fichaMarcadaY = getCasillla(ficha,"blanco").getPosicionArregloX()/100;
+            tablero[y][x].setSombreada(true);
+            setTurno("negro");
             Movimiento(tablero[y][x]);
         }
         else
         {
             Casilla acasilla = new Casilla();
-            //acasilla = getCasillla(hacker.getHackerBlanco()[8].getNombreFicha());
-           // fichaMarcadaX = acasilla.getPosicionArregloX();
-            //fichaMarcadaY = acasilla.getPosicionArregloY();
-            fichaMarcadaX = 1;
-            fichaMarcadaY = 1;
-            tablero[2][1].setSombreada(true);
+            for(int i = 0;i<hacker.getHackerBlanco().length;i++)
+            {
+                acasilla = getCasillla(hacker.getHackerBlanco()[i].getNombreFicha(),"blanco");
+               if(acasilla!=null)
+               {
+                   fichaMarcadaY = acasilla.getPosicionArregloX()/100;
+                   fichaMarcadaX = acasilla.getPosicionArregloY()/100;
+                   for (int j = 0; j < hacker.getHackerBlanco()[i].getTotalalmacenados(); j++) {
+                       x = hacker.getHackerBlanco()[i].getListaNodosPuntos()[j].getValorX();
+                       y = hacker.getHackerBlanco()[i].getListaNodosPuntos()[j].getValorY();
+                       if(hacker.getHackerBlanco()[i].getNombreFicha().contains("peon"))
+                           x--;
+                       if(tablero[y][x].getFicha().getIdFicha() == "")
+                       {
+                           i = 20;
+                           break;
+                       }
+                   }
+               }
+             }
+            tablero[y][x].setSombreada(true);
             setTurno("negro");
-            Movimiento(tablero[2][1]);
+            Movimiento(tablero[y][x]);
         }
     }
 
-    public Casilla getCasillla(String aNombre)
+    public Casilla getCasillla(String aNombre, String ajugador)
     {
         for(int i = 0; i < 8; i++)
             for(int j = 0; j < 8; j++)
-                if(tablero[i][j].getCasilla() == aNombre)
+                if(tablero[i][j].getFicha().getIdFicha() == aNombre && tablero[i][j].getFicha().getJugador() == ajugador)
                     return tablero[i][j];
        return null;
     }
