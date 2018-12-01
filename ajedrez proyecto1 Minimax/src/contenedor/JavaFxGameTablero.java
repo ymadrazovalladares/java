@@ -192,10 +192,9 @@ public class JavaFxGameTablero {
                 acasilla.getButton().setGraphic(this.tablero[fichaMarcadaX][fichaMarcadaY].getButton().getGraphic());
                 this.tablero[fichaMarcadaX][fichaMarcadaY].setFicha(new JavaFxFicha());
                 this.tablero[fichaMarcadaX][fichaMarcadaY].getButton().setGraphic(new ImageView());
-                //this.setTurno(acasilla.getFicha().getJugador());
+                this.setTurno(acasilla.getFicha().getJugador());
                 ResetearListaHacker();
-                if(turno == "blanco")
-                    Minimax();
+
                 String color = "blanco";
                 if(turno == "blanco")
                     color = "negro";
@@ -217,9 +216,26 @@ public class JavaFxGameTablero {
                     ActualizarTablaFichas(acasilla);
                     turno = "blanco";
                 }
-
+                Minimax();
           }return true;
   }
+
+    public boolean MovimientoMiniMax(Casilla acasilla)
+    {
+        if(acasilla.isSombreada())
+        {
+            if(acasilla.getFicha() != null)
+                EliminarTablaFichas(acasilla);
+            LimpiarTablaFichas(GetCasilla(fichaMarcadaX, fichaMarcadaY));
+            acasilla.setFicha(this.tablero[fichaMarcadaX][fichaMarcadaY].getFicha());
+            acasilla.getButton().setGraphic(this.tablero[fichaMarcadaX][fichaMarcadaY].getButton().getGraphic());
+            this.tablero[fichaMarcadaX][fichaMarcadaY].setFicha(new JavaFxFicha());
+            this.tablero[fichaMarcadaX][fichaMarcadaY].getButton().setGraphic(new ImageView());
+            this.setTurno(acasilla.getFicha().getJugador());
+            ResetearListaHacker();
+
+        }return true;
+    }
 
     public void MostrarJugada(int x, int y)
     {
@@ -269,7 +285,7 @@ public class JavaFxGameTablero {
                         mayor = GetPonderacion(tablero[temp.getValorY()][temp.getValorX()].getFicha().getIdFicha());
                     }
                  }
-                temp = temp.getSiguiente();
+                 temp = temp.getSiguiente();
             }
           }
         if(ficha!="")
@@ -277,8 +293,7 @@ public class JavaFxGameTablero {
             fichaMarcadaX = getCasillla(ficha,"blanco").getPosicionArregloY()/100;
             fichaMarcadaY = getCasillla(ficha,"blanco").getPosicionArregloX()/100;
             tablero[y][x].setSombreada(true);
-            setTurno("negro");
-            Movimiento(tablero[y][x]);
+            MovimientoMiniMax(tablero[y][x]);
         }
         else
         {
@@ -294,7 +309,7 @@ public class JavaFxGameTablero {
                        x = hacker.getHackerBlanco()[i].getListaNodosPuntos()[j].getValorX();
                        y = hacker.getHackerBlanco()[i].getListaNodosPuntos()[j].getValorY();
                        if(hacker.getHackerBlanco()[i].getNombreFicha().contains("peon"))
-                           x--;
+                           x = fichaMarcadaY;
                        if(tablero[y][x].getFicha().getIdFicha() == "")
                        {
                            i = 20;
@@ -304,8 +319,7 @@ public class JavaFxGameTablero {
                }
              }
             tablero[y][x].setSombreada(true);
-            setTurno("negro");
-            Movimiento(tablero[y][x]);
+            MovimientoMiniMax(tablero[y][x]);
         }
     }
 
