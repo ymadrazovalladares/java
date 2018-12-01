@@ -237,7 +237,6 @@ public class JavaFxGameTablero {
             this.tablero[fichaMarcadaX][fichaMarcadaY].getButton().setGraphic(new ImageView());
             this.setTurno(acasilla.getFicha().getJugador());
             ResetearListaHacker();
-
             if( pondera< MayorPonderacionContraria())
             {
                 this.tablero[fichaMarcadaX][fichaMarcadaY].getButton().setGraphic(acasilla.getButton().getGraphic());
@@ -248,8 +247,6 @@ public class JavaFxGameTablero {
                 RestaurarColores();
                 fichaMarcada = false;
                 ActualizarTablaFichas(this.tablero[fichaMarcadaX][fichaMarcadaY]);
-                xMinimax = fichaMarcadaY;
-                yMinimax = fichaMarcadaX;
                // mayorPonderacion = MayorPonderacionContraria();
                 return false;
             }
@@ -284,7 +281,7 @@ public class JavaFxGameTablero {
         PosicionHacker temp = new PosicionHacker();
         PosicionHacker primeraJ = new PosicionHacker();
         Integer x = 10;
-        Integer y = 10;
+        //Integer y = 10;
         Integer mayor = 0;
         for(int i = 0; i < hacker.getHackerBlanco().length;i++)
         {
@@ -298,7 +295,7 @@ public class JavaFxGameTablero {
                  { Integer b = GetPonderacion(tablero[temp.getValorY()][temp.getValorX()].getFicha().getIdFicha());
                    String c = tablero[temp.getValorY()][temp.getValorX()].getFicha().getJugador();
                     if(b>=mayor
-                        && c == "negro" && (fichaMarcadaX !=yMinimax || fichaMarcadaY!=xMinimax))
+                        && c == "negro" && (xMinimax !=temp.getValorX()||yMinimax!= temp.getValorY()))
                     {
                         xMinimax = temp.getValorX();
                         yMinimax = temp.getValorY();
@@ -329,25 +326,21 @@ public class JavaFxGameTablero {
                    fichaMarcadaX = acasilla.getPosicionArregloY()/100;
                    for (int j = 0; j < hacker.getHackerBlanco()[i].getTotalalmacenados(); j++) {
 
-                       x = hacker.getHackerBlanco()[i].getListaNodosPuntos()[j].getValorX();
-                       y = hacker.getHackerBlanco()[i].getListaNodosPuntos()[j].getValorY();
-                       if(hacker.getHackerBlanco()[i].getNombreFicha().contains("peon")) {
+                       if(hacker.getHackerBlanco()[i].getNombreFicha().contains("peon"))
                            x = fichaMarcadaY;
-                        }
-                       if(tablero[y][x].getFicha().getIdFicha() == "" && (fichaMarcadaX !=yMinimax || fichaMarcadaY!=xMinimax))
+                       if(tablero[fichaMarcadaX][fichaMarcadaY].getFicha().getIdFicha() == "" && (i!=yMinimax|| j!=xMinimax))
                        {
                            xMinimax = hacker.getHackerBlanco()[i].getListaNodosPuntos()[j].getValorX();
                            yMinimax = hacker.getHackerBlanco()[i].getListaNodosPuntos()[j].getValorY();
-                           tablero[yMinimax][x].setSombreada(true);
-                           if(MovimientoMiniMax(tablero[yMinimax][x])) {
-                             i =20;
-                               break;
-                           }
+                           i = 20;
+                           break;
                        }
                    }
                }
              }
-
+            tablero[yMinimax][x].setSombreada(true);
+            if(!MovimientoMiniMax(tablero[yMinimax][x]))
+                Minimax();
         }
     }
 

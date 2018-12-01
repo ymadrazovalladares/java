@@ -198,12 +198,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="2794" />
+          <entry key="java" value="2568" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="2794" />
+          <entry key="JAVA" value="2568" />
         </counts>
       </usages-collector>
     </session>
@@ -258,23 +258,23 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/contenedor/JavaFxGameTablero.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="427">
-              <caret line="342" column="35" selection-start-line="342" selection-start-column="35" selection-end-line="342" selection-end-column="35" />
+            <state relative-caret-position="-1811">
+              <caret line="330" selection-start-line="330" selection-end-line="330" />
               <folding>
-                <element signature="e#29580#29581#0" expanded="true" />
-                <element signature="e#29607#29608#0" expanded="true" />
-                <element signature="e#29645#29646#0" expanded="true" />
-                <element signature="e#29677#29678#0" expanded="true" />
-                <element signature="e#29716#29717#0" expanded="true" />
-                <element signature="e#29746#29747#0" expanded="true" />
-                <element signature="e#29797#29798#0" expanded="true" />
-                <element signature="e#29835#29836#0" expanded="true" />
-                <element signature="e#29867#29868#0" expanded="true" />
-                <element signature="e#29895#29896#0" expanded="true" />
-                <element signature="e#29939#29940#0" expanded="true" />
-                <element signature="e#29975#29976#0" expanded="true" />
-                <element signature="e#32358#32359#0" expanded="true" />
-                <element signature="e#32394#32395#0" expanded="true" />
+                <element signature="e#27867#27868#0" expanded="true" />
+                <element signature="e#27894#27895#0" expanded="true" />
+                <element signature="e#27932#27933#0" expanded="true" />
+                <element signature="e#27964#27965#0" expanded="true" />
+                <element signature="e#28003#28004#0" expanded="true" />
+                <element signature="e#28033#28034#0" expanded="true" />
+                <element signature="e#28084#28085#0" expanded="true" />
+                <element signature="e#28122#28123#0" expanded="true" />
+                <element signature="e#28154#28155#0" expanded="true" />
+                <element signature="e#28182#28183#0" expanded="true" />
+                <element signature="e#28226#28227#0" expanded="true" />
+                <element signature="e#28262#28263#0" expanded="true" />
+                <element signature="e#30645#30646#0" expanded="true" />
+                <element signature="e#30681#30682#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -452,7 +452,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543695142674" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543691291883" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -526,11 +526,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="178555000" />
+    <option name="totallyTimeSpent" value="174958000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="0" width="1620" height="876" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21730769" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -541,8 +540,8 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.14939435" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.1897712" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.14939435" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.1897712" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -567,18 +566,6 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/contenedor/JavaFxGameTablero.java</url>
-          <line>336</line>
-          <properties />
-          <option name="timeStamp" value="52" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/javafx-src.zip!/javafx/scene/PropertyHelper.java">
@@ -975,23 +962,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/contenedor/JavaFxGameTablero.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="427">
-          <caret line="342" column="35" selection-start-line="342" selection-start-column="35" selection-end-line="342" selection-end-column="35" />
+        <state relative-caret-position="-1811">
+          <caret line="330" selection-start-line="330" selection-end-line="330" />
           <folding>
-            <element signature="e#29580#29581#0" expanded="true" />
-            <element signature="e#29607#29608#0" expanded="true" />
-            <element signature="e#29645#29646#0" expanded="true" />
-            <element signature="e#29677#29678#0" expanded="true" />
-            <element signature="e#29716#29717#0" expanded="true" />
-            <element signature="e#29746#29747#0" expanded="true" />
-            <element signature="e#29797#29798#0" expanded="true" />
-            <element signature="e#29835#29836#0" expanded="true" />
-            <element signature="e#29867#29868#0" expanded="true" />
-            <element signature="e#29895#29896#0" expanded="true" />
-            <element signature="e#29939#29940#0" expanded="true" />
-            <element signature="e#29975#29976#0" expanded="true" />
-            <element signature="e#32358#32359#0" expanded="true" />
-            <element signature="e#32394#32395#0" expanded="true" />
+            <element signature="e#27867#27868#0" expanded="true" />
+            <element signature="e#27894#27895#0" expanded="true" />
+            <element signature="e#27932#27933#0" expanded="true" />
+            <element signature="e#27964#27965#0" expanded="true" />
+            <element signature="e#28003#28004#0" expanded="true" />
+            <element signature="e#28033#28034#0" expanded="true" />
+            <element signature="e#28084#28085#0" expanded="true" />
+            <element signature="e#28122#28123#0" expanded="true" />
+            <element signature="e#28154#28155#0" expanded="true" />
+            <element signature="e#28182#28183#0" expanded="true" />
+            <element signature="e#28226#28227#0" expanded="true" />
+            <element signature="e#28262#28263#0" expanded="true" />
+            <element signature="e#30645#30646#0" expanded="true" />
+            <element signature="e#30681#30682#0" expanded="true" />
           </folding>
         </state>
       </provider>
