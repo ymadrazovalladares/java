@@ -14,8 +14,6 @@ public class Casilla {
     private boolean cambioColor;
     private boolean sombreada;
     private String color;
-   // String jugador;
-
 
     public Casilla(Integer tableroY, Integer tableroX,String IdCasila) {
 

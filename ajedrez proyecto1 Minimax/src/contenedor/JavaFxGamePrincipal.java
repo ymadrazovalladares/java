@@ -17,7 +17,7 @@ public  class JavaFxGamePrincipal extends Application {
 
 
         JavaFxGameTablero javaFxGameTablero= new JavaFxGameTablero();
-        Scene scene = new Scene(javaFxGameTablero.getPane(),860,800);
+        Scene scene = new Scene(javaFxGameTablero.getPane(),800,800);
         primaryStage.setScene(scene);
         primaryStage.show();
     }

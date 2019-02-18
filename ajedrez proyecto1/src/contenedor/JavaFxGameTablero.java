@@ -213,9 +213,8 @@ public class JavaFxGameTablero {
                 }
                 else {
                     RestaurarColores();
-                    ActualizarTablaFichas(acasilla);
-                }
-          }return true;
+                    ActualizarTablaFichas(acasill
+
   }
 
     public void MostrarJugada(int x, int y)

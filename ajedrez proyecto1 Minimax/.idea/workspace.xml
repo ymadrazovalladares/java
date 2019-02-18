@@ -188,22 +188,22 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="4" />
+          <entry key="java" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="4" />
+          <entry key="JAVA" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="2794" />
+          <entry key="java" value="2984" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="2794" />
+          <entry key="JAVA" value="2984" />
         </counts>
       </usages-collector>
     </session>
@@ -241,14 +241,15 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/contenedor/Casilla.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="215">
-              <caret line="151" selection-start-line="151" selection-end-line="151" />
+            <state relative-caret-position="193">
+              <caret line="86" column="19" selection-start-line="86" selection-start-column="19" selection-end-line="86" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1603#1604#0" expanded="true" />
                 <element signature="e#1635#1636#0" expanded="true" />
                 <element signature="e#3772#3773#0" expanded="true" />
                 <element signature="e#3804#3805#0" expanded="true" />
+                <element signature="e#3934#3935#0" expanded="true" />
                 <element signature="e#3962#3963#0" expanded="true" />
               </folding>
             </state>
@@ -258,23 +259,23 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/contenedor/JavaFxGameTablero.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="427">
-              <caret line="342" column="35" selection-start-line="342" selection-start-column="35" selection-end-line="342" selection-end-column="35" />
+            <state relative-caret-position="253">
+              <caret line="297" column="17" selection-start-line="284" selection-start-column="5" selection-end-line="297" selection-end-column="17" />
               <folding>
-                <element signature="e#29580#29581#0" expanded="true" />
-                <element signature="e#29607#29608#0" expanded="true" />
-                <element signature="e#29645#29646#0" expanded="true" />
-                <element signature="e#29677#29678#0" expanded="true" />
-                <element signature="e#29716#29717#0" expanded="true" />
-                <element signature="e#29746#29747#0" expanded="true" />
-                <element signature="e#29797#29798#0" expanded="true" />
-                <element signature="e#29835#29836#0" expanded="true" />
-                <element signature="e#29867#29868#0" expanded="true" />
-                <element signature="e#29895#29896#0" expanded="true" />
-                <element signature="e#29939#29940#0" expanded="true" />
-                <element signature="e#29975#29976#0" expanded="true" />
-                <element signature="e#32358#32359#0" expanded="true" />
-                <element signature="e#32394#32395#0" expanded="true" />
+                <element signature="e#15676#16005#0" />
+                <element signature="e#16011#16487#0" />
+                <element signature="e#16493#17517#0" />
+                <element signature="e#17523#21397#0" />
+                <element signature="e#21403#24673#0" />
+                <element signature="e#24679#27510#0" />
+                <element signature="e#27516#29239#0" />
+                <element signature="e#29245#29551#0" />
+                <element signature="e#30385#30915#0" />
+                <element signature="e#30920#31294#0" />
+                <element signature="e#31300#31657#0" />
+                <element signature="e#31662#32308#0" />
+                <element signature="e#32400#33409#0" />
+                <element signature="e#33414#33817#0" />
               </folding>
             </state>
           </provider>
@@ -283,9 +284,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/contenedor/JavaFxFicha.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" selection-start-line="18" selection-end-line="18" />
+            <state relative-caret-position="102">
+              <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="8" selection-end-column="25" />
               <folding>
+                <element signature="e#265#266#0" expanded="true" />
                 <element signature="e#295#296#0" expanded="true" />
                 <element signature="e#341#342#0" expanded="true" />
                 <element signature="e#379#380#0" expanded="true" />
@@ -305,7 +307,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/contenedor/Servidor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="501">
+            <state relative-caret-position="1611">
               <caret line="102" column="17" selection-start-line="102" selection-start-column="17" selection-end-line="102" selection-end-column="17" />
             </state>
           </provider>
@@ -314,10 +316,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/contenedor/Hacker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="183">
-              <caret line="52" selection-start-line="52" selection-end-line="52" />
+            <state relative-caret-position="193">
+              <caret line="83" column="16" selection-start-line="83" selection-start-column="16" selection-end-line="83" selection-end-column="16" />
               <folding>
                 <element signature="method#Hacker#0;class#Hacker#0" />
+                <element signature="e#2429#2430#0" expanded="true" />
                 <element signature="e#2464#2465#0" expanded="true" />
                 <element signature="e#2636#2637#0" expanded="true" />
                 <element signature="e#2670#2671#0" expanded="true" />
@@ -329,7 +332,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/contenedor/ListaPosicionHacker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="183">
+            <state relative-caret-position="1292">
               <caret line="78" selection-start-line="78" selection-end-line="78" />
               <folding>
                 <element signature="e#246#247#0" expanded="true" />
@@ -345,7 +348,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/contenedor/PosicionHacker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
+            <state relative-caret-position="527">
               <caret line="31" selection-start-line="31" selection-end-line="31" />
               <folding>
                 <element signature="e#684#685#0" expanded="true" />
@@ -358,6 +361,15 @@
                 <element signature="e#1310#1311#0" expanded="true" />
                 <element signature="e#1356#1357#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/contenedor/Cliente.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="23" column="9" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -390,17 +402,17 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/JavaFxGameTablero.java" />
-        <option value="$PROJECT_DIR$/src/contenedor/JavaFxGamePrincipal.java" />
         <option value="$PROJECT_DIR$/src/contenedor/Posiciones.java" />
         <option value="$PROJECT_DIR$/src/contenedor/NodoPuntos.java" />
         <option value="$PROJECT_DIR$/src/contenedor/ListaNodos.java" />
         <option value="$PROJECT_DIR$/src/contenedor/Servidor.java" />
         <option value="$PROJECT_DIR$/src/contenedor/Cliente.java" />
         <option value="$PROJECT_DIR$/src/contenedor/JavaFxFicha.java" />
-        <option value="$PROJECT_DIR$/src/contenedor/Casilla.java" />
         <option value="$PROJECT_DIR$/src/contenedor/PosicionHacker.java" />
         <option value="$PROJECT_DIR$/src/contenedor/ListaPosicionHacker.java" />
         <option value="$PROJECT_DIR$/src/contenedor/Hacker.java" />
+        <option value="$PROJECT_DIR$/src/contenedor/Casilla.java" />
+        <option value="$PROJECT_DIR$/src/contenedor/JavaFxGamePrincipal.java" />
         <option value="$PROJECT_DIR$/src/contenedor/JavaFxGameTablero.java" />
       </list>
     </option>
@@ -411,10 +423,11 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-4" />
-    <option name="width" value="1620" />
-    <option name="height" value="876" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="-7" />
+    <option name="y" value="1" />
+    <option name="width" value="1036" />
+    <option name="height" value="733" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -452,8 +465,8 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543695142674" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544150843388" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ajedrez proyecto1" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -526,13 +539,12 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="178555000" />
+    <option name="totallyTimeSpent" value="196745000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-4" y="0" width="1620" height="876" extended-state="0" />
-    <editor active="true" />
+    <frame x="-7" y="1" width="1036" height="733" extended-state="1" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21730769" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.34733605" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -541,8 +553,8 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.14939435" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.1897712" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.14833333" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.235" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -571,11 +583,13 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/contenedor/JavaFxGameTablero.java</url>
-          <line>336</line>
-          <properties />
-          <option name="timeStamp" value="52" />
+          <line>286</line>
+          <properties class="contenedor.JavaFxGameTablero" method="Minimax">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="64" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -848,13 +862,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/contenedor/Cliente.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/javafx-src.zip!/javafx/beans/property/DoublePropertyBase.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="331">
@@ -869,41 +876,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/contenedor/JavaFxGamePrincipal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="62" selection-start-line="19" selection-start-column="62" selection-end-line="19" selection-end-column="62" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/contenedor/Servidor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="501">
-          <caret line="102" column="17" selection-start-line="102" selection-start-column="17" selection-end-line="102" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/contenedor/PosicionHacker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="31" selection-start-line="31" selection-end-line="31" />
-          <folding>
-            <element signature="e#684#685#0" expanded="true" />
-            <element signature="e#799#800#0" expanded="true" />
-            <element signature="e#828#829#0" expanded="true" />
-            <element signature="e#953#954#0" expanded="true" />
-            <element signature="e#985#986#0" expanded="true" />
-            <element signature="e#1221#1222#0" expanded="true" />
-            <element signature="e#1255#1256#0" expanded="true" />
-            <element signature="e#1310#1311#0" expanded="true" />
-            <element signature="e#1356#1357#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/javafx-src.zip!/javafx/stage/Window.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -911,53 +883,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/contenedor/Hacker.java">
+    <entry file="file://$PROJECT_DIR$/src/contenedor/Cliente.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="52" selection-start-line="52" selection-end-line="52" />
-          <folding>
-            <element signature="method#Hacker#0;class#Hacker#0" />
-            <element signature="e#2464#2465#0" expanded="true" />
-            <element signature="e#2636#2637#0" expanded="true" />
-            <element signature="e#2670#2671#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="323">
+          <caret line="23" column="9" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/contenedor/ListaPosicionHacker.java">
+    <entry file="file://$PROJECT_DIR$/src/contenedor/Servidor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="78" selection-start-line="78" selection-end-line="78" />
-          <folding>
-            <element signature="e#246#247#0" expanded="true" />
-            <element signature="e#290#291#0" expanded="true" />
-            <element signature="e#336#337#0" expanded="true" />
-            <element signature="e#370#371#0" expanded="true" />
-            <element signature="e#2135#2136#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/contenedor/Casilla.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="151" selection-start-line="151" selection-end-line="151" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1603#1604#0" expanded="true" />
-            <element signature="e#1635#1636#0" expanded="true" />
-            <element signature="e#3772#3773#0" expanded="true" />
-            <element signature="e#3804#3805#0" expanded="true" />
-            <element signature="e#3962#3963#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="1611">
+          <caret line="102" column="17" selection-start-line="102" selection-start-column="17" selection-end-line="102" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/contenedor/JavaFxFicha.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        <state relative-caret-position="102">
+          <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="8" selection-end-column="25" />
           <folding>
+            <element signature="e#265#266#0" expanded="true" />
             <element signature="e#295#296#0" expanded="true" />
             <element signature="e#341#342#0" expanded="true" />
             <element signature="e#379#380#0" expanded="true" />
@@ -973,25 +918,97 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/contenedor/JavaFxGamePrincipal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="62" selection-start-line="19" selection-start-column="62" selection-end-line="19" selection-end-column="62" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/contenedor/Casilla.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="86" column="19" selection-start-line="86" selection-start-column="19" selection-end-line="86" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1603#1604#0" expanded="true" />
+            <element signature="e#1635#1636#0" expanded="true" />
+            <element signature="e#3772#3773#0" expanded="true" />
+            <element signature="e#3804#3805#0" expanded="true" />
+            <element signature="e#3934#3935#0" expanded="true" />
+            <element signature="e#3962#3963#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/contenedor/PosicionHacker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+          <folding>
+            <element signature="e#684#685#0" expanded="true" />
+            <element signature="e#799#800#0" expanded="true" />
+            <element signature="e#828#829#0" expanded="true" />
+            <element signature="e#953#954#0" expanded="true" />
+            <element signature="e#985#986#0" expanded="true" />
+            <element signature="e#1221#1222#0" expanded="true" />
+            <element signature="e#1255#1256#0" expanded="true" />
+            <element signature="e#1310#1311#0" expanded="true" />
+            <element signature="e#1356#1357#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/contenedor/ListaPosicionHacker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1292">
+          <caret line="78" selection-start-line="78" selection-end-line="78" />
+          <folding>
+            <element signature="e#246#247#0" expanded="true" />
+            <element signature="e#290#291#0" expanded="true" />
+            <element signature="e#336#337#0" expanded="true" />
+            <element signature="e#370#371#0" expanded="true" />
+            <element signature="e#2135#2136#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/contenedor/Hacker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="83" column="16" selection-start-line="83" selection-start-column="16" selection-end-line="83" selection-end-column="16" />
+          <folding>
+            <element signature="method#Hacker#0;class#Hacker#0" />
+            <element signature="e#2429#2430#0" expanded="true" />
+            <element signature="e#2464#2465#0" expanded="true" />
+            <element signature="e#2636#2637#0" expanded="true" />
+            <element signature="e#2670#2671#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/contenedor/JavaFxGameTablero.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="427">
-          <caret line="342" column="35" selection-start-line="342" selection-start-column="35" selection-end-line="342" selection-end-column="35" />
+        <state relative-caret-position="253">
+          <caret line="297" column="17" selection-start-line="284" selection-start-column="5" selection-end-line="297" selection-end-column="17" />
           <folding>
-            <element signature="e#29580#29581#0" expanded="true" />
-            <element signature="e#29607#29608#0" expanded="true" />
-            <element signature="e#29645#29646#0" expanded="true" />
-            <element signature="e#29677#29678#0" expanded="true" />
-            <element signature="e#29716#29717#0" expanded="true" />
-            <element signature="e#29746#29747#0" expanded="true" />
-            <element signature="e#29797#29798#0" expanded="true" />
-            <element signature="e#29835#29836#0" expanded="true" />
-            <element signature="e#29867#29868#0" expanded="true" />
-            <element signature="e#29895#29896#0" expanded="true" />
-            <element signature="e#29939#29940#0" expanded="true" />
-            <element signature="e#29975#29976#0" expanded="true" />
-            <element signature="e#32358#32359#0" expanded="true" />
-            <element signature="e#32394#32395#0" expanded="true" />
+            <element signature="e#15676#16005#0" />
+            <element signature="e#16011#16487#0" />
+            <element signature="e#16493#17517#0" />
+            <element signature="e#17523#21397#0" />
+            <element signature="e#21403#24673#0" />
+            <element signature="e#24679#27510#0" />
+            <element signature="e#27516#29239#0" />
+            <element signature="e#29245#29551#0" />
+            <element signature="e#30385#30915#0" />
+            <element signature="e#30920#31294#0" />
+            <element signature="e#31300#31657#0" />
+            <element signature="e#31662#32308#0" />
+            <element signature="e#32400#33409#0" />
+            <element signature="e#33414#33817#0" />
           </folding>
         </state>
       </provider>

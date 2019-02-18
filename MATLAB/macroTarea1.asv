@@ -1,0 +1,452 @@
+function varargout = macroTarea1(varargin)
+% MACROTAREA1 MATLAB code for macroTarea1.fig
+%      MACROTAREA1, by itself, creates a new MACROTAREA1 or raises the existing
+%      singleton*.
+%
+%      H = MACROTAREA1 returns the handle to a new MACROTAREA1 or the handle to
+%      the existing singleton*.
+%
+%      MACROTAREA1('CALLBACK',hObject,eventData,handles,...) calls the local
+%      function named CALLBACK in MACROTAREA1.M with the given input arguments.
+%
+%      MACROTAREA1('Property','Value',...) creates a new MACROTAREA1 or raises the
+%      existing singleton*.  Starting from the left, property value pairs are
+%      applied to the GUI before macroTarea1_OpeningFcn gets called.  An
+%      unrecognized property name or invalid value makes property application
+%      stop.  All inputs are passed to macroTarea1_OpeningFcn via varargin.
+%
+%      *See GUI Options on GUIDE's Tools menu.  Choose "GUI allows only one
+%      instance to run (singleton)".
+%
+% See also: GUIDE, GUIDATA, GUIHANDLES
+
+% Edit the above text to modify the response to help macroTarea1
+
+% Last Modified by GUIDE v2.5 17-Feb-2019 20:48:39
+
+% Begin initialization code - DO NOT EDIT
+gui_Singleton = 1;
+gui_State = struct('gui_Name',       mfilename, ...
+                   'gui_Singleton',  gui_Singleton, ...
+                   'gui_OpeningFcn', @macroTarea1_OpeningFcn, ...
+                   'gui_OutputFcn',  @macroTarea1_OutputFcn, ...
+                   'gui_LayoutFcn',  [] , ...
+                   'gui_Callback',   []);
+if nargin && ischar(varargin{1})
+    gui_State.gui_Callback = str2func(varargin{1});
+end
+
+if nargout
+    [varargout{1:nargout}] = gui_mainfcn(gui_State, varargin{:});
+else
+    gui_mainfcn(gui_State, varargin{:});
+end
+% End initialization code - DO NOT EDIT
+
+
+% --- Executes just before macroTarea1 is made visible.
+function macroTarea1_OpeningFcn(hObject, eventdata, handles, varargin)
+  
+   
+% This function has no output args, see OutputFcn.
+% hObject    handle to figure
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+% varargin   command line arguments to macroTarea1 (see VARARGIN)
+
+% Choose default command line output for macroTarea1
+handles.output = hObject;
+
+% Update handles structure
+guidata(hObject, handles);
+
+% UIWAIT makes macroTarea1 wait for user response (see UIRESUME)
+% uiwait(handles.figure1);
+
+
+% --- Outputs from this function are returned to the command line.
+function varargout = macroTarea1_OutputFcn(hObject, eventdata, handles) 
+% varargout  cell array for returning output args (see VARARGOUT);
+% hObject    handle to figure
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Get default command line output from handles structure
+varargout{1} = handles.output;
+
+
+% --- Executes on button press in pushbutton1.
+function pushbutton1_Callback(hObject, eventdata, handles)
+axes(handles.axes1); % Establece el eje como actual
+cla reset;
+set(gca, 'Box', 'on'); % Se encierran los ejes en una caja
+set(gca, 'XTick', [], 'YTick', []) % No muestra las marcas de la señal de los ejes
+
+t=0:10^-15:10^-12;
+f=10^12;
+Fase=0;
+Amplitud1=288;
+S1=Amplitud1* sin(2*pi*f*t + Fase);
+Amplitud2=55;
+S2=Amplitud2* cos(2*pi*f*2*t + Fase);
+Amplitud3=30;
+S3=Amplitud3* sin(2*pi*f*3*t + Fase);
+Amplitud4=19;
+S4=Amplitud4*cos(2*pi*f*5*t + Fase);
+Amplitud5=6;
+S5=Amplitud5*sin(2*pi*f*7*t + Fase);
+Amplitud6=3;
+S6=Amplitud6*cos(2*pi*f*10*t + Fase);
+
+ST= S1+S2+S3+S4+S5+S6;
+plot(t,ST,'LineWidth',2);
+xlabel ('t (segundos)');
+title ('Suma de Señales');
+axis([0 1E-12 -330 300]);
+
+
+% hObject    handle to pushbutton1 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+
+% --- Executes on key press with focus on pushbutton1 and none of its controls.
+function pushbutton1_KeyPressFcn(hObject, eventdata, handles)
+
+% hObject    handle to pushbutton1 (see GCBO)
+% eventdata  structure with the following fields (see MATLAB.UI.CONTROL.UICONTROL)
+%	Key: name of the key that was pressed, in lower case
+%	Character: character interpretation of the key(s) that was pressed
+%	Modifier: name(s) of the modifier key(s) (i.e., control, shift) pressed
+% handles    structure with handles and user data (see GUIDATA)
+
+
+% --- Executes on mouse press over axes background.
+function axes1_ButtonDownFcn(hObject, eventdata, handles)
+% hObject    handle to axes1 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+
+% --- Executes on button press in pushbutton2.
+function pushbutton2_Callback(hObject, eventdata, handles)
+axes(handles.axes1); % Establece el eje como actual
+cla reset;
+set(gca, 'Box', 'on'); % Se encierran los ejes en una caja
+set(gca, 'XTick', [], 'YTick', []) % No muestra las marcas de la señal de los ejes
+
+t=0:10^-14:10^-12;
+f=10^12;
+Fase=0;
+Amplitud1=738;
+S1=Amplitud1* sin(2*pi*f*t + Fase);
+Amplitud2=55;
+S2=Amplitud2* cos(2*pi*f*2*t + Fase);
+Amplitud3=30;
+S3=Amplitud3* sin(2*pi*f*3*t + Fase);
+Amplitud4=19;
+S4=Amplitud4*cos(2*pi*f*5*t + Fase);
+Amplitud5=6;
+S5=Amplitud5*sin(2*pi*f*7*t + Fase);
+Amplitud6=3;
+S6=Amplitud6*cos(2*pi*f*10*t + Fase);
+
+ST= S5./(S3+S6);
+plot(t,ST,'LineWidth',2);
+xlabel ('t (segundos)');
+title ('S5./(S3+S6))');
+
+% --- Executes on button press in pushbutton3.
+function pushbutton3_Callback(hObject, eventdata, handles)
+axes(handles.axes1); % Establece el eje como actual
+cla reset;
+set(gca, 'Box', 'on'); % Se encierran los ejes en una caja
+set(gca, 'XTick', [], 'YTick', []) % No muestra las marcas de la señal de los ejes
+
+t=0:10^-15:10^-12;
+f=10^12;
+Fase=0;
+Amplitud1=738;
+S1=Amplitud1* sin(2*pi*f*t + Fase);
+
+plot(t,S1,'LineWidth',2);
+xlabel ('t (segundos)');
+title ('Suma de la señal S1 con incremento de amplitud 450');
+axis([0 1E-12 -800 800]);
+
+% --- Executes on button press in pushbutton4.
+function pushbutton4_Callback(hObject, eventdata, handles)
+axes(handles.axes1); % Establece el eje como actual
+cla reset;
+set(gca, 'Box', 'on'); % Se encierran los ejes en una caja
+set(gca, 'XTick', [], 'YTick', []) % No muestra las marcas de la señal de los ejes
+
+f=1E12; 
+t=0:1E-14:1E-12;
+Fase=0;
+Amplitud=288;
+s1=Amplitud* sin(2*pi*f*t + Fase);
+plot(t,s1,'LineWidth',2);grid on;
+title ('Señal sinusoidal seno con amplitud 288 con 1t');
+axis([0 1E-12 -300 300]);
+
+
+% --- Executes on button press in pushbutton5.
+function pushbutton5_Callback(hObject, eventdata, handles)
+axes(handles.axes1); % Establece el eje como actual
+cla reset;
+set(gca, 'Box', 'on'); % Se encierran los ejes en una caja
+set(gca, 'XTick', [], 'YTick', []) % No muestra las marcas de la señal de los ejes
+
+f=1E12; 
+t=0:1E-14:1E-12;
+Fase=0;
+Amplitud=55;
+s1=Amplitud* cos(2*pi*f*2*t + Fase);
+plot(t,s1,'LineWidth',2);grid on;
+title ('Señal sinusoidal coseno con amplitud 55 con 2t');
+axis([0 1E-12 -60 60]);% hObject    handle to pushbutton5 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+
+% --- Executes on button press in pushbutton6.
+function pushbutton6_Callback(hObject, eventdata, handles)
+axes(handles.axes1); % Establece el eje como actual
+cla reset;
+set(gca, 'Box', 'on'); % Se encierran los ejes en una caja
+set(gca, 'XTick', [], 'YTick', []) % No muestra las marcas de la señal de los ejes
+
+f=1E12; 
+t=0:1E-14:1E-12;
+Fase=0;
+Amplitud=30;
+s1=Amplitud* sin(2*pi*f*3*t + Fase);
+plot(t,s1,'LineWidth',2);grid on;
+title ('Señal sinusoidal seno con amplitud 30 con 3t');
+axis([0 1E-12 -40 40]);% hObject    handle to pushbutton6 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+
+% --- Executes on button press in pushbutton7.
+function pushbutton7_Callback(hObject, eventdata, handles)
+axes(handles.axes1); % Establece el eje como actual
+cla reset;
+set(gca, 'Box', 'on'); % Se encierran los ejes en una caja
+set(gca, 'XTick', [], 'YTick', []) % No muestra las marcas de la señal de los ejes
+
+f=1E12; 
+t=0:1E-14:1E-12;
+Fase=0;
+Amplitud=19;
+s1=Amplitud* cos(2*pi*f*5*t + Fase);
+plot(t,s1,'LineWidth',2);grid on;
+title ('Señal sinusoidal coseno con amplitud 19 con 5t');
+axis([0 1E-12 -20 20]);
+% hObject    handle to pushbutton7 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+
+% --- Executes on button press in pushbutton8.
+function pushbutton8_Callback(hObject, eventdata, handles)
+axes(handles.axes1); % Establece el eje como actual
+cla reset;
+set(gca, 'Box', 'on'); % Se encierran los ejes en una caja
+set(gca, 'XTick', [], 'YTick', []) % No muestra las marcas de la señal de los ejes
+
+f=1E12; 
+t=0:1E-14:1E-12;
+Fase=0;
+Amplitud=6;
+s1=Amplitud* sin(2*pi*f*7*t + Fase);
+plot(t,s1,'LineWidth',2);grid on;
+title ('Señal sinusoidal seno con amplitud 6 con 7t');
+axis([0 1E-12 -10 10]);
+
+% --- Executes on button press in pushbutton9.
+function pushbutton9_Callback(hObject, eventdata, handles)
+axes(handles.axes1); % Establece el eje como actual
+cla reset;
+set(gca, 'Box', 'on'); % Se encierran los ejes en una caja
+set(gca, 'XTick', [], 'YTick', []) % No muestra las marcas de la señal de los ejes
+
+f=1E12; 
+t=0:1E-14:1E-12;
+Fase=0;
+Amplitud=3;
+s1=Amplitud* cos(2*pi*f*10*t + Fase);
+plot(t,s1,'LineWidth',2);grid on;
+title ('Señal sinusoidal coseno con amplitud 3 con 10t');
+axis([0 1E-12 -5 5]);
+
+% --- Executes on selection change in popupmenu1.
+function popupmenu1_Callback(hObject, eventdata, handles)
+axes(handles.axes1); % Establece el eje como actual
+cla reset;
+set(gca, 'Box', 'on'); % Se encierran los ejes en una caja
+set(gca, 'XTick', [], 'YTick', []) % No muestra las marcas de la señal de los ejes
+
+if fun==1
+y1=sin(2*pi*1*handles.ejex);
+plot(handles.ejex,y1,'LineWidth',2);grid on;axis([0 2*pi -1 1]);
+elseif fun==2
+y2=cos(2*pi*1*handles.ejex);
+plot(handles.ejex,y2,'LineWidth',2);grid on;axis([0 2*pi -1 1]);
+else
+y3=sin(2*pi*1*handles.ejex)+cos(2*pi*1*handles.ejex);
+plot(handles.ejex,y3,'LineWidth',2);grid on;
+axis([0 2*pi min(y3) max(y3) ]);
+end
+guidata(hObject, handles);
+
+
+% Hints: contents = cellstr(get(hObject,'String')) returns popupmenu1 contents as cell array
+%        contents{get(hObject,'Value')} returns selected item from popupmenu1
+
+
+% --- Executes during object creation, after setting all properties.
+function popupmenu1_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to popupmenu1 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: popupmenu controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+
+% --- Executes on button press in pushbutton10.
+function pushbutton10_Callback(hObject, eventdata, handles)
+axes(handles.axes1); % Establece el eje como actual
+cla reset;
+set(gca, 'Box', 'on'); % Se encierran los ejes en una caja
+set(gca, 'XTick', [], 'YTick', []) % No muestra las marcas de la señal de los ejes
+
+t=0:10^-15:10^-12;
+f=10^12;
+Fase=0;
+Amplitud1=288;
+S1=Amplitud1* sin(2*pi*f*t + Fase);
+Amplitud3=30;
+S3=Amplitud3* sin(2*pi*f*3*t + Fase);
+Amplitud5=6;
+S5=Amplitud5*sin(2*pi*f*7*t + Fase);
+
+ST= S1+S3+S5;
+plot(t,ST,'LineWidth',2);
+xlabel ('t (segundos)');
+title ('Suma de Señales S1+S3+S5');
+axis([0 1E-12 -330 300]);
+
+% --- Executes on button press in pushbutton11.
+function pushbutton11_Callback(hObject, eventdata, handles)
+axes(handles.axes1); % Establece el eje como actual
+cla reset;
+set(gca, 'Box', 'on'); % Se encierran los ejes en una caja
+set(gca, 'XTick', [], 'YTick', []) % No muestra las marcas de la señal de los ejes
+
+t=0:10^-14:10^-12;
+f=10^12;
+Fase=0;
+Amplitud1=738;
+S1=Amplitud1* sin(2*pi*f*t + Fase);
+Amplitud2=55;
+S2=Amplitud2* cos(2*pi*f*2*t + Fase);
+Amplitud3=30;
+S3=Amplitud3* sin(2*pi*f*3*t + Fase);
+Amplitud4=19;
+S4=Amplitud4*cos(2*pi*f*5*t + Fase);
+Amplitud5=6;
+S5=Amplitud5*sin(2*pi*f*7*t + Fase);
+Amplitud6=3;
+S6=Amplitud6*cos(2*pi*f*10*t + Fase);
+
+ST= S1.*(S2+S4);
+plot(t,ST,'LineWidth',2);
+xlabel ('t (segundos)');
+title ('S1.*(S2+S4)');
+
+% --- Executes on button press in pushbutton12.
+function pushbutton12_Callback(hObject, eventdata, handles)
+axes(handles.axes1); % Establece el eje como actual
+cla reset;
+set(gca, 'Box', 'on'); % Se encierran los ejes en una caja
+set(gca, 'XTick', [], 'YTick', []) % No muestra las marcas de la señal de los ejes
+
+hold on;
+clc;
+clear all;
+f=1E12; 
+t=0:1E-14:1E-12;
+Amplitud=288;
+fase = 0;
+ for j=1:24
+     s1=Amplitud* sin(2*pi*f*t + fase);
+     ll = plot(t,s1,'LineWidth',2);
+     fase = fase + 15;
+ end
+ delete(ll);
+%grid on;
+title ('Señal sinusoidal seno con amplitud 288 con 1t');
+axis([0 1E-12 -350 350]);
+
+% --- Executes on button press in pushbutton13.
+function pushbutton13_Callback(hObject, eventdata, handles)
+axes(handles.axes1); % Establece el eje como actual
+cla reset;
+set(gca, 'Box', 'on'); % Se encierran los ejes en una caja
+set(gca, 'XTick', [], 'YTick', []) % No muestra las marcas de la señal de los ejes
+
+ hold on;
+ clc;
+ clear all;
+ f=1E12; 
+ t=0:1E-14:1E-12;
+ Amplitud=288;
+ fase = 0;
+ for j=1:19
+     s1=(288* sin(2*pi*f*t + fase))+(55* sin(2*pi*f*t + fase));
+     ll = plot(t,s1,'LineWidth',2);
+     fase = fase + 5;
+ end
+ delete(ll);
+%grid on;
+title ('Señal sinusoidal seno con amplitud 288 con 1t');
+axis([0 1E-12 -400 400]);
+
+
+% --- Executes on button press in pushbutton14.
+function pushbutton14_Callback(hObject, eventdata, handles)
+axes(handles.axes1); % Establece el eje como actual
+cla reset;
+set(gca, 'Box', 'on'); % Se encierran los ejes en una caja
+set(gca, 'XTick', [], 'YTick', []) % No muestra las marcas de la señal de los ejes
+
+t=0:10^-15:10^-12;
+f=10^12;
+Fase=0;
+Amplitud1=738;
+S1=Amplitud1* sin(2*pi*f*t + Fase);
+Amplitud2=55;
+S2=Amplitud2* cos(2*pi*f*2*t + Fase);
+Amplitud3=30;
+S3=Amplitud3* sin(2*pi*f*3*t + Fase);
+Amplitud4=19;
+S4=Amplitud4*cos(2*pi*f*5*t + Fase);
+Amplitud5=6;
+S5=Amplitud5*sin(2*pi*f*7*t + Fase);
+Amplitud6=3;
+S6=Amplitud6*cos(2*pi*f*10*t + Fase);
+
+ST= S1+S2+S3+S4+S5+S6;
+plot(t,ST,'LineWidth',2);
+xlabel ('t (segundos)');
+title ('Suma de las señales con incremento de amplitud en S1 450');
+axis([0 1E-12 -800 800]);
+% hObject    handle to pushbutton14 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)

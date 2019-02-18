@@ -179,6 +179,25 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="2132488650">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.3" value="2" />
+          <entry key="project.opened" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="93" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="93" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
@@ -194,7 +213,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/javafx-src.zip!/javafx/scene/Scene.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="55063">
+            <state relative-caret-position="55012">
               <caret line="3472" selection-start-line="3472" selection-end-line="3472" />
             </state>
           </provider>
@@ -215,24 +234,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/contenedor/JavaFxGameTablero.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="217" column="23" selection-start-line="217" selection-start-column="23" selection-end-line="217" selection-end-column="23" />
-              <folding>
-                <element signature="e#22150#22151#0" expanded="true" />
-                <element signature="e#22177#22178#0" expanded="true" />
-                <element signature="e#22215#22216#0" expanded="true" />
-                <element signature="e#22247#22248#0" expanded="true" />
-                <element signature="e#22286#22287#0" expanded="true" />
-                <element signature="e#22316#22317#0" expanded="true" />
-                <element signature="e#22367#22368#0" expanded="true" />
-                <element signature="e#22405#22406#0" expanded="true" />
-                <element signature="e#22437#22438#0" expanded="true" />
-                <element signature="e#22465#22466#0" expanded="true" />
-                <element signature="e#22509#22510#0" expanded="true" />
-                <element signature="e#22545#22546#0" expanded="true" />
-                <element signature="e#24928#24929#0" expanded="true" />
-                <element signature="e#24964#24965#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="452">
+              <caret line="215" column="49" selection-start-line="215" selection-start-column="49" selection-end-line="215" selection-end-column="49" />
             </state>
           </provider>
         </entry>
@@ -343,11 +346,11 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="1587" />
-    <option name="y" value="4" />
-    <option name="width" value="1616" />
-    <option name="height" value="876" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-7" />
+    <option name="y" value="1" />
+    <option name="width" value="1036" />
+    <option name="height" value="733" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -355,6 +358,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -378,16 +383,16 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542407769884" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ajedrez proyecto1 Minimax" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -452,17 +457,19 @@
       <workItem from="1542326598303" duration="9625000" />
       <workItem from="1543531618865" duration="54000" />
       <workItem from="1543531776670" duration="2776000" />
+      <workItem from="1543853851531" duration="1797000" />
+      <workItem from="1544749507728" duration="977000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="140530000" />
+    <option name="totallyTimeSpent" value="143304000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1587" y="4" width="1616" height="876" extended-state="1" />
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21529563" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13946016" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -471,7 +478,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.21130551" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.18573351" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.17496635" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -798,7 +805,7 @@
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/javafx-src.zip!/javafx/scene/Scene.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="55063">
+        <state relative-caret-position="55012">
           <caret line="3472" selection-start-line="3472" selection-end-line="3472" />
         </state>
       </provider>
@@ -873,24 +880,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/contenedor/JavaFxGameTablero.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="217" column="23" selection-start-line="217" selection-start-column="23" selection-end-line="217" selection-end-column="23" />
-          <folding>
-            <element signature="e#22150#22151#0" expanded="true" />
-            <element signature="e#22177#22178#0" expanded="true" />
-            <element signature="e#22215#22216#0" expanded="true" />
-            <element signature="e#22247#22248#0" expanded="true" />
-            <element signature="e#22286#22287#0" expanded="true" />
-            <element signature="e#22316#22317#0" expanded="true" />
-            <element signature="e#22367#22368#0" expanded="true" />
-            <element signature="e#22405#22406#0" expanded="true" />
-            <element signature="e#22437#22438#0" expanded="true" />
-            <element signature="e#22465#22466#0" expanded="true" />
-            <element signature="e#22509#22510#0" expanded="true" />
-            <element signature="e#22545#22546#0" expanded="true" />
-            <element signature="e#24928#24929#0" expanded="true" />
-            <element signature="e#24964#24965#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="452">
+          <caret line="215" column="49" selection-start-line="215" selection-start-column="49" selection-end-line="215" selection-end-column="49" />
         </state>
       </provider>
     </entry>

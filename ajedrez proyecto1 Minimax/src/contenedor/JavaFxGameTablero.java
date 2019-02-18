@@ -224,7 +224,8 @@ public class JavaFxGameTablero {
 
     public boolean MovimientoMiniMax(Casilla acasilla)
     {
-        //Integer ponderacion = GetPonderacion(this.tablero[fichaMarcadaY][fichaMarcadaX].getFicha().getIdFicha());
+        Casilla temp = new Casilla();
+        temp = acasilla;
         Integer pondera = GetPonderacion(acasilla.getFicha().getIdFicha());
         if(acasilla.isSombreada())
         {
@@ -244,7 +245,12 @@ public class JavaFxGameTablero {
                 this.tablero[fichaMarcadaX][fichaMarcadaY].setFicha(acasilla.getFicha());
                 acasilla.setFicha(new JavaFxFicha());
                 acasilla.getButton().setGraphic(new ImageView());
-               // this.setTurno(color);
+                if(temp.getFicha().getIdFicha() != "")
+                {
+                    acasilla.setFicha(temp.getFicha());
+                    acasilla.getButton().setGraphic(temp.getButton().getGraphic());
+                 }
+                //this.setTurno("negro");
                 RestaurarColores();
                 fichaMarcada = false;
                 ActualizarTablaFichas(this.tablero[fichaMarcadaX][fichaMarcadaY]);
@@ -295,7 +301,8 @@ public class JavaFxGameTablero {
             {
                String a = tablero[temp.getValorY()][temp.getValorX()].getFicha().getIdFicha();
                if(a!= "")
-                 { Integer b = GetPonderacion(tablero[temp.getValorY()][temp.getValorX()].getFicha().getIdFicha());
+                 {
+                   Integer b = GetPonderacion(tablero[temp.getValorY()][temp.getValorX()].getFicha().getIdFicha());
                    String c = tablero[temp.getValorY()][temp.getValorX()].getFicha().getJugador();
                     if(b>=mayor
                         && c == "negro" && (fichaMarcadaX !=yMinimax || fichaMarcadaY!=xMinimax))
@@ -365,10 +372,10 @@ public class JavaFxGameTablero {
             {
                 String a = tablero[temp.getValorY()][temp.getValorX()].getFicha().getIdFicha();
                 if(a!= "")
-                { Integer b = GetPonderacion(tablero[temp.getValorY()][temp.getValorX()].getFicha().getIdFicha());
+                {
+                    Integer b = GetPonderacion(tablero[temp.getValorY()][temp.getValorX()].getFicha().getIdFicha());
                     String c = tablero[temp.getValorY()][temp.getValorX()].getFicha().getJugador();
-                    if(b>=mayorPonder
-                            && c == "blanco")
+                    if(b>mayorPonder && c == "blanco")
                     {
                         x = temp.getValorX();
                         y = temp.getValorY();
